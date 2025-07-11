@@ -11,10 +11,6 @@ interface Interview {
   date: string;
   speaker: string;
   type: "video" | "audio" | "text";
-<<<<<<< HEAD
- 
-=======
->>>>>>> f5d362c (nows commit 11juillet)
   fullContent: string;
 }
 

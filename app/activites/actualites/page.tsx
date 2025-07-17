@@ -109,7 +109,11 @@ function NewsCard({ news } : { news: { id: string; title: string; excerpt: strin
             <Calendar className="mr-2 h-4 w-4" />
             <span>{news.date}</span>
           </div>
-          <h3 className="font-bold">{news.title}</h3>
+          {news.id === "5" || news.id === "12" ? (
+            <span className="font-bold text-black block w-fit">{news.title}</span>
+          ) : (
+            <Link href={`/activites/actualites/infos/${news.id}`} className="font-bold text-black hover:underline block w-fit">{news.title}</Link>
+          )}
           <p className="text-sm text-muted-foreground line-clamp-3 text-justify">{news.excerpt}</p>
           <div className="pt-2">
             {/* <Link href={`/actualites/${news.id}`}>
@@ -172,7 +176,7 @@ const newsList = [
     title: "Conférence internationale de cloture, Abidjan du projet de recherche sur l'impacts des politiques publiques liées à la pandemie de la Covid-19 sur les entreprises, les femmes et les jeunes: cas du Burkina  Faso, Cameroun, Cote d'Ivoire et du Sénégal'",
     excerpt:
       "",
-    date: "",
+    date: "jeudi 23 Mars 2023",
     image: "/images/TOUTES LES ACTUALITES/Conferenceinternationale.jpg",
   },
   {
@@ -248,11 +252,32 @@ const newsList = [
     date: "02 Février 2023",
     image: "/images/TOUTES LES ACTUALITES/RESTITUTION BUDGET.jpg",
   },
-
-
+  {
+    id: "16",
+    title: "Le Forum EPA, organisé en partenariat avec l’ACED, s’est tenu à Abidjan les 6 et 7 novembre 2024. Cet événement majeur a réuni des acteurs clés du développement issus de divers horizons pour réfléchir ensemble aux voies d’un développement inclusif en Afrique francophone.",
+    excerpt:
+      "",
+    date: "6 et 7 novembre 2024",
+    image: "/images/photo/converted_img_c.png",
+  },
+  {
+    id: "17",
+    title: "l’Université Félix Houphouët-Boigny de Cocody a accueilli la Conférence Internationale Japan Corner - JICA - CAPEC sur le thème : « Faire progresser l’industrialisation et améliorer la productivité du travail : une voie pour le développement de l’économie ivoirienne ».",
+    excerpt:
+      "",
+    date: "Le 22 février 2024",
+    image: "/images/japan.jpg",
+  },
  
-  
+  {
+    id: "18",
+    title: "Le Professeur Alban AHOURÉ, Directeur de la CAPEC, a été nominé à la 6ᵉ édition du Who's Who in Côte d'Ivoire, un événement annuel honorant l'excellence ivoirienne dans divers secteurs.",
+    excerpt:
+      "",
+    date: "le 3 décembre 2024 ",
+    image:  "/images/photo/converted_img_j.png",
+  },
  
-  
+ 
 ]
 

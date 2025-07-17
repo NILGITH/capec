@@ -1,11 +1,11 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
-import { ChevronDown, Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { ChevronDown, Facebook, Linkedin, Twitter, Youtube } from "lucide-react";
 import { navItems } from "./navItems";
+import { cn } from "@/lib/utils";
 
 export type NavItem = {
   title: string;
@@ -15,21 +15,14 @@ export type NavItem = {
 
 export function MainNav() {
   const pathname = usePathname();
-  const isRootPath = pathname === "/";
-  const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null);
-  const [hoverItem, setHoverItem] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
     <div className="shadow-sm w-full flex flex-col">
       {/* Top bar: social icons and paragraph */}
-      <div
-        className={cn(
-          "w-full flex flex-col sm:flex-row items-center px-2 sm:px-4 py-1 sm:py-2 gap-1 sm:gap-4",
-          isRootPath ? "bg-green-700" : "bg-orange-500"
-        )}
-      >
-        {/* Logo for mobile (centered) */}
+      <div className="w-full flex flex-col sm:flex-row items-center px-2 sm:px-4 py-1 sm:py-2 gap-1 sm:gap-4 bg-green-700">
+        {/* Logo pour mobile (centré) */}
         <div className="flex sm:hidden justify-center w-full">
           <Link href="/">
             <Image
@@ -42,63 +35,27 @@ export function MainNav() {
             />
           </Link>
         </div>
-
-        {/* Paragraph (root path only) and social icons */}
+        {/* Social icons */}
         <div className="flex w-full items-center justify-between sm:justify-end px-2 sm:px-0">
-          {isRootPath && (
-            <p className="text-white italic text-xs sm:text-sm md:text-base sm:ml-auto max-w-[50%] sm:max-w-none break-words">
-              La Recherche au Service du Développement
-            </p>
-          )}
-          <div className={cn("flex items-center gap-2 sm:gap-3", isRootPath ? "ml-auto sm:ml-4" : "sm:ml-auto")}>
+          <div className="flex items-center gap-2 sm:gap-3 ml-auto sm:ml-4">
             <Link href="https://www.facebook.com/share/1EPYzPPHZ8/" target="_blank">
-              <Facebook
-                className={cn(
-                  "h-4 w-4 sm:h-5 md:h-6 sm:w-5 md:w-6",
-                  isRootPath ? "text-white hover:text-ci-orange" : "text-white hover:text-white"
-                )}
-              />
+              <Facebook className="h-4 w-4 sm:h-5 md:h-6 sm:w-5 md:w-6 text-white hover:text-ci-orange" />
             </Link>
-            <Link
-              href="https://www.linkedin.com/in/cellule-d-analyse-de-politiques-economiques-du-cires-3993b0238/"
-              target="_blank"
-            >
-              <Linkedin
-                className={cn(
-                  "h-4 w-4 sm:h-5 md:h-6 sm:w-5 md:w-6",
-                  isRootPath ? "text-white hover:text-ci-orange" : "text-white hover:text-white"
-                )}
-              />
+            <Link href="https://www.linkedin.com/in/cellule-d-analyse-de-politiques-economiques-du-cires-3993b0238/" target="_blank">
+              <Linkedin className="h-4 w-4 sm:h-5 md:h-6 sm:w-5 md:w-6 text-white hover:text-ci-orange" />
             </Link>
             <Link href="https://www.youtube.com/@capeccotedivoire8917" target="_blank">
-              <Youtube
-                className={cn(
-                  "h-4 w-4 sm:h-5 md:h-6 sm:w-5 md:w-6",
-                  isRootPath ? "text-white hover:text-ci-orange" : "text-white hover:text-white"
-                )}
-              />
+              <Youtube className="h-4 w-4 sm:h-5 md:h-6 sm:w-5 md:w-6 text-white hover:text-ci-orange" />
             </Link>
             <Link href="#" target="_blank">
-              <Twitter
-                className={cn(
-                  "h-4 w-4 sm:h-5 md:h-6 sm:w-5 md:w-6",
-                  isRootPath ? "text-white hover:text-ci-orange" : "text-white hover:text-white"
-                )}
-              />
+              <Twitter className="h-4 w-4 sm:h-5 md:h-6 sm:w-5 md:w-6 text-white hover:text-ci-orange" />
             </Link>
-           
           </div>
         </div>
       </div>
-
       {/* Navigation */}
-      <nav
-        className={cn(
-          "w-full text-black flex items-center min-h-[100px] sm:min-h-[120px] md:min-h-[150px] px-2 sm:px-4 md:px-8",
-          isRootPath ? "" : "justify-center"
-        )}
-      >
-        {/* Logo for desktop */}
+      <nav className="w-full text-black flex items-center min-h-[100px] sm:min-h-[120px] md:min-h-[150px] px-2 sm:px-4 md:px-8">
+        {/* Logo pour desktop */}
         <div className="hidden sm:flex absolute top-0 left-2 sm:left-4 h-[150px] sm:h-[180px] w-[180px] sm:w-[220px] items-center justify-center overflow-visible">
           <Link href="/">
             <Image
@@ -111,25 +68,20 @@ export function MainNav() {
             />
           </Link>
         </div>
-
         {/* Desktop menu */}
-        <div
-          className={cn(
-            "hidden md:flex flex-wrap items-center justify-center gap-1 md:gap-2 lg:gap-6 w-full max-w-screen-xl px-4 ml-[220px] mr-4",
-          )}
-        >
+        <div className="hidden lg:flex flex-wrap items-center justify-center gap-1 md:gap-2 lg:gap-6 w-full max-w-screen-xl px-4 ml-[220px] mr-4">
           {navItems.map((item) => {
-            const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
+            const isActive = item.href && (pathname === item.href || pathname.startsWith(`${item.href}/`));
             if (item.submenu) {
               return (
                 <div
                   key={item.title}
                   className="group relative"
-                  onMouseEnter={() => setHoverItem(item.title)}
-                  onMouseLeave={() => setHoverItem(null)}
+                  onMouseEnter={() => setOpenDropdown(item.title)}
+                  onMouseLeave={() => setOpenDropdown(null)}
                 >
                   <Link
-                    href={item.href}
+                    href={item.href || "#"}
                     className={cn(
                       "flex items-center px-2 md:px-3 py-1 md:py-2 text-sm md:text-base font-medium transition-colors hover:text-orange-300 rounded-md",
                       isActive ? "text-black" : ""
@@ -141,7 +93,7 @@ export function MainNav() {
                   <div
                     className={cn(
                       "absolute left-0 top-full z-50 pt-1 md:pt-2",
-                      hoverItem === item.title ? "block" : "hidden group-hover:block"
+                      openDropdown === item.title ? "block" : "hidden group-hover:block"
                     )}
                   >
                     <div className="w-48 md:w-56 overflow-hidden rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
@@ -182,9 +134,8 @@ export function MainNav() {
             );
           })}
         </div>
-
         {/* Mobile menu toggle */}
-        <div className="md:hidden flex justify-end w-full pr-2">
+        <div className="lg:hidden flex justify-end w-full pr-2">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="flex items-center space-x-1 text-sm font-medium text-black"
@@ -213,42 +164,53 @@ export function MainNav() {
           </button>
         </div>
       </nav>
-
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <>
+          {/* Overlay */}
           <div
-            className="fixed inset-0 z-40 bg-black bg-opacity-30 sm:hidden"
+            className="fixed inset-0 z-40 bg-black bg-opacity-30 lg:hidden"
             onClick={() => {
               setMobileMenuOpen(false);
-              setOpenMobileSubmenu(null);
             }}
           />
-          <div className="sm:hidden fixed top-[100px] left-0 z-50 w-full h-[calc(100vh-100px)] border-t border-gray-200 bg-white px-4 py-4 shadow-2xl rounded-b-md overflow-y-auto">
+          {/* Drawer à gauche */}
+          <div className="fixed top-0 left-0 z-50 h-full w-4/5 max-w-xs bg-white shadow-2xl px-4 py-6 lg:hidden flex flex-col overflow-y-auto transition-transform duration-300">
+            <div className="flex items-center justify-between mb-4">
+              <Link href="/" onClick={() => setMobileMenuOpen(false)}>
+                <Image src="/images/logocapec.png" alt="CAPEC Logo" width={130} height={130} className="object-contain" />
+              </Link>
+              <button onClick={() => setMobileMenuOpen(false)} aria-label="Fermer le menu">
+                <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7">
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </button>
+            </div>
             <nav className="flex flex-col space-y-2">
               {navItems.map((item) => {
-                const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
+                const isActive = item.href && (pathname === item.href || pathname.startsWith(`${item.href}/`));
                 if (item.submenu) {
                   return (
                     <div key={item.title} className="space-y-1">
                       <button
-                        onClick={() => setOpenMobileSubmenu(openMobileSubmenu === item.title ? null : item.title)}
+                        onClick={() => setOpenDropdown(openDropdown === item.title ? null : item.title)}
                         className={cn(
                           "flex w-full items-center justify-between text-base font-medium transition-colors hover:text-ci-orange py-2 px-2 rounded-md bg-gray-50",
                           isActive ? "text-black" : "text-foreground"
                         )}
-                        aria-expanded={openMobileSubmenu === item.title}
+                        aria-expanded={openDropdown === item.title}
                         aria-controls={`submenu-${item.title}`}
                       >
                         {item.title}
                         <ChevronDown
                           className={cn(
                             "h-4 w-4 transition-transform",
-                            openMobileSubmenu === item.title ? "rotate-180" : ""
+                            openDropdown === item.title ? "rotate-180" : ""
                           )}
                         />
                       </button>
-                      {openMobileSubmenu === item.title && (
+                      {openDropdown === item.title && (
                         <div id={`submenu-${item.title}`} className="space-y-1 border-l-2 border-ci-green pl-4 ml-2 bg-gray-100 rounded-md">
                           {item.submenu.map((subItem) => {
                             const isSubActive = pathname === subItem.href;
@@ -264,7 +226,7 @@ export function MainNav() {
                                 )}
                                 onClick={() => {
                                   setMobileMenuOpen(false);
-                                  setOpenMobileSubmenu(null);
+                                  setOpenDropdown(null);
                                 }}
                               >
                                 {subItem.title}

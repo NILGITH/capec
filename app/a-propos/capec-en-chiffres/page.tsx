@@ -6,7 +6,7 @@ import { MainNav } from "@/components/main-nav";
 
 export default function CapecEnChiffresPage() {
   const tableData = [
-    { year: "2002", travaux: 5, etudes: 3, formations: 2, personnes: "-", assistance: 1 },
+    { year: "2002", travaux: 5, etudes: 3, formations: 2, personnes: 60, assistance: 1 },
     { year: "2003", travaux: 21, etudes: 2, formations: 1, personnes: 37, assistance: 2 },
     { year: "2004", travaux: 16, etudes: 1, formations: 1, personnes: 30, assistance: 2 },
     { year: "2005", travaux: 16, etudes: 0, formations: 3, personnes: 64, assistance: 2 },
@@ -17,15 +17,20 @@ export default function CapecEnChiffresPage() {
     { year: "2010", travaux: 9, etudes: 8, formations: 6, personnes: 182, assistance: 6 },
     { year: "2011", travaux: 2, etudes: 8, formations: 3, personnes: 101, assistance: 3 },
     { year: "2012", travaux: 5, etudes: 10, formations: 5, personnes: 134, assistance: 2 },
-    { year: "2002-2012", travaux: 109, etudes: 40, formations: 40, personnes: 1173, assistance: 26 },
+    { year: "2002-2012", travaux: 109, etudes: 40, formations: 40, personnes: 1233, assistance: 26 },
     { year: "2013", travaux: 15, etudes: 4, formations: 7, personnes: 64, assistance: 3 },
     { year: "2014", travaux: 8, etudes: 10, formations: 0, personnes: 0, assistance: 2 },
     { year: "2015", travaux: 6, etudes: 16, formations: 6, personnes: 16, assistance: 4 },
     { year: "2016", travaux: 6, etudes: 25, formations: 6, personnes: 54, assistance: 3 },
     { year: "2017", travaux: 12, etudes: 11, formations: 2, personnes: 41, assistance: 4 },
     { year: "2018", travaux: 4, etudes: 14, formations: 7, personnes: 141, assistance: 1 },
-    { year: "2019", travaux: 8, etudes: 12, formations: 1, personnes: 7, assistance: 0 },
-    { year: "2002-2019", travaux: 168, etudes: 132, formations: 69, personnes: 1496, assistance: 43 },
+    { year: "2019", travaux: 8, etudes: 12, formations: 1, personnes: 7, assistance: 1 },
+    { year: "2020", travaux: 7, etudes: 18, formations: 2, personnes: 14, assistance: 3 },
+    { year: "2021", travaux: 3, etudes: 20, formations: '-', personnes: '-', assistance: 3 },
+    { year: "2022", travaux: 4, etudes: 24, formations: '-', personnes: '-', assistance: 3 },
+    { year: "2023", travaux: 4, etudes: 19, formations: '-', personnes: '-', assistance: '-' },
+    { year: "2024", travaux: 4, etudes: 16, formations: '-', personnes: '-', assistance: '-' },
+    { year: "2002-2024", travaux: 190, etudes: 229, formations: 71, personnes: 1570, assistance: 43 },
   ];
 
   return (
@@ -43,7 +48,7 @@ export default function CapecEnChiffresPage() {
         </div>
         <div className="text-center space-y-4 mb-8 sm:mb-12">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl md:text-4xl">
-            Tableau des Activités (2002-2019)
+            Tableau des Activités (2002-2024)
           </h2>
           <div className="w-20 sm:w-24 h-1 bg-ci-orange mx-auto"></div>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
@@ -57,23 +62,28 @@ export default function CapecEnChiffresPage() {
             {/* Table Header */}
             <thead>
               <tr className="bg-ci-orange/10 text-gray-900">
-                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[80px]">
+                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[80px]" rowSpan={2}>
                   Année
                 </th>
-                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[120px]">
+                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[120px]" rowSpan={2}>
                   Travaux des chercheurs
                 </th>
-                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[80px]">
+                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[80px]" rowSpan={2}>
                   Études
                 </th>
-                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[120px]">
+                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[260px]" colSpan={2}>
+                  Formations
+                </th>
+                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[180px]" rowSpan={2}>
+                  Assistance à l’Administration
+                </th>
+              </tr>
+              <tr className="bg-ci-orange/10 text-gray-900">
+                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[80px]">
                   Nombre de formations
                 </th>
                 <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[140px]">
                   Nombre de personnes formées
-                </th>
-                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[180px]">
-                  Assistance aux institutions nationales et internationales
                 </th>
               </tr>
             </thead>

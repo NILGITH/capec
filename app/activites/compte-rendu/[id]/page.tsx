@@ -6,8 +6,8 @@ import { MainNav } from "@/components/main-nav";
 import Link from "next/link";
 
 // Définition des types pour les props
-interface PageProps {
-  params: Promise<{ id: string }>;
+interface CompteRenduPageProps {
+  params: { id: string };
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
@@ -144,7 +144,7 @@ const sidebarConferences = conferences.filter(
 );
 
 // Fonction pour générer les métadonnées
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const event = conferences.find((e) => e.id === id);
 
@@ -161,7 +161,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default async function EventDetailsPage({ params, searchParams }: PageProps) {
+export default async function EventDetailsPage({ params, searchParams }: { params: Promise<{ id: string }>, searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
   const { id } = await params;
   const resolvedSearchParams = await searchParams;
   const event = conferences.find((e) => e.id === id);

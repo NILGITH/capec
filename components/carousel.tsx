@@ -77,7 +77,7 @@ export function EventCarousel({ events }: {
                   <div className="flex flex-wrap gap-3">
                       <Link href="/activites/actualites">
                         <Button className="flex flex-col gap-2 min-[400px]:flex-row">
-                          Découvrir toutes nos actualités
+                          Découvrez toutes nos actualités
                           <ChevronRight className="ml-2 h-4 w-4" />
                         </Button>
                       </Link>

@@ -3,9 +3,35 @@
 @tailwind utilities;
 
 body {
-  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
+  font-family: var(--font-policy-brief), 'policy-brief', system-ui, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+p, .prose p, span, .prose span {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  font-family: var(--font-policy-brief), 'policy-brief', system-ui, sans-serif;
+}
+
+h1, .prose h1 {
+  font-size: 1.15rem;
+  font-family: var(--font-policy-brief), 'policy-brief', system-ui, sans-serif;
+}
+
+h2, .prose h2 {
+  font-size: 1.15rem;
+  font-family: var(--font-policy-brief), 'policy-brief', system-ui, sans-serif;
+}
+
+h3, .prose h3 {
+  font-size: 1.12rem;
+  font-family: var(--font-policy-brief), 'policy-brief', system-ui, sans-serif;
+}
+
+h4, .prose h4 {
+  font-size: 1.15rem;
+  font-family: var(--font-policy-brief), 'policy-brief', system-ui, sans-serif;
 }
 
 @layer utilities {
@@ -99,7 +125,7 @@ body {
   }
   
   p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.7;
     text-align: justify;
   }

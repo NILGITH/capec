@@ -267,13 +267,7 @@ export default function PhotothequePage() {
 // Sample data
 const conferencesPhotos = [
  
-  {
-    id: "conf2",
-    title: "Forum économique régional",
-    date: "10 novembre 2022",
-    description: "Forum sur l'intégration économique régionale avec la participation de plusieurs pays africains.",
-    src: "/images/leçoninaugurale8octobre.jpg?text=Forum+Économique+Régional&height=600&width=600",
-  },
+
   {
     id: "conf3",
     title: "3 ETUDES D'EVALUATION D'IMPACT DES MESURES FISCALES",
@@ -299,30 +293,8 @@ const conferencesPhotos = [
 ]
 
 const seminairesPhotos = [
-  {
-    id: "sem1",
-    title: "Séminaire sur les politiques fiscales",
-    date: "25 février 2023",
-    description:
-      "Séminaire d'experts sur l'optimisation des politiques fiscales pour stimuler la croissance économique.",
-    src: "/images/paneldehautniveau5.jpg?text=Séminaire+Politiques+Fiscales&height=600&width=600",
-  },
+
  
-  {
-    id: "sem2",
-    title: "Atelier sur l'analyse des données économiques",
-    date: "12 janvier 2023",
-    description: "Atelier de formation sur les méthodes avancées d'analyse des données économiques.",
-    src: "/images/sem3.jpg?text=Atelier+Analyse+Données&height=600&width=600",
-  },
-  {
-    id: "sem3",
-    title: "Atelier sur l'analyse des données économiques",
-    date: "12 janvier 2023",
-    description: "Atelier de formation sur les méthodes avancées d'analyse des données économiques.",
-    src: "/images/sem4.jpg?text=Atelier+Analyse+Données&height=600&width=600",
-   
-  },
   {
     id: "sem4",
     title: "FORUM EPA EN PARTENARIAT AVEC L'ACED du 6 au 7 Novembre 2024",
@@ -367,7 +339,7 @@ const formationsPhotos = [
   },
   {
     id: "form5",
-    title: "Stand d'exposition de la CAPEC a la celebration du 30ème anniversaire de la CAPEC et le 10ème sommet",
+    title: "Stand d’exposition de la CAPEC lors de la célébration du 30 -ème anniversaire de la CAPEC et du 10e sommet des Think tanks",
     date: "",
     description: "",
     src: "/images/photo/converted_img_k.png",
@@ -378,13 +350,7 @@ const formationsPhotos = [
 ]
 
 const equipesPhotos = [
-  {
-    id: "eq1",
-    title: "Équipe de direction de la CAPEC",
-    date: "15 janvier 2023",
-    description: "Photo officielle de l'équipe de direction de la CAPEC lors de la cérémonie des vœux.",
-    src: "/images/introduction.jpg?text=Équipe+Direction+CAPEC&height=600&width=600",
-  },
+ 
   {
     id: "eq2",
     title: "Directeur de la CAPEC PROF;AHOURE Alban pendant la conférence JAPAN CORNER-JICA-TODA CORPORATION-CAPEC 2025",
@@ -401,25 +367,13 @@ const equipesPhotos = [
     description: "",
     src: "/images/estherubo.jpg?text=Équipe+Recherche+Développement&height=600&width=600",
   },
-  {
-    id: "eq4",
-    title: "Diner Des 30e anniversaire de la CAPEC 9 OCTOBRE 2024",
-    date: "9 OCTOBRE 2024",
-    description: "",
-    src: "/images/photo/converted_img_b (1).png",
-  },
+ 
  
 ]
 
 
 const panelPhotos = [
-  {
-    id: "pan1",
-    title: "Panel de haut niveau Lors de la celebration des 30 ans de la CAPEC",
-    date: "",
-    description: "",
-    src: "/images/photo/converted_img_h.png",
-  },
+
   {
     id: "pan2",
     title: "Panel de haut niveau",
@@ -452,12 +406,6 @@ const panelPhotos = [
     description: "",
     src: "/images/photo/panel de haut niveau (2).png",
   },
-  {
-    id: "pan6",
-    title: "Panel de haut niveau",
-    date: "",
-    description: "",
-    src: "/images/photo/converted_img_e.png",
-  },
+
  
 ]

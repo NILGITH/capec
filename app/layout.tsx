@@ -2,14 +2,14 @@ import type React from "react"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
-import { Inter, Poppins } from "next/font/google"
+// import { Inter, Poppins } from "next/font/google"
 
-const inter = Inter({ subsets: ["latin"] })
-const poppins = Poppins({ 
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-poppins"
-})
+// const inter = Inter({ subsets: ["latin"] })
+// const poppins = Poppins({ 
+//   subsets: ["latin"],
+//   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+//   variable: "--font-poppins"
+// })
 
 export const metadata = {
   title: "CAPEC - Cellule d'Analyse de Politiques Économiques du CIRES",
@@ -29,7 +29,7 @@ export default function RootLayout({
      <head>
      <link rel="icon" href="/logocapec.ico" />
      </head>
-        <body className={`${inter.className} ${poppins.variable}`}>
+        <body /* className={`${inter.className} ${poppins.variable}`} */>
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
             {children}
             <Toaster />

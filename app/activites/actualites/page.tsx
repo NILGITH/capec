@@ -192,7 +192,7 @@ const newsList = [
     title: "4ème Edition des Conférences internationales  sur les Etudes Japonaises 09 fev 23 ",
     excerpt:
       "",
-    date: "09  fev 23",
+    date: "09 Février 2023",
     image: "/images/TOUTES LES ACTUALITES/conference.jpg",
   },
   {
@@ -216,7 +216,7 @@ const newsList = [
     title: "Conférence de cloture du Projet de Recherche PEP sur l'impact socio-economique des jeunes vulnérables en Cote d'Ivoire, Abidjan, 21 Oct 2021",
     excerpt:
       "",
-    date: "Publié le 21 Oct 2021",
+    date: "Publié le 21 Octobre 2021",
     image: "/images/conferencedecloture.jpeg",
   },
  

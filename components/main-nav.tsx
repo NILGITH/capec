@@ -20,9 +20,9 @@ export function MainNav() {
 
   return (
     <div className="shadow-sm w-full flex flex-col">
-      {/* Top bar: social icons and paragraph */}
+      {/* Top bar */}
       <div className="w-full flex flex-col sm:flex-row items-center px-2 sm:px-4 py-1 sm:py-2 gap-1 sm:gap-4 bg-green-700">
-        {/* Logo pour mobile (centré) */}
+        {/* Logo mobile */}
         <div className="flex sm:hidden justify-center w-full">
           <Link href="/">
             <Image
@@ -53,9 +53,10 @@ export function MainNav() {
           </div>
         </div>
       </div>
+
       {/* Navigation */}
       <nav className="w-full text-black flex items-center min-h-[100px] sm:min-h-[120px] md:min-h-[150px] px-2 sm:px-4 md:px-8">
-        {/* Logo pour desktop */}
+        {/* Logo desktop */}
         <div className="hidden sm:flex absolute top-0 left-2 sm:left-4 h-[150px] sm:h-[180px] w-[180px] sm:w-[220px] items-center justify-center overflow-visible">
           <Link href="/">
             <Image
@@ -68,8 +69,9 @@ export function MainNav() {
             />
           </Link>
         </div>
+
         {/* Desktop menu */}
-        <div className="hidden lg:flex flex-wrap items-center justify-center gap-1 md:gap-2 lg:gap-6 w-full max-w-screen-xl px-4 ml-[220px] mr-4">
+        <div className="hidden lg:flex flex-nowrap items-center justify-center gap-1 md:gap-2 lg:gap-6 w-full max-w-screen-xl px-2 md:px-4 ml-[200px] mr-2 main-nav-links">
           {navItems.map((item) => {
             const isActive = item.href && (pathname === item.href || pathname.startsWith(`${item.href}/`));
             if (item.submenu) {
@@ -83,7 +85,7 @@ export function MainNav() {
                   <Link
                     href={item.href || "#"}
                     className={cn(
-                      "flex items-center px-2 md:px-3 py-1 md:py-2 text-sm md:text-base font-medium transition-colors hover:text-orange-300 rounded-md",
+                      "flex items-center px-2 md:px-3 py-1 md:py-2 text-base font-medium transition-colors hover:text-orange-300 rounded-md nav-text-reduced",
                       isActive ? "text-black" : ""
                     )}
                   >
@@ -125,7 +127,7 @@ export function MainNav() {
                 key={item.title}
                 href={item.href}
                 className={cn(
-                  "px-2 md:px-3 py-1 md:py-2 text-sm md:text-base font-medium transition-colors hover:text-orange-300 rounded-md",
+                  "px-2 md:px-3 py-1 md:py-2 text-base font-medium transition-colors hover:text-orange-300 rounded-md nav-text-reduced",
                   isActive ? "text-black" : ""
                 )}
               >
@@ -134,6 +136,7 @@ export function MainNav() {
             );
           })}
         </div>
+
         {/* Mobile menu toggle */}
         <div className="lg:hidden flex justify-end w-full pr-2">
           <button
@@ -142,39 +145,18 @@ export function MainNav() {
           >
             <span>Menu</span>
             <div className="flex h-4 w-5 flex-col justify-between">
-              <span
-                className={cn(
-                  "h-0.5 w-full transform bg-black transition duration-300",
-                  mobileMenuOpen ? "translate-y-1.5 rotate-45" : ""
-                )}
-              />
-              <span
-                className={cn(
-                  "h-0.5 w-full bg-black transition duration-300",
-                  mobileMenuOpen ? "opacity-0" : "opacity-100"
-                )}
-              />
-              <span
-                className={cn(
-                  "h-0.5 w-full transform bg-black transition duration-300",
-                  mobileMenuOpen ? "-translate-y-1.5 -rotate-45" : ""
-                )}
-              />
+              <span className={cn("h-0.5 w-full transform bg-black transition duration-300", mobileMenuOpen ? "translate-y-1.5 rotate-45" : "")} />
+              <span className={cn("h-0.5 w-full bg-black transition duration-300", mobileMenuOpen ? "opacity-0" : "opacity-100")} />
+              <span className={cn("h-0.5 w-full transform bg-black transition duration-300", mobileMenuOpen ? "-translate-y-1.5 -rotate-45" : "")} />
             </div>
           </button>
         </div>
       </nav>
+
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <>
-          {/* Overlay */}
-          <div
-            className="fixed inset-0 z-40 bg-black bg-opacity-30 lg:hidden"
-            onClick={() => {
-              setMobileMenuOpen(false);
-            }}
-          />
-          {/* Drawer à gauche */}
+          <div className="fixed inset-0 z-40 bg-black bg-opacity-30 lg:hidden" onClick={() => setMobileMenuOpen(false)} />
           <div className="fixed top-0 left-0 z-50 h-full w-4/5 max-w-xs bg-white shadow-2xl px-4 py-6 lg:hidden flex flex-col overflow-y-auto transition-transform duration-300">
             <div className="flex items-center justify-between mb-4">
               <Link href="/" onClick={() => setMobileMenuOpen(false)}>
@@ -203,12 +185,7 @@ export function MainNav() {
                         aria-controls={`submenu-${item.title}`}
                       >
                         {item.title}
-                        <ChevronDown
-                          className={cn(
-                            "h-4 w-4 transition-transform",
-                            openDropdown === item.title ? "rotate-180" : ""
-                          )}
-                        />
+                        <ChevronDown className={cn("h-4 w-4 transition-transform", openDropdown === item.title ? "rotate-180" : "")} />
                       </button>
                       {openDropdown === item.title && (
                         <div id={`submenu-${item.title}`} className="space-y-1 border-l-2 border-ci-green pl-4 ml-2 bg-gray-100 rounded-md">

@@ -241,7 +241,7 @@ const newsList = [
     title: "panel de haut niveau Lors de la celebration des 30 ans de la CAPEC",
     excerpt:
       "",
-    date: "",
+    date: "8 octobre 2024",
     image: "/images/converted_img7.png",
   },
   {
@@ -277,7 +277,14 @@ const newsList = [
     date: "le 3 décembre 2024 ",
     image:  "/images/photo/converted_img_j.png",
   },
- 
+  {
+    id: "19",
+    title: "Lancement du projet SPIA en Côte d’Ivoire : une nouvelle dynamique pour l’agriculture ivoirienne le 15 mai 2025",
+    excerpt:
+      "",
+    date: "Le 15 mai 2025 ",
+    image:  "/images/Atelier.jpg",
+  },
  
 ]
 

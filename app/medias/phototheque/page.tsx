@@ -296,11 +296,91 @@ const seminairesPhotos = [
 
  
   {
-    id: "sem4",
+    id: "sem1",
     title: "FORUM EPA EN PARTENARIAT AVEC L'ACED du 6 au 7 Novembre 2024",
     date: "6 au 7 Novembre 2024",
     description: "",
     src: "/images/photo/converted_img_c.png",
+ 
+  },
+  {
+    id: "sem2",
+    title: "Lancement du projet SPIA en Côte d’Ivoire : une nouvelle dynamique pour l’agriculture ivoirienne",
+    date: "le 15 mai 2025",
+    description: "",
+    src: "/images/photo/IMG_9039con.jpg",
+ 
+  },
+  {
+    id: "sem3",
+    title: "Lancement du projet SPIA en Côte d’Ivoire : une nouvelle dynamique pour l’agriculture ivoirienne",
+    date: "le 15 mai 2025",
+    description: "",
+    src: "/images/photo/IMG_9044.jpg",
+ 
+  },
+  {
+    id: "sem4",
+    title: "Lancement du projet SPIA en Côte d’Ivoire : une nouvelle dynamique pour l’agriculture ivoirienne",
+    date: "le 15 mai 2025",
+    description: "",
+    src: "/images/photo/IMG_9046.jpg",
+ 
+  },
+  {
+    id: "sem5",
+    title: "Lancement du projet SPIA en Côte d’Ivoire : une nouvelle dynamique pour l’agriculture ivoirienne",
+    date: "le 15 mai 2025",
+    description: "",
+    src: "/images/photo/IMG_9056.jpg",
+ 
+  },
+  {
+    id: "sem6",
+    title: "Lancement du projet SPIA en Côte d’Ivoire : une nouvelle dynamique pour l’agriculture ivoirienne",
+    date: "le 15 mai 2025",
+    description: "",
+    src: "/images/photo/IMG_9071.jpg",
+ 
+  },
+  {
+    id: "sem7",
+    title: "Lancement du projet SPIA en Côte d’Ivoire : une nouvelle dynamique pour l’agriculture ivoirienne",
+    date: "le 15 mai 2025",
+    description: "",
+    src: "/images/photo/IMG_9082.jpg",
+ 
+  },
+  {
+    id: "sem8",
+    title: "Lancement du projet SPIA en Côte d’Ivoire : une nouvelle dynamique pour l’agriculture ivoirienne",
+    date: "le 15 mai 2025",
+    description: "",
+    src: "/images/photo/IMG_9083.jpg",
+ 
+  },
+  {
+    id: "sem9",
+    title: "Lancement du projet SPIA en Côte d’Ivoire : une nouvelle dynamique pour l’agriculture ivoirienne",
+    date: "le 15 mai 2025",
+    description: "",
+    src: "/images/photo/IMG_9099.jpg",
+ 
+  },
+  {
+    id: "sem10",
+    title: "Lancement du projet SPIA en Côte d’Ivoire : une nouvelle dynamique pour l’agriculture ivoirienne",
+    date: "le 15 mai 2025",
+    description: "",
+    src: "/images/photo/IMG_9108.jpg",
+ 
+  },
+  {
+    id: "sem11",
+    title: "Lancement du projet SPIA en Côte d’Ivoire : une nouvelle dynamique pour l’agriculture ivoirienne",
+    date: "le 15 mai 2025",
+    description: "",
+    src: "/images/photo/IMG_9110.jpg",
  
   },
  

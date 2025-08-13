@@ -164,7 +164,7 @@ export function Footer() {
             </div>
            
             <div className="text-base text-gray-100 mb-4 text-center md:text-left">
-            Bd Latrille, CIRES, Près du Lycée Classique d'Abidjan 08 BP 1295 Abidjan 08 Abidjan-Cote d'Ivoire
+            Bd Latrille, CIRES, Près du Lycée Classique d'Abidjan 08 BP 1295 Abidjan 08 Abidjan-Côte d'Ivoire
             </div>
             <a href="https://maps.app.goo.gl/2iQ82grwVVgQTdyW7" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-ci-orange font-semibold mb-2 hover:underline">
               <MapPin className="h-5 w-5" />
@@ -194,7 +194,7 @@ export function Footer() {
                 <Link href="/a-propos/organigramme" className="hover:text-ci-orange transition-colors">Organigramme</Link>
                 <Link href="/a-propos/nos-activites" className="hover:text-ci-orange transition-colors">Nos Activités</Link>
                 <Link href="/a-propos/capec-en-chiffres" className="hover:text-ci-orange transition-colors">La CAPEC en Chiffres</Link>
-                <Link href="/a-propos/references" className="hover:text-ci-orange transition-colors">Quelques Références</Link>
+                <Link href="/a-propos/references" className="hover:text-ci-orange transition-colors">Quelques Référence</Link>
                 <Link href="/ressources/recherches" className="hover:text-ci-orange transition-colors">Projets de recherches</Link>
                 <Link href="/ressources/etudes" className="hover:text-ci-orange transition-colors">Etudes</Link>
               </div>
@@ -204,8 +204,8 @@ export function Footer() {
                 <Link href="/activites/compte-rendu" className="hover:text-ci-orange transition-colors">CR d'actualités</Link>
                 <Link href="/activites/interview" className="hover:text-ci-orange transition-colors">Interview - Question</Link>
                 <Link href="/activites/actualites" className="hover:text-ci-orange transition-colors">Actualités</Link>
-                <Link href="/medias/phototheque" className="hover:text-ci-orange transition-colors">Photothèques</Link>
-                <Link href="/medias/videotheque" className="hover:text-ci-orange transition-colors">Vidéothèques</Link>
+                <Link href="/medias/phototheque" className="hover:text-ci-orange transition-colors">Photothèque</Link>
+                <Link href="/medias/videotheque" className="hover:text-ci-orange transition-colors">Vidéothèque</Link>
                
               </div>
             </div>

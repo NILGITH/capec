@@ -16,7 +16,7 @@ export default function RapportActivitePage() {
       <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-100 to-gray-200">
         <div className="container px-4 py-12 md:px-6 md:py-16 flex-grow">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 tracking-tight">Rapports d'Activité</h1>
+            <h1 className="text-4xl font-bold text-gray-900 tracking-tight">Rapports d'Activités</h1>
             <div className="w-24 h-1 bg-orange-400 mx-auto mt-2 rounded-full"></div>
             <p className="mt-4 text-gray-600 max-w-xl mx-auto text-lg">
               Explorez les rapports d'activités de la CAPEC de 2007 à 2024.
@@ -70,22 +70,22 @@ export default function RapportActivitePage() {
 }
 
 const annualReports = [
-  { id: "report2024", title: "Rapports d'Activité 2024", year: "2024", pdfUrl: "/images/rapport activite/rapport 2024.pdf" },
-  { id: "report2023", title: "Rapports d'Activité 2023", year: "2023", pdfUrl: "/images/rapport activite/rapport 2023.pdf" },
-  { id: "report2022", title: "Rapports d'Activité 2022", year: "2022", pdfUrl: "/images/rapport activite/rapport 2022.pdf" },
-  { id: "report2021", title: "Rapports d'Activité 2021", year: "2021", pdfUrl: "/images/rapport activite/rapport 2021.pdf" },
-  { id: "report2020", title: "Rapports d'Activité 2020", year: "2020", pdfUrl: "/images/rapport activite/rapport 2020.pdf" },
-  { id: "report2019", title: "Rapports d'Activité 2019", year: "2019", pdfUrl: "/images/rapport activite/rapport 2019.pdf" },
-  { id: "report2018", title: "Rapports d'Activité 2018", year: "2018", pdfUrl: "/images/rapport activite/rapport 2018.pdf" },
-  { id: "report2017", title: "Rapports d'Activité 2017", year: "2017", pdfUrl: "/images/rapport activite/rapport 2017.pdf" },
-  { id: "report2016", title: "Rapports d'Activité 2016", year: "2016", pdfUrl: "/images/rapport activite/rapport 2016.pdf" },
-  { id: "report2015", title: "Rapports d'Activité 2015", year: "2015", pdfUrl: "/images/rapport activite/rapport 2015.pdf" },
-  { id: "report2014", title: "Rapports d'Activité 2014", year: "2014", pdfUrl: "/images/rapport activite/rapport 2014.pdf" },
-  { id: "report2013", title: "Rapports d'Activité 2013", year: "2013", pdfUrl: "/images/rapport activite/rapport 2013.pdf" },
-  { id: "report2012", title: "Rapports d'Activité 2012", year: "2012", pdfUrl: "/images/rapport activite/rapport 2012.pdf" },
-  { id: "report2011", title: "Rapports d'Activité 2011", year: "2011", pdfUrl: "/images/rapport activite/rapport 2011.pdf" },
-  { id: "report2010", title: "Rapports d'Activité 2010", year: "2010", pdfUrl: "/images/rapport activite/rapport 2010.pdf" },
-  { id: "report2009", title: "Rapports d'Activité 2009", year: "2009", pdfUrl: "/images/rapport activite/rapport 2009.pdf" },
-  { id: "report2008", title: "Rapports d'Activité 2008", year: "2008", pdfUrl: "/images/rapport activite/rapport 2008.pdf" },
-  { id: "report2007", title: "Rapports d'Activité 2007", year: "2007", pdfUrl: "/images/rapport activite/rapport 2007.pdf" },
+  { id: "report2024", title: "Rapports d'Activités 2024", year: "2024", pdfUrl: "/images/rapport activite/rapport 2024.pdf" },
+  { id: "report2023", title: "Rapports d'Activités 2023", year: "2023", pdfUrl: "/images/rapport activite/rapport 2023.pdf" },
+  { id: "report2022", title: "Rapports d'Activités 2022", year: "2022", pdfUrl: "/images/rapport activite/rapport 2022.pdf" },
+  { id: "report2021", title: "Rapports d'Activités 2021", year: "2021", pdfUrl: "/images/rapport activite/rapport 2021.pdf" },
+  { id: "report2020", title: "Rapports d'Activités 2020", year: "2020", pdfUrl: "/images/rapport activite/rapport 2020.pdf" },
+  { id: "report2019", title: "Rapports d'Activités 2019", year: "2019", pdfUrl: "/images/rapport activite/rapport 2019.pdf" },
+  { id: "report2018", title: "Rapports d'Activités 2018", year: "2018", pdfUrl: "/images/rapport activite/rapport 2018.pdf" },
+  { id: "report2017", title: "Rapports d'Activités 2017", year: "2017", pdfUrl: "/images/rapport activite/rapport 2017.pdf" },
+  { id: "report2016", title: "Rapports d'Activités 2016", year: "2016", pdfUrl: "/images/rapport activite/rapport 2016.pdf" },
+  { id: "report2015", title: "Rapports d'Activités 2015", year: "2015", pdfUrl: "/images/rapport activite/rapport 2015.pdf" },
+  { id: "report2014", title: "Rapports d'Activités 2014", year: "2014", pdfUrl: "/images/rapport activite/rapport 2014.pdf" },
+  { id: "report2013", title: "Rapports d'Activités 2013", year: "2013", pdfUrl: "/images/rapport activite/rapport 2013.pdf" },
+  { id: "report2012", title: "Rapports d'Activités 2012", year: "2012", pdfUrl: "/images/rapport activite/rapport 2012.pdf" },
+  { id: "report2011", title: "Rapports d'Activités 2011", year: "2011", pdfUrl: "/images/rapport activite/rapport 2011.pdf" },
+  { id: "report2010", title: "Rapports d'Activités 2010", year: "2010", pdfUrl: "/images/rapport activite/rapport 2010.pdf" },
+  { id: "report2009", title: "Rapports d'Activités 2009", year: "2009", pdfUrl: "/images/rapport activite/rapport 2009.pdf" },
+  { id: "report2008", title: "Rapports d'Activités 2008", year: "2008", pdfUrl: "/images/rapport activite/rapport 2008.pdf" },
+  { id: "report2007", title: "Rapports d'Activités 2007", year: "2007", pdfUrl: "/images/rapport activite/rapport 2007.pdf" },
 ]

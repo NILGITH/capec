@@ -19,7 +19,7 @@ export default function CompteRenduActivitesPage() {
           </h1>
           <div className="w-20 h-1 bg-ci-orange"></div>
           <p className="text-muted-foreground md:text-xl max-w-[800px]">
-            Retrouvez les comptes rendus des activités organisés par la CAPEC.
+            Retrouvez les comptes rendus des activités organisées par la CAPEC.
           </p>
         </div>
 

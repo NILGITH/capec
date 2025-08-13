@@ -52,7 +52,7 @@ export const navItems: NavItem[] = [
         href: "/ressources/recherches",
       },
       {
-        title: "Etude réalisée",
+        title: "Études réalisées",
         href: "/ressources/etudes",
       },
     ],

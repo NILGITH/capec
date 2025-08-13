@@ -50,14 +50,7 @@ export default function MotDuDirecteurPage() {
              et merci de votre intérêt pour notre travail.
 
             </p>
-            <p>
-             Professeur Alban AHOURE
-            </p>
-         
-            <div className="pt-4 font-bold text-black text-lg">
-             
-              <p>Directeur de la CAPEC</p>
-            </div>
+           
           </div>
         </div>
       </div>

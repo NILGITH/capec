@@ -144,7 +144,7 @@ export default function HistoriqueObjectifPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
                       <div className="p-4 text-white">
-                        <p className="text-base font-medium">VISITE DU PROF.ESTHER DUFLO,PRIX NOBEL DE L'ECONOMIE 2019</p>
+                        <p className="text-base font-medium">VISITE DU PROF ESTHER DUFLO , PRIX NOBEL DE L'ECONOMIE 2019</p>
                       </div>
                     </div>
                   </div>
@@ -207,7 +207,7 @@ export default function HistoriqueObjectifPage() {
                 <div>
                   <h3 className="font-bold text-lg mb-4">Objectifs spécifiques</h3>
                   <div className="space-y-4">
-                    <ul className="list-disc pl-4 space-y-2 text-base">
+                    <ul className="list-disc pl-4 space-y-2 text-justify text-base">
                       <li>
                         Faire des études et recherches destinées à éclairer les décideurs et les groupes 
                         socio-économiques ivoiriens, en vue de renforcer les capacités nationales d'analyse 

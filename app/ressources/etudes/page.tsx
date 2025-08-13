@@ -445,7 +445,7 @@ export default function EtudePage() {
                       className="text-blue-600 hover:underline"
                       href="/activites/actualites"
                     >
-                    Conférence internationale de cloture, Abidjan du projet de recherche sur 'impacts des politiques publiques liées à la pandemie de la Covid-19 sur les entreprises, les femmes et les jeunes: cas du Burkina  Faso, Cameroun, Cote d'Ivoire et du Sénégal
+                      Conférence internationale de clôture, Abidjan, du projet de recherche sur l’impact des politiques publiques liées à la pandémie de la Covid-19 sur les entreprises, les femmes et les jeunes : cas du Burkina Faso, du Cameroun, de la Côte d’Ivoire et du Sénégal.
                     </a>
                   </h6>
                   <p className="text-sm text-gray-600"> 23 Mars 2023</p>

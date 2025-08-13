@@ -43,7 +43,7 @@ export default function CapecEnChiffresPage() {
           </h1>
           <div className="w-16 sm:w-20 h-1 bg-ci-orange"></div>
           <p className="text-muted-foreground text-base sm:text-lg md:text-xl max-w-[800px]">
-            Découvrez les chiffres clés qui illustrent l'impact et les réalisations de la CAPEC depuis sa création.
+            Découvrez les chiffres clés qui illustrent l'impact et les réalisations de la CAPEC.
           </p>
         </div>
         <div className="text-center space-y-4 mb-8 sm:mb-12">

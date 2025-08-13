@@ -331,7 +331,7 @@ export default function Home() {
             >
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Projets de recherche Récents</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Découvrez nos dernier projets de recherches.
+                Découvrez nos derniers projets de recherches.
               </p>
             </motion.div>
             <motion.div

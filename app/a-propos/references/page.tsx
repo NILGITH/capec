@@ -137,12 +137,6 @@ const internationalInstitutions = [
     logo: "/images/partenaires/IDRC.jpg",
   },
   {
-    id: "ii7",
-    name: "",
-    type: "",
-    logo: "/images/partenaire_de_la_CAPEC/acbflogo.jpg",
-  },
-  {
     id: "ii8",
     name: "",
     type: "",
@@ -270,12 +264,7 @@ const nationalPublicInstitutions = [
     type: "",
     logo: "/images/partenaire_de_la_CAPEC/LOGO CIRES.jpg",
   },
-  {
-    id: "ni4",
-    name: "",
-    type: "",
-    logo: "/images/partenaire_de_la_CAPEC/acbflogo.jpg",
-  },
+ 
 ]
 
 // Secteur Privé

@@ -197,7 +197,7 @@ const interviews: Interview[] = [
     id: "int1",
     title: "« Nos réflexions aideront à établir un lien entre la violence juvénile et les opportunités économiques »",
     date: "le 18 Août, 2020",
-    speaker: "Prof Kimou Assi José Carlos, Cherecheurs Sénior a la CAPEC,Responsable de la Recherche et du Suivi-Evaluation",
+    speaker: "Prof Kimou Assi José Carlos, Directeur Adjoint de la CAPEC,Responsable de la Recherche et du Suivi-Evaluation",
     type: "video",
   },
   {

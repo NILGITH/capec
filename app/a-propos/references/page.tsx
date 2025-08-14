@@ -178,6 +178,12 @@ const internationalInstitutions = [
     type: "",
     logo: "/images/partenaires/CEA.png",
   },
+  {
+    id: "ii15",
+    name: "",
+    type: "",
+    logo: "/images/acbflogo.png",
+  },
 ]
 
 // Institutions Régionales

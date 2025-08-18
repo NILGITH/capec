@@ -72,8 +72,7 @@ export function EventCarousel({ events }: {
                   <span className="text-xl text-white/80 mb-2 block">
                     {event.date}
                   </span>
-                  <h2 className="text-5xl md:text-4xl font-bold text-white mb-4">{event.title}</h2>
-                  <p className="text-white/90 mb-6 max-w-2xl text-sm md:text-base">{event.description}</p>
+                  <h2 className="text-5xl font-bold text-white mb-4 md:text-5xl">{event.title}</h2>                  <p className="text-white/90 mb-6 max-w-2xl text-sm md:text-base">{event.description}</p>
                   <div className="flex flex-wrap gap-3">
                       <Link href="/activites/actualites">
                         <Button className="flex flex-col gap-2 min-[400px]:flex-row">

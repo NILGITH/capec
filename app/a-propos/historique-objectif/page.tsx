@@ -157,9 +157,16 @@ export default function HistoriqueObjectifPage() {
                       œuvre des politiques économiques, la CAPEC connait une mutation institutionnelle.
                       Elle aura besoin de plus de ressources de l’Etat, mais souhaite préserver son autonomie afin de permettre aux chercheurs
                       d’avoir des contributions plus pertinentes à l’analyse de la politique économique en CI.En attendant cette mutation, 
-                      la CAPEC se présente à ce jour,comme 
+                      la CAPEC se présente à ce jour comme :
 
                     </p>
+                    <div className="mt-4 flex items-center">
+                      <Award className="h-6 w-6 text-ci-green mr-2" />
+                      <p className="text-base font-medium">
+                      un précieux organe de référence dans la maîtrise du développement économique de la Côte d'Ivoire.
+                      </p>
+                    
+                    </div>
                     <div className="mt-4 flex items-center">
                       <Award className="h-6 w-6 text-ci-green mr-2" />
                       <p className="text-base font-medium">
@@ -168,13 +175,7 @@ export default function HistoriqueObjectifPage() {
                       </p>
                     
                     </div>
-                    <div className="mt-4 flex items-center">
-                      <Award className="h-6 w-6 text-ci-green mr-2" />
-                      <p className="text-base font-medium">
-                      un précieux organe de référence dans la maîtrise du développement économique de la Côte d'Ivoire.
-                      </p>
-                    
-                    </div>
+                  
                     <p className="text-base mt-8 text-muted-foreground">
                     Cette performance est à mettre sur le compte de la qualité de ses produits. Produits en tant que résultats de la recherche et produits en tant que Producteurs de la Recherche.
                     </p>

@@ -329,7 +329,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: 0.1 }}
             >
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Projets de recherche Récents</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Travaux de Recherche Récents</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Découvrez nos derniers projets de recherches.
               </p>

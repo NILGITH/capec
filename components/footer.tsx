@@ -164,25 +164,23 @@ export function Footer() {
             </div>
            
             <div className="text-base text-gray-100 mb-4 text-center md:text-left">
-            Bd Latrille, CIRES, Près du Lycée Classique d'Abidjan 08 BP 1295 Abidjan 08 Abidjan-Côte d'Ivoire
+              Bd Latrille, CIRES, Près du Lycée Classique d'Abidjan 08 BP 1295 Abidjan 08 Abidjan-Côte d'Ivoire
             </div>
-            <a href="https://maps.app.goo.gl/2iQ82grwVVgQTdyW7" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-ci-orange font-semibold mb-2 hover:underline">
+            <a href="https://maps.app.goo.gl/2iQ82grwVVgQTdyW7" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-ci-orange font-semibold mb-2 hover:underline justify-center md:justify-start">
               <MapPin className="h-5 w-5" />
               Localisation Google map
             </a>
-            <ul className="text-base text-gray-100 flex flex-col gap-2 w-full">
+            <ul className="text-base text-gray-100 flex flex-col gap-2 w-full items-center md:items-start">
               <li className="flex items-center gap-2">
                 <Phone className="h-5 w-5" />
                 (225) 27 22 44 41 24/
               </li>
-             
               <li className="flex items-center gap-2">
                 <Mail className="h-5 w-5" />
                 <a href="mailto:info@capec.ci" className="hover:text-ci-orange transition-colors">info@capec-ci.org</a>
               </li>
             </ul>
-          </div>
-
+            </div>
           {/* Colonne 2 : Découvrez (sous-menus) */}
           <div className="self-center mt-12 w-full">
             <h3 className="text-lg font-bold uppercase mb-2 font-policy-brief">NOS SOUS MENUS</h3>

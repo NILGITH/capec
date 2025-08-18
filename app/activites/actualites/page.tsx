@@ -39,12 +39,7 @@ export default function NewsPage() {
                   </div>
                   <h2 className="text-2xl font-bold">{featuredNews.title}</h2>
                   <p className="text-muted-foreground text-justify">{featuredNews.excerpt}</p>
-                  {/* <Link href={`/actualites/${featuredNews.id}`}>
-                    <Button className="bg-ci-orange mt-5 hover:bg-orange-600 text-white">
-                      Lire l'article complet
-                      <ChevronRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link> */}
+                 
                 </div>
               </CardContent>
             </div>
@@ -60,29 +55,6 @@ export default function NewsPage() {
             ))}
           </div>
         </div>
-
-        {/* Pagination */}
-        {/* <div className="mt-12 flex justify-center">
-          <div className="flex space-x-2">
-            <Button variant="outline" size="icon" disabled>
-              <ChevronRight className="h-4 w-4 rotate-180" />
-              <span className="sr-only">Page précédente</span>
-            </Button>
-            <Button variant="outline" size="sm" className="font-medium bg-ci-orange text-white border-ci-orange">
-              1
-            </Button>
-            <Button variant="outline" size="sm" className="text-muted-foreground">
-              2
-            </Button>
-            <Button variant="outline" size="sm" className="text-muted-foreground">
-              3
-            </Button>
-            <Button variant="outline" size="icon">
-              <ChevronRight className="h-4 w-4" />
-              <span className="sr-only">Page suivante</span>
-            </Button>
-          </div>
-        </div> */}
       </div>
       <Footer />
     </div>
@@ -115,14 +87,7 @@ function NewsCard({ news } : { news: { id: string; title: string; excerpt: strin
             <Link href={`/activites/actualites/infos/${news.id}`} className="font-bold text-black hover:underline block w-fit">{news.title}</Link>
           )}
           <p className="text-sm text-muted-foreground line-clamp-3 text-justify">{news.excerpt}</p>
-          <div className="pt-2">
-            {/* <Link href={`/actualites/${news.id}`}>
-              <Button variant="link" className="p-0 h-auto">
-                Lire plus
-                <ChevronRight className="ml-1 h-4 w-4" />
-              </Button>
-            </Link> */}
-          </div>
+          
         </div>
       </CardContent>
     </Card>
@@ -139,152 +104,105 @@ const featuredNews = {
 }
 
 const newsList = [
-  // {
-  //   id: "2",
-  //   title: "CONFERENCE DE HAUT NIVEAU",
-  //   excerpt:
-  //     "La Banque Africaine de Développement (BAD), avec l'appui de la Cellule d'Analyse de Politiques Economiques du CIRES organise, le mardi 10 mai de 10h00 à 12h30.",
-  //   date: "Publié le 06 Mai, 2022",
-  //   image: "/images/conf2.jpg?text=Partenariat+Université+Paris-Saclay&height=340&width=600",
-  // },
-  // {
-  //   id: "3",
-  //   title: "La CAPEC se félicite pour la validation de la vision prospectrice 2050 de la CEDEAO.",
-  //   excerpt:
-  //     "A la suite de plusieurs rencontres de validation technique puis de validation par le Conseil des Ministres de la CEDEAO (le 10 décembre 2021).",
-  //   date: "Publié le 21 Déc, 2021",
-  //   image: "/images/actua1.jpg?text=Rapport+Annuel+Économie&height=340&width=600",
-  // },
-  // {
-  //   id: "4",
-  //   title: "RECRUTEMENT DE DEUX CHERCHEURS JUNIORS MICROECONOMISTES ET D'UN CHERCHEUR JUNIOR MACROECONOMISTE",
-  //   excerpt:
-  //     "Ce recrutement visait à renforcer l'équipe de recherche de la CAPEC en intégrant de jeunes talents spécialisés en microéconomie et macroéconomie.",
-  //   date: "Publié le 22 Avr, 2022",
-  //   image: "/images/recrutement.png?text=Séminaire+Analyse+Données&height=340&width=600",
-  // },
   {
-    id: "14",
-    title: "Réunion de validation du projet de vision 2050 par les expert des etats membres de la CEDAO, du 10 au 12 Septembre 2021, Accra/Ghana",
-    excerpt:
-      "",
-    date: "du 10 au 12 Septembre 2021",
-    image: "/images/TOUTES LES ACTUALITES/REUNION DE VALIDATION DU PROJET DE VISION.jpg",
+    id: "19",
+    title: "Lancement du projet SPIA en Côte d’Ivoire : une nouvelle dynamique pour l’agriculture ivoirienne le 15 mai 2025",
+    excerpt: "",
+    date: "Le 15 mai 2025 ",
+    image:  "/images/Atelier.jpg",
   },
-  {
-    id: "9",
-    title: "Conférence internationale de cloture, Abidjan du projet de recherche sur l'impacts des politiques publiques liées à la pandemie de la Covid-19 sur les entreprises, les femmes et les jeunes: cas du Burkina  Faso, Cameroun, Cote d'Ivoire et du Sénégal'",
-    excerpt:
-      "",
-    date: "jeudi 23 Mars 2023",
-    image: "/images/TOUTES LES ACTUALITES/Conferenceinternationale.jpg",
-  },
-  {
-    id: "15",
-    title: "Reunion du Comité indépendant de lecture et 4ème réunion du Comité de pilotage de l'Etude relative a l'Elaboration de la vision 2040 de l'UEMOA, 10 au 16 septembre 2023 –Ouagadougou/Burkina Faso",
-    excerpt:
-      "",
-    date: "10 au 16 septembre 2023",
-    image: "/images/TOUTES LES ACTUALITES/ReunionComite.jpg",
-  },
-  {
-    id: "5",
-    title: "4ème Edition des Conférences internationales  sur les Etudes Japonaises 09 fev 23 ",
-    excerpt:
-      "",
-    date: "09 Février 2023",
-    image: "/images/TOUTES LES ACTUALITES/conference.jpg",
-  },
-  {
-    id: "6",
-    title: "9ème édition Africa Think Tanks… ACBF 08 au 10 Novembre 2023, Lusaka/ZAMBIE.",
-    excerpt:
-      "",
-    date: " 08 au 10 Novembre 2023",
-    image: "/images/TOUTES LES ACTUALITES/ACBF.jpeg",
-  },
-  {
-    id: "7",
-    title: "Cérémonie d'ouverture officiel du JAPAN CORNER de l'UFHB - 1er Juin 2023",
-    excerpt:
-      "",
-    date: "Publié le 1er Juin 2023",
-    image: "/images/TOUTES LES ACTUALITES/Ceremonie.jpg",
-  },
-  {
-    id: "8",
-    title: "Conférence de cloture du Projet de Recherche PEP sur l'impact socio-economique des jeunes vulnérables en Cote d'Ivoire, Abidjan, 21 Oct 2021",
-    excerpt:
-      "",
-    date: "Publié le 21 Octobre 2021",
-    image: "/images/conferencedecloture.jpeg",
-  },
- 
-  // {
-  //   id: "10",
-  //   title: "INAUGURATION JAPAN CORNER",
-  //   excerpt:
-  //     "Ce recrutement visait à renforcer l'équipe de recherche de la CAPEC en intégrant de jeunes talents spécialisés en microéconomie et macroéconomie.",
-  //   date: "Publié le 22 Avr, 2022",
-  //   image: "/images/TOUTES LES ACTUALITES/INAUGURATION JAPAN CORNER.jpg",
-  // },
-  {
-    id: "11",
-    title: "Cérémonie de lancement du Projet de recherche sur «Impact des programmes socio-éducatifs communautaires d’encadrement de la petite enfance sur l’autonomisation des femmes dans les zones défavorisées sur Burkina Faso et de la Côte d’Ivoire » Abidjan 22 juillet 2021",
-    excerpt:
-      "",
-    date: " 22 juillet 2021",
-    image: "/images/converted_img6.png",
-  },
-  {
-    id: "12",
-    title: "panel de haut niveau Lors de la celebration des 30 ans de la CAPEC",
-    excerpt:
-      "",
-    date: "8 octobre 2024",
-    image: "/images/converted_img7.png",
-  },
-  {
-    id: "13",
-    title: "Restitution des 03 études sur «La problématique du changement du taux de l’impôt BIC » , « La rationalisation du code des investissements ».Abidjan, 02 Février 2023",
-    excerpt:
-      "",
-    date: "02 Février 2023",
-    image: "/images/TOUTES LES ACTUALITES/RESTITUTION BUDGET.jpg",
-  },
-  {
-    id: "16",
-    title: "Le Forum EPA, organisé en partenariat avec l’ACED, s’est tenu à Abidjan les 6 et 7 novembre 2024. Cet événement majeur a réuni des acteurs clés du développement issus de divers horizons pour réfléchir ensemble aux voies d’un développement inclusif en Afrique francophone.",
-    excerpt:
-      "",
-    date: "6 et 7 novembre 2024",
-    image: "/images/photo/converted_img_c.png",
-  },
-  {
-    id: "17",
-    title: "l’Université Félix Houphouët-Boigny de Cocody a accueilli la Conférence Internationale Japan Corner - JICA - CAPEC sur le thème : « Faire progresser l’industrialisation et améliorer la productivité du travail : une voie pour le développement de l’économie ivoirienne ».",
-    excerpt:
-      "",
-    date: "Le 22 février 2024",
-    image: "/images/japan.jpg",
-  },
- 
+  
   {
     id: "18",
     title: "Le Professeur Alban AHOURÉ, Directeur de la CAPEC, a été nominé à la 6ᵉ édition du Who's Who in Côte d'Ivoire, un événement annuel honorant l'excellence ivoirienne dans divers secteurs.",
-    excerpt:
-      "",
+    excerpt: "",
     date: "le 3 décembre 2024 ",
     image:  "/images/photo/converted_img_j.png",
   },
   {
-    id: "19",
-    title: "Lancement du projet SPIA en Côte d’Ivoire : une nouvelle dynamique pour l’agriculture ivoirienne le 15 mai 2025",
-    excerpt:
-      "",
-    date: "Le 15 mai 2025 ",
-    image:  "/images/Atelier.jpg",
+    id: "16",
+    title: "Le Forum EPA, organisé en partenariat avec l’ACED, s’est tenu à Abidjan les 6 et 7 novembre 2024. Cet événement majeur a réuni des acteurs clés du développement issus de divers horizons pour réfléchir ensemble aux voies d’un développement inclusif en Afrique francophone.",
+    excerpt: "",
+    date: "6 et 7 novembre 2024",
+    image: "/images/photo/converted_img_c.png",
   },
- 
+  {
+    id: "12",
+    title: "panel de haut niveau Lors de la celebration des 30 ans de la CAPEC",
+    excerpt: "",
+    date: "8 octobre 2024",
+    image: "/images/converted_img7.png",
+  },
+  {
+    id: "17",
+    title: "l’Université Félix Houphouët-Boigny de Cocody a accueilli la Conférence Internationale Japan Corner - JICA - CAPEC sur le thème : « Faire progresser l’industrialisation et améliorer la productivité du travail : une voie pour le développement de l’économie ivoirienne ».",
+    excerpt: "",
+    date: "Le 22 février 2024",
+    image: "/images/japan.jpg",
+  },
+  {
+    id: "6",
+    title: "9ème édition Africa Think Tanks… ACBF 08 au 10 Novembre 2023, Lusaka/ZAMBIE.",
+    excerpt: "",
+    date: " 08 au 10 Novembre 2023",
+    image: "/images/TOUTES LES ACTUALITES/ACBF.jpeg",
+  },
+  {
+    id: "15",
+    title: "Reunion du Comité indépendant de lecture et 4ème réunion du Comité de pilotage de l'Etude relative a l'Elaboration de la vision 2040 de l'UEMOA, 10 au 16 septembre 2023 –Ouagadougou/Burkina Faso",
+    excerpt: "",
+    date: "10 au 16 septembre 2023",
+    image: "/images/TOUTES LES ACTUALITES/ReunionComite.jpg",
+  },
+  {
+    id: "7",
+    title: "Cérémonie d'ouverture officiel du JAPAN CORNER de l'UFHB - 1er Juin 2023",
+    excerpt: "",
+    date: "Publié le 1er Juin 2023",
+    image: "/images/TOUTES LES ACTUALITES/Ceremonie.jpg",
+  },
+  {
+    id: "9",
+    title: "Conférence internationale de cloture, Abidjan du projet de recherche sur l'impacts des politiques publiques liées à la pandemie de la Covid-19 sur les entreprises, les femmes et les jeunes: cas du Burkina  Faso, Cameroun, Cote d'Ivoire et du Sénégal'",
+    excerpt: "",
+    date: "jeudi 23 Mars 2023",
+    image: "/images/TOUTES LES ACTUALITES/Conferenceinternationale.jpg",
+  },
+  {
+    id: "5",
+    title: "4ème Edition des Conférences internationales  sur les Etudes Japonaises 09 fev 23 ",
+    excerpt: "",
+    date: "09 Février 2023",
+    image: "/images/TOUTES LES ACTUALITES/conference.jpg",
+  },
+  {
+    id: "13",
+    title: "Restitution des 03 études sur «La problématique du changement du taux de l’impôt BIC » , « La rationalisation du code des investissements ».Abidjan, 02 Février 2023",
+    excerpt: "",
+    date: "02 Février 2023",
+    image: "/images/TOUTES LES ACTUALITES/RESTITUTION BUDGET.jpg",
+  },
+  {
+    id: "8",
+    title: "Conférence de cloture du Projet de Recherche PEP sur l'impact socio-economique des jeunes vulnérables en Cote d'Ivoire, Abidjan, 21 Oct 2021",
+    excerpt: "",
+    date: "Publié le 21 Octobre 2021",
+    image: "/images/conferencedecloture.jpeg",
+  },
+  {
+    id: "14",
+    title: "Réunion de validation du projet de vision 2050 par les expert des etats membres de la CEDAO, du 10 au 12 Septembre 2021, Accra/Ghana",
+    excerpt: "",
+    date: "du 10 au 12 Septembre 2021",
+    image: "/images/TOUTES LES ACTUALITES/REUNION DE VALIDATION DU PROJET DE VISION.jpg",
+  },
+  {
+    id: "11",
+    title: "Cérémonie de lancement du Projet de recherche sur «Impact des programmes socio-éducatifs communautaires d’encadrement de la petite enfance sur l’autonomisation des femmes dans les zones défavorisées sur Burkina Faso et de la Côte d’Ivoire » Abidjan 22 juillet 2021",
+    excerpt: "",
+    date: " 22 juillet 2021",
+    image: "/images/converted_img6.png",
+  },
 ]
+
 

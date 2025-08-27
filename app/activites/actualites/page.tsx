@@ -21,7 +21,7 @@ export default function NewsPage() {
 
         {/* Featured News */}
         <div className="mt-10">
-          <Card className="overflow-hidden border-l-4 border-l-ci-orange">
+          {/* <Card className="overflow-hidden border-l-4 border-l-ci-orange">
             <div className="grid md:grid-cols-2">
               <div className="relative aspect-video md:aspect-auto">
                 <Image
@@ -39,11 +39,11 @@ export default function NewsPage() {
                   </div>
                   <h2 className="text-2xl font-bold">{featuredNews.title}</h2>
                   <p className="text-muted-foreground text-justify">{featuredNews.excerpt}</p>
-                 
+                  
                 </div>
               </CardContent>
             </div>
-          </Card>
+          </Card> */}
         </div>
 
         {/* News List */}
@@ -81,7 +81,7 @@ function NewsCard({ news } : { news: { id: string; title: string; excerpt: strin
             <Calendar className="mr-2 h-4 w-4" />
             <span>{news.date}</span>
           </div>
-          {news.id === "5" || news.id === "12" ? (
+          {news.id === "1" || news.id === "5" || news.id === "12" ? (
             <span className="font-bold text-black block w-fit">{news.title}</span>
           ) : (
             <Link href={`/activites/actualites/infos/${news.id}`} className="font-bold text-black hover:underline block w-fit">{news.title}</Link>
@@ -95,13 +95,13 @@ function NewsCard({ news } : { news: { id: string; title: string; excerpt: strin
 }
 
 // Sample data with updated image placeholders
-const featuredNews = {
-  id: "1",
-  title: "30e anniversaire de la CAPEC",
-  excerpt:
-    "Les 8 et 9 octobre 2024, la CAPEC a célébrée ses 30 ans d'existence à Abidjan. L'événement, placé sous le haut patronage du Vice-Président de la République, Tiémoko Meyliet Koné, a été l'occasion de faire le bilan des contributions de la CAPEC à la transformation structurelle de la Côte d'Ivoire et à l'intégration sous-régionale entre 1993 et 2023.",
-  date: "Publié le 8 et 9 octobre 2024",
-}
+// const featuredNews = {
+//   id: "1",
+//   title: "30e anniversaire de la CAPEC",
+//   excerpt:
+//     "Les 8 et 9 octobre 2024, la CAPEC a célébrée ses 30 ans d'existence à Abidjan. L'événement, placé sous le haut patronage du Vice-Président de la République, Tiémoko Meyliet Koné, a été l'occasion de faire le bilan des contributions de la CAPEC à la transformation structurelle de la Côte d'Ivoire et à l'intégration sous-régionale entre 1993 et 2023.",
+//   date: "Publié le 8 et 9 octobre 2024",
+// }
 
 const newsList = [
   {
@@ -109,7 +109,7 @@ const newsList = [
     title: "Lancement du projet SPIA en Côte d’Ivoire : une nouvelle dynamique pour l’agriculture ivoirienne le 15 mai 2025",
     excerpt: "",
     date: "Le 15 mai 2025 ",
-    image:  "/images/Atelier.jpg",
+    image: 	"/images/Atelier.jpg",
   },
   
   {
@@ -117,7 +117,7 @@ const newsList = [
     title: "Le Professeur Alban AHOURÉ, Directeur de la CAPEC, a été nominé à la 6ᵉ édition du Who's Who in Côte d'Ivoire, un événement annuel honorant l'excellence ivoirienne dans divers secteurs.",
     excerpt: "",
     date: "le 3 décembre 2024 ",
-    image:  "/images/photo/converted_img_j.png",
+    image: 	"/images/photo/converted_img_j.png",
   },
   
   {
@@ -142,6 +142,14 @@ const newsList = [
     image: "/images/japan.jpg",
   },
   {
+    id: "1",
+    title: "30e anniversaire de la CAPEC",
+    excerpt:
+    "",
+      date: "Publié le 8 et 9 octobre 2024",
+      image:"/images/12.jpg?text=Conférence+Internationale+CAPEC&height=500&width=800"
+  },
+  {
     id: "6",
     title: "9ème édition Africa Think Tanks… ACBF 08 au 10 Novembre 2023, Lusaka/ZAMBIE.",
     excerpt: "",
@@ -164,14 +172,14 @@ const newsList = [
   },
   {
     id: "9",
-    title: "Conférence internationale de cloture, Abidjan du projet de recherche sur l'impacts des politiques publiques liées à la pandemie de la Covid-19 sur les entreprises, les femmes et les jeunes: cas du Burkina  Faso, Cameroun, Cote d'Ivoire et du Sénégal'",
+    title: "Conférence internationale de cloture, Abidjan du projet de recherche sur l'impacts des politiques publiques liées à la pandemie de la Covid-19 sur les entreprises, les femmes et les jeunes: cas du Burkina  Faso, Cameroun, Cote d'Ivoire et du Sénégal'",
     excerpt: "",
     date: "jeudi 23 Mars 2023",
     image: "/images/TOUTES LES ACTUALITES/Conferenceinternationale.jpg",
   },
   {
     id: "5",
-    title: "4ème Edition des Conférences internationales  sur les Etudes Japonaises 09 fev 23 ",
+    title: "4ème Edition des Conférences internationales  sur les Etudes Japonaises 09 fev 23 ",
     excerpt: "",
     date: "09 Février 2023",
     image: "/images/TOUTES LES ACTUALITES/conference.jpg",
@@ -204,6 +212,5 @@ const newsList = [
     date: " 22 juillet 2021",
     image: "/images/converted_img6.png",
   },
+  
 ]
-
-

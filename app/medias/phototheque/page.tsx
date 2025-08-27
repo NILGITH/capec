@@ -4,7 +4,6 @@ import { useState } from "react"
 import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
 import { MainNav } from "@/components/main-nav"
 
@@ -54,172 +53,32 @@ export default function PhotothequePage() {
           </p>
         </div>
 
-        <Tabs defaultValue="all" className="mt-8 mb-32">
-          <TabsList className="grid grid-cols-6 w-full">
-            <TabsTrigger value="all">Toutes les photos</TabsTrigger>
-            <TabsTrigger value="conferences">Conférences</TabsTrigger>
-            <TabsTrigger value="seminaires">Séminaires</TabsTrigger>
-            <TabsTrigger value="formations">Formations</TabsTrigger>
-            <TabsTrigger value="equipes">Équipes</TabsTrigger>
-            <TabsTrigger value="panel">Panels</TabsTrigger>
-          </TabsList>
-          <TabsContent value="all" className="mt-6">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {allPhotos.map((photo, index) => (
-                <div
-                  key={photo.id}
-                  className="overflow-hidden rounded-lg shadow-md cursor-pointer group"
-                  onClick={() => openLightbox(photo, index)}
-                >
-                  <div className="relative aspect-square">
-                    <Image
-                      src={photo.src || "/placeholder.svg"}
-                      alt={photo.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                      <div className="p-3 text-white">
-                        <h3 className="font-medium text-sm">{photo.title}</h3>
-                        <p className="text-xs text-white/80">{photo.date}</p>
-                      </div>
+        <div className="mt-8 mb-32">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {allPhotos.map((photo, index) => (
+              <div
+                key={photo.id}
+                className="overflow-hidden rounded-lg shadow-md cursor-pointer group"
+                onClick={() => openLightbox(photo, index)}
+              >
+                <div className="relative aspect-square">
+                  <Image
+                    src={photo.src || "/placeholder.svg"}
+                    alt={photo.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                    <div className="p-3 text-white">
+                      <h3 className="font-medium text-sm">{photo.title}</h3>
+                      <p className="text-xs text-white/80">{photo.date}</p>
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </TabsContent>
-          <TabsContent value="conferences" className="mt-6">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {conferencesPhotos.map((photo, index) => (
-                <div
-                  key={photo.id}
-                  className="overflow-hidden rounded-lg shadow-md cursor-pointer group"
-                  onClick={() => openLightbox(photo, conferencesPhotos.indexOf(photo))}
-                >
-                  <div className="relative aspect-square">
-                    <Image
-                      src={photo.src || "/placeholder.svg"}
-                      alt={photo.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                      <div className="p-3 text-white">
-                        <h3 className="font-medium text-sm">{photo.title}</h3>
-                        <p className="text-xs text-white/80">{photo.date}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </TabsContent>
-          <TabsContent value="seminaires" className="mt-6">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {seminairesPhotos.map((photo, index) => (
-                <div
-                  key={photo.id}
-                  className="overflow-hidden rounded-lg shadow-md cursor-pointer group"
-                  onClick={() => openLightbox(photo, seminairesPhotos.indexOf(photo))}
-                >
-                  <div className="relative aspect-square">
-                    <Image
-                      src={photo.src || "/placeholder.svg"}
-                      alt={photo.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                      <div className="p-3 text-white">
-                        <h3 className="font-medium text-sm">{photo.title}</h3>
-                        <p className="text-xs text-white/80">{photo.date}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </TabsContent>
-          <TabsContent value="formations" className="mt-6">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {formationsPhotos.map((photo, index) => (
-                <div
-                  key={photo.id}
-                  className="overflow-hidden rounded-lg shadow-md cursor-pointer group"
-                  onClick={() => openLightbox(photo, formationsPhotos.indexOf(photo))}
-                >
-                  <div className="relative aspect-square">
-                    <Image
-                      src={photo.src || "/placeholder.svg"}
-                      alt={photo.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                      <div className="p-3 text-white">
-                        <h3 className="font-medium text-sm">{photo.title}</h3>
-                        <p className="text-xs text-white/80">{photo.date}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </TabsContent>
-          <TabsContent value="equipes" className="mt-6">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {equipesPhotos.map((photo, index) => (
-                <div
-                  key={photo.id}
-                  className="overflow-hidden rounded-lg shadow-md cursor-pointer group"
-                  onClick={() => openLightbox(photo, equipesPhotos.indexOf(photo))}
-                >
-                  <div className="relative aspect-square">
-                    <Image
-                      src={photo.src || "/placeholder.svg"}
-                      alt={photo.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                      <div className="p-3 text-white">
-                        <h3 className="font-medium text-sm">{photo.title}</h3>
-                        <p className="text-xs text-white/80">{photo.date}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </TabsContent>
-          <TabsContent value="panel" className="mt-6">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {panelPhotos.map((photo, index) => (
-                <div
-                  key={photo.id}
-                  className="overflow-hidden rounded-lg shadow-md cursor-pointer group"
-                  onClick={() => openLightbox(photo, panelPhotos.indexOf(photo))}
-                >
-                  <div className="relative aspect-square">
-                    <Image
-                      src={photo.src || "/placeholder.svg"}
-                      alt={photo.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                      <div className="p-3 text-white">
-                        <h3 className="font-medium text-sm">{photo.title}</h3>
-                        <p className="text-xs text-white/80">{photo.date}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Lightbox */}
@@ -266,8 +125,6 @@ export default function PhotothequePage() {
 
 // Sample data
 const conferencesPhotos = [
- 
-
   {
     id: "conf3",
     title: "3 ETUDES D'EVALUATION D'IMPACT DES MESURES FISCALES",
@@ -288,20 +145,16 @@ const conferencesPhotos = [
     date: "",
     description: "",
     src: "/images/photo/converted_img_j.png",
-    
   },
 ]
 
 const seminairesPhotos = [
-
- 
   {
     id: "sem1",
     title: "FORUM EPA EN PARTENARIAT AVEC L'ACED du 6 au 7 Novembre 2024",
     date: "6 au 7 Novembre 2024",
     description: "",
     src: "/images/photo/converted_img_c.png",
- 
   },
   {
     id: "sem2",
@@ -309,7 +162,6 @@ const seminairesPhotos = [
     date: "le 15 mai 2025",
     description: "",
     src: "/images/photo/IMG_9039con.jpg",
- 
   },
   {
     id: "sem3",
@@ -317,7 +169,6 @@ const seminairesPhotos = [
     date: "le 15 mai 2025",
     description: "",
     src: "/images/photo/IMG_9044.jpg",
- 
   },
   {
     id: "sem4",
@@ -325,7 +176,6 @@ const seminairesPhotos = [
     date: "le 15 mai 2025",
     description: "",
     src: "/images/photo/IMG_9046.jpg",
- 
   },
   {
     id: "sem5",
@@ -333,7 +183,6 @@ const seminairesPhotos = [
     date: "le 15 mai 2025",
     description: "",
     src: "/images/photo/IMG_9056.jpg",
- 
   },
   {
     id: "sem6",
@@ -341,7 +190,6 @@ const seminairesPhotos = [
     date: "le 15 mai 2025",
     description: "",
     src: "/images/photo/IMG_9071.jpg",
- 
   },
   {
     id: "sem7",
@@ -349,7 +197,6 @@ const seminairesPhotos = [
     date: "le 15 mai 2025",
     description: "",
     src: "/images/photo/IMG_9082.jpg",
- 
   },
   {
     id: "sem8",
@@ -357,7 +204,6 @@ const seminairesPhotos = [
     date: "le 15 mai 2025",
     description: "",
     src: "/images/photo/IMG_9083.jpg",
- 
   },
   {
     id: "sem9",
@@ -365,7 +211,6 @@ const seminairesPhotos = [
     date: "le 15 mai 2025",
     description: "",
     src: "/images/photo/IMG_9099.jpg",
- 
   },
   {
     id: "sem10",
@@ -373,7 +218,6 @@ const seminairesPhotos = [
     date: "le 15 mai 2025",
     description: "",
     src: "/images/photo/IMG_9108.jpg",
- 
   },
   {
     id: "sem11",
@@ -381,13 +225,10 @@ const seminairesPhotos = [
     date: "le 15 mai 2025",
     description: "",
     src: "/images/photo/IMG_9110.jpg",
- 
   },
- 
 ]
 
 const formationsPhotos = [
- 
   {
     id: "form1",
     title: "Remise des trophées 30 ans de la CAPEC - Awards de la politique économique",
@@ -415,7 +256,6 @@ const formationsPhotos = [
     date: "",
     description: "",
     src: "/images/Atelier.jpg",
-
   },
   {
     id: "form5",
@@ -423,14 +263,10 @@ const formationsPhotos = [
     date: "",
     description: "",
     src: "/images/photo/converted_img_k.png",
-
   },
-  
-  
 ]
 
 const equipesPhotos = [
- 
   {
     id: "eq2",
     title: "Directeur de la CAPEC PROF;AHOURE Alban pendant la conférence JAPAN CORNER-JICA-TODA CORPORATION-CAPEC 2025",
@@ -438,8 +274,6 @@ const equipesPhotos = [
     description: "",
     src: "/images/dgcapec.jpg?text=Équipe+Recherche+Développement&height=600&width=600",
   },
- 
- 
   {
     id: "eq3",
     title: "Visite d'Esther DUFLO,prix Nobel de l'Economie 2019",
@@ -447,13 +281,9 @@ const equipesPhotos = [
     description: "",
     src: "/images/estherubo.jpg?text=Équipe+Recherche+Développement&height=600&width=600",
   },
- 
- 
 ]
 
-
 const panelPhotos = [
-
   {
     id: "pan2",
     title: "Panel de haut niveau",
@@ -461,8 +291,6 @@ const panelPhotos = [
     description: "",
     src: "/images/photo/panel de haut niveau.png",
   },
- 
- 
   {
     id: "pan3",
     title: "Panel de haut niveau",
@@ -470,7 +298,6 @@ const panelPhotos = [
     description: "",
     src: "/images/photo/converted_img_g.png",
   },
-  
   {
     id: "pan4",
     title: "Panel de haut niveau",
@@ -478,7 +305,6 @@ const panelPhotos = [
     description: "",
     src: "/images/photo/panel de haut niveau (4).png",
   },
-
   {
     id: "pan5",
     title: "Panel de haut niveau",
@@ -486,6 +312,4 @@ const panelPhotos = [
     description: "",
     src: "/images/photo/panel de haut niveau (2).png",
   },
-
- 
 ]

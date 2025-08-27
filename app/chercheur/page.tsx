@@ -24,7 +24,7 @@ export default function ChercheurPage() {
         <div className="space-y-4">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Nos Chercheurs</h1>
           <p className="text-muted-foreground md:text-xl max-w-[800px]">
-            Découvrez l'équipe de chercheurs de la CAPEC, leurs domaines d'expertise et leurs publications.
+            Découvrez l'équipe de chercheurs de la CAPEC à travers notre galerie de photos.
           </p>
         </div>
 
@@ -56,17 +56,17 @@ export default function ChercheurPage() {
 }
 
 function ResearcherCard({ researcher }: { researcher: any }) {
-  // Liste des identifiants des chercheurs pour lesquels appliquer le zoom
-  const idsToZoom = ["1", "2", "3", "4", "5"];
-  const shouldZoom = idsToZoom.includes(researcher.id);
-  
-  const imageClass = shouldZoom
-    ? "object-cover object-position-center transform scale-140"
-    : "object-contain inset-0";
+  // Liste des identifiants des chercheurs pour lesquels appliquer le zoom et le centrage
+  const idsToFocus = ["4", "5"]; // Dr BECHO et Prof BEKE
+  const shouldFocus = idsToFocus.includes(researcher.id);
+
+  const imageClass = shouldFocus
+    ? "object-cover object-position-top scale-125" // Zoom et positionne en haut
+    : "object-contain"; // Utilise object-contain pour les autres images
 
   return (
     <Card className="overflow-hidden hover:shadow-md transition-shadow bg-white rounded-lg border border-gray-200 group">
-      <div className="relative w-full h-64">
+      <div className="relative w-full h-64 mb-6">
         <Image
           src={researcher.photo || "/placeholder.svg"}
           alt={researcher.name}
@@ -75,7 +75,7 @@ function ResearcherCard({ researcher }: { researcher: any }) {
         />
       </div>
 
-      <div className="p-4 group-hover:bg-ci-orange/10 transition-colors duration-200">
+      <div className="p-4  group-hover:bg-ci-orange/10 transition-colors duration-200">
         <h3 className="font-bold text-lg text-gray-800 group-hover:text-ci-orange transition-colors">
           {researcher.name}
         </h3>
@@ -118,7 +118,7 @@ function ResearcherCard({ researcher }: { researcher: any }) {
                       src={researcher.photo || "/placeholder.svg"}
                       alt={researcher.name}
                       fill
-                      className="object-cover"
+                      className={shouldFocus ? "object-cover object-position-top scale-125" : "object-cover"} // Applique le zoom pour le modal aussi
                     />
                   </div>
                   <h2 className="text-xl font-bold">{researcher.name}</h2>
@@ -167,8 +167,14 @@ const seniorResearchers = [
     name: "Prof AHOURE ALBAN ALPHONSE EMMANUEL",
     title: "Directeur de la CAPEC",
     photo: "/images/chercheurs/profahourealbanalphonseemmanueldirecteurdelacapec.jpg?t&height=200&width=1200&object-cover",
-    expertise: ["Économie", "Gestion", "Politiques publiques"],
-    bio: "Biographie de Prof AHOURE ALBAN ALPHONSE EMMANUEL.",
+    expertise: ["Économie ", "Gestion", "Politiques publiques"],
+    bio: `Alban A. E. Ahouré est Professeur Titulaire des Sciences Économiques à l'Université Félix Houphouët-Boigny d'Abidjan (depuis 2021) et Directeur de la Cellule d'Analyse de Politiques Économiques du CIRES (CAPEC) depuis 2011. Docteur en économie de l'Université de Kobé (Japon, 2006), il est spécialiste de la microéconomie appliquée, de l'économie du travail et des ressources humaines, de l'économie des institutions, de la théorie des jeux et de l'évaluation des politiques publiques.
+
+Il a coordonné de nombreuses études sur la compétitivité, la fiscalité, le secteur privé, l'informalité, l'agriculture, la gouvernance et les perspectives de développement pour des institutions nationales, régionales (UEMOA, CEDEAO) et internationales (AfDB, Banque Mondiale, PNUD, PAM, FAO, UNICEF, etc).
+
+Auteur de plusieurs ouvrages et articles scientifiques dans des revues internationales de référence, ses recherches portent notamment sur l'employabilité, l'inclusion économique, les modèles d'affaires inclusifs et la transformation structurelle en Afrique.
+
+Élu en 2024 Membre Honoraire de l'Académie Royale Européenne de Docteurs (RAED) et figurant sans discontinuer dans le Who's Who en Côte d'Ivoire depuis sa première édition, il contribue activement au débat scientifique et aux politiques de développement en Afrique.`,
     socials: {
       linkedin: "https://www.linkedin.com/in/yves-thierry-kacou-phd-462a69145",
       twitter: "#",
@@ -205,9 +211,9 @@ const seniorResearchers = [
     id: "4",
     name: "Dr BECHO-N’DRI Isabelle",
     title: "Chercheuse à la Cellule d’Analyse de politique economique du CIRES (CAPEC)",
-    photo: "/images/chercheurs/Dr BECHO .jpg?text=Dr.+Jean+Touré&height=100&width=300",
+    photo: "/images/chercheurs/Dr BECHO .jpg",
     expertise: ["Microéconomie", "Analyse des données"],
-    bio: "BECHO Isabelle epse N’DRI est une économiste titulaire d'un doctorat en économie de l'Université Félix Houphouët-Boigny de Cocody, ainsi que d'un diplôme de Microprogramme in Applied Development Economics de l'Université Laval. Elle est enseignante-Chercheure à l'Université Virtuelle de Côte d'Ivoire (UVCI) et chercheuse à la Cellule d’Analyse de Politique Economique du CIRES (CAPEC).Ses domaines d'expertise englobent l'évaluation d'impact des politiques publiques, l'analyse de la pauvreté, l'analyse de la vulnérabilité, l’économie politique et la gouvernance, , l'analyse de genre, , l'analyse des entreprises, l'analyse du secteur informel, la finance inclusive, la microfinance, l'économie du développement, les techniques quantitatives et qualitatives, ainsi que le traitement et l'analyse de données.Isabelle s'est distinguée par son engagement sur des projets touchant aux questions de genre, de vulnérabilité, et d'extrémisme violent. Elle a collaboré avec ONUFEMMES pour évaluer les opportunités pour les femmes dans les opérations de paix des Nations Unies en Côte d’Ivoire. Dans ce cadre, elle a conçu et coordonné des études sur l'impact des politiques de sécurité sur l'autonomisation des femmes.En partenariat avec l'USAID, elle a conduit des recherches approfondies sur les impacts des politiques publiques liées à la pandémie de la COVID-19 sur les femmes et les jeunes en Afrique de l'Ouest, et a également travaillé sur l'analyse des vulnérabilités socio-économiques dans des contextes de post-conflit, notamment en Côte d'Ivoire. Isabelle a également été consultante pour Equal Access, où elle a contribué à des projets visant à réduire l'extrémisme violent à travers l'inclusion économique et sociale des jeunes.Forte d'une expérience solide en formation et enseignement, Isabelle dispense des cours en microéconomie, analyse des données, et méthodologies de recherche à des étudiants de divers niveaux académiques, ainsi qu'à des professionnels du secteur public et privé.Isabelle est membre de plusieurs associations scientifiques, dont l'Association Internationale des Chercheurs Francophones en Microfinance (AICFM) et l'Association des Femmes Chercheures de Côte d'Ivoire (AFEMCI). Lauréate du prix d'Excellence Evaluation d’OR en 2017, elle continue d'allier rigueur scientifique et engagement pour le développement socio-économique, avec une attention particulière aux enjeux de genre et de vulnérabilité.",
+    bio: "BECHO Isabelle epse N’DRI est une économiste titulaire d'un doctorat en économie de l'Université Félix Houphouët-Boigny de Cocody, ainsi que d'un diplôme de Microprogramme in Applied Development Economics de l'Université Laval. Elle est enseignante-Chercheure à l'Université Virtuelle de Côte d'Ivoire (UVCI) et chercheuse à la Cellule d’Analyse de Politique Economique du CIRES (CAPEC).Ses domaines d'expertise englobent l'évaluation d'impact des politiques publiques, l'analyse de la pauvreté, l'analyse de la vulnérabilité, l’économie politique et la gouvernance, , l'analyse de genre, , l'analyse des entreprises, l'analyse du secteur informel, la finance inclusive, la microfinance, l'économie du développement, les techniques quantitatives et qualitatives, ainsi que le traitement et l’analyse de données.Isabelle s'est distinguée par son engagement sur des projets touchant aux questions de genre, de vulnérabilité, et d'extrémisme violent. Elle a collaboré avec ONUFEMMES pour évaluer les opportunités pour les femmes dans les opérations de paix des Nations Unies en Côte d’Ivoire. Dans ce cadre, elle a conçu et coordonné des études sur l'impact des politiques de sécurité sur l'autonomisation des femmes.En partenariat avec l'USAID, elle a conduit des recherches approfondies sur les impacts des politiques publiques liées à la pandémie de la COVID-19 sur les femmes et les jeunes en Afrique de l'Ouest, et a également travaillé sur l'analyse des vulnérabilités socio-économiques dans des contextes de post-conflit, notamment en Côte d'Ivoire. Isabelle a également été consultante pour Equal Access, où elle a contribué à des projets visant à réduire l'extrémisme violent à travers l'inclusion économique et sociale des jeunes.Forte d'une expérience solide en formation et enseignement, Isabelle dispense des cours en microéconomie, analyse des données, et méthodologies de recherche à des étudiants de divers niveaux académiques, ainsi qu'à des professionnels du secteur public et privé.Isabelle est membre de plusieurs associations scientifiques, dont l'Association Internationale des Chercheurs Francophones en Microfinance (AICFM) et l'Association des Femmes Chercheures de Côte d'Ivoire (AFEMCI). Lauréate du prix d'Excellence Evaluation d’OR en 2017, elle continue d'allier rigueur scientifique et engagement pour le développement socio-économique, avec une attention particulière aux enjeux de genre et de vulnérabilité.",
     socials: {
       linkedin: "https://www.linkedin.com/in/yves-thierry-kacou-phd-462a69145",
       twitter: "#",
@@ -244,7 +250,7 @@ const seniorResearchers = [
     id: "7",
     name: "Dr ASSOUM Féissal",
     title: "Chercheur et Economiste du développement à la (CAPEC)",
-    photo: "/images/chercheurs/converted_img3.png",
+    photo: "/images/chercheurs/assoum.png",
     expertise: ["Economie"],
     bio: "Titulaire d'un doctorat en économie de l’École Nationale de Statistique et d’Économie Appliquée (ENSEA) d'Abidjan, avec une solide formation en statistiques et mathématiques, je suis économiste du développement et chercheur à la Cellule d’Analyse des Politiques Économiques du CIRES (CAPEC), où je suis également responsable de la gestion des données. Cette double expertise en économie et en statistique me permet de combiner rigueur analytique et maîtrise technique pour mener des recherches économiques appliquées. Mes travaux portent principalement sur des questions de stabilité financière, de dette publique, de transformation structurelle et d’évaluation des politiques publiques, en utilisant des méthodes économétriques avancées pour fournir des analyses robustes et orientées vers la prise de décision.",
     socials: {
@@ -257,7 +263,7 @@ const seniorResearchers = [
     id: "8",
     name: "Dr KOUADIO Boniface",
     title: "Chercheur à la Cellule d’Analyse de politique economique du CIRES (CAPEC)",
-    photo: "/images/chercheurs/converted_img4.png",
+    photo: "/images/chercheurs/kouadio.png",
     expertise: ["Microéconomie", "Analyse des données", "méthodologie"],
     bio: `Dr KOUADIO est titulaire d’un doctorat en sciences économiques obtenu à l’Université Félix Houphouët-Boigny de Cocody. Enseignant-chercheur au sein de cette même université, il est également chercheur à la Cellule d’Analyse de Politiques Économiques du CIRES (CAPEC).Fort d’une dizaine d’années d’expérience dans la conduite de travaux de recherche et d’études, il a réalisé de nombreuses études tant pour des institutions internationales que pour des structures locales, en tant que consultant.Au sein de la CAPEC, il a activement contribué à la mise en œuvre de plusieurs projets de recherche, dans lesquels il a successivement occupé les fonctions d’assistant de recherche puis de chercheur associé.Dr KOUADIO est membre du réseau AfricaLics (African Network for Economics of Learning, Innovation, and Competence Building Systems).Ses intérêts de recherche portent principalement sur l’économie du développement, avec un accent particulier sur les domaines suivants :
 - Théorie économique (microéconomie et macroéconomie) ;
@@ -274,7 +280,7 @@ const seniorResearchers = [
     id: "9",
     name: "Dr KACOU Yves Thierry Kacou",
     title: "Chercheur junior macroéconomiste à la Cellule d’Analyse de Politiques Économiques du CIRES (CAPEC)",
-    photo: "/images/chercheurs/Dr KACOU.png?text=Dr.+Jean+Touré&",
+    photo: "/images/chercheurs/Dr KACOU.png",
     expertise: ["Macroéconomie"],
     bio: `Kacou Yves Thierry Kacou est titulaire d’un PhD en économie obtenu à l’Université d’Ulsan en Corée du Sud. Il est enseignant-chercheur à l’Institut National Polytechnique Houphouët-Boigny (INPHB) de Yamoussoukro et chercheur junior macroéconomiste à la Cellule d’Analyse de Politiques Économiques du CIRES (CAPEC). Dans le cadre de ses missions au sein de la CAPEC, il a contribué de manière significative à la réalisation d’études portant sur la politique fiscale, la modélisation économique et l’analyse prospective. En tant que chercheur, Kacou Yves a publié, en collaboration avec d’autres chercheurs, plusieurs articles scientifiques dans des revues à comité de lecture. Ces travaux récents portent sur le développement d’un modèle d’équilibre général dynamique stochastique multisectoriel pour l’économie ivoirienne. Ils explorent également les implications macroéconomiques des retards de mise en œuvre des projets d’infrastructure, ainsi que les impacts économiques et financiers de l’adaptation aux risques climatiques pour les pays de l’UEMOA. Enfin, ses domaines d’intérêt incluent l’impact des politiques publiques, l’économétrie appliquée et la modélisation macroéconomique.`,
     socials: {

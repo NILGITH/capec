@@ -3,7 +3,10 @@ import Image from "next/image";
 import { MainNav } from "@/components/main-nav";
 import { Footer } from "@/components/footer";
 import { Calendar } from "lucide-react";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Eye } from "lucide-react";
+import { useState } from "react";
+import { PdfViewerButton } from "./PdfViewerButton";
+import { Button } from "@/components/ui/button";
 
 // Simule la même liste que dans page.tsx (à factoriser plus tard)
 const newsList = [
@@ -111,7 +114,8 @@ const newsList = [
   },
   {
     id: "19",
-    title: "Lancement du projet SPIA en Côte d’Ivoire : une nouvelle dynamique pour l’agriculture ivoirienne le 15 mai 2025",
+    title:
+      "Lancement du projet SPIA en Côte d’Ivoire : une nouvelle dynamique pour l’agriculture ivoirienne le 15 mai 2025",
     excerpt: "",
     date: "Le 15 mai 2025",
     image: "/images/Atelier.jpg",
@@ -119,42 +123,48 @@ const newsList = [
           <p>Dans le cadre de son programme de recherche, le Standing Panel on Impact Assessment (SPIA), en collaboration avec l’Université Félix Houphouët-Boigny à travers la CAPEC et l’Université de Bordeaux, a lancé en Côte d’Ivoire un projet pilote ambitieux visant à développer des approches intégrées d’évaluation des innovations agricoles. Ce projet s’inscrit dans un contexte de transformation du secteur agricole, marqué par un fort besoin d’innovations efficaces, d’évaluations rigoureuses et de valorisation des résultats scientifiques.</p>
           <p>L’objectif principal du projet est de recenser les innovations agricoles liées au réseau CGIAR, d’analyser leur adoption par les agriculteurs, et d’étudier les politiques publiques favorisant leur diffusion. À terme, il s’agit de produire des données fiables et utiles pour éclairer les décisions en matière de développement agricole et renforcer la contribution de la recherche à l’élaboration de politiques publiques plus efficaces.</p>
           <p>La première phase du projet consiste à identifier les innovations existantes, cartographier les zones concernées et analyser leur niveau d’adoption. Le projet s’articule autour de trois axes :</p>
-         <ul style="list-style-type: disc; padding-left: 20px;">
-          <li>Un inventaire des innovations agricoles adoptées à travers le pays ;</li>
-          <li>Une analyse de leur diffusion et de leur adoption réelle par les agriculteurs ;</li>
-          <li>Une évaluation des politiques publiques qui soutiennent leur développement.</li>
-        </ul>
+          <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Un inventaire des innovations agricoles adoptées à travers le pays ;</li>
+            <li>Une analyse de leur diffusion et de leur adoption réelle par les agriculteurs ;</li>
+            <li>Une évaluation des politiques publiques qui soutiennent leur développement.</li>
+          </ul>
           <p>Le lancement officiel du projet a eu lieu <b>le 15 mai 2025 à Abidjan</b>, lors d’un atelier organisé à l’hôtel Silver Moon. Cet événement a rassemblé chercheurs, décideurs publics, acteurs du secteur agricole et partenaires techniques. Il visait à présenter le projet, mobiliser les parties prenantes et favoriser leur engagement actif.</p>
           <p>Dans son allocution d’ouverture, Mme Kouadio Sylvie Zoh, représentante du Directeur général de la Planification, des Statistiques et des Projets du MEMINADER, a salué l’approche participative du projet et insisté sur l’importance de l’implication des acteurs locaux pour une orientation efficace des investissements publics et privés. Elle a souligné que cette initiative ouvre la voie à une agriculture ivoirienne plus résiliente, inclusive et durable, fondée sur la science, l’innovation et la concertation.</p>
-          <p>Le Professeur Ahoure Alban, Directeur de la CAPEC, a clôturé l’atelier en remerciant les participants pour leur engagement. Il a rappelé que ce projet incarne une démarche collective, ancrée dans les réalités locales mais inspirée par les meilleures pratiques internationales. Il a mis l’accent sur le rôle déterminant de la recherche pour éclairer les politiques publiques et améliorer le bien-être des populations rurales.</p>`
-  }
-  
-  
- 
+          <p>Le Professeur Ahoure Alban, Directeur de la CAPEC, a clôturé l’atelier en remerciant les participants pour leur engagement. Il a rappelé que ce projet incarne une démarche collective, ancrée dans les réalités locales mais inspirée par les meilleures pratiques internationales. Il a mis l’accent sur le rôle déterminant de la recherche pour éclairer les politiques publiques et améliorer le bien-être des populations rurales.</p>`,
+  },
 ];
-export async function generateStaticParams() {
-    return newsList.map((news) => ({
-      id: news.id,
-    }));
-  }
 
-export default async function Page({ params }: { params: Promise<{ id: string }> }) {
+export async function generateStaticParams() {
+  return newsList.map((news) => ({
+    id: news.id,
+  }));
+}
+
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
   const news = newsList.find((n) => n.id === id);
   if (!news) return notFound();
 
-  // Calcul de l'id suivant
+
   const currentIndex = newsList.findIndex((n) => n.id === id);
   const nextIndex = (currentIndex + 1) % newsList.length;
   const nextId = newsList[nextIndex].id;
   const isLast = currentIndex === newsList.length - 1;
+
+  // Assurez-vous d'avoir ce fichier dans votre projet.
 
   return (
     <div className="flex flex-col min-h-screen">
       <MainNav />
       <div className="container px-4 py-8 sm:py-12 md:px-6 md:py-24 flex-grow">
         <div className="space-y-4">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Actualité</h1>
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Actualité
+          </h1>
           <div className="w-20 h-1 bg-ci-orange"></div>
         </div>
         <div className="grid gap-8 md:grid-cols-3 mt-12">
@@ -169,34 +179,46 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
                 />
               </div>
               <div className="bg-white/90 px-2 py-3 rounded-b-lg shadow text-center">
-                <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">{news.title}</h2>
+                <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">
+                  {news.title}
+                </h2>
                 <div className="flex items-center justify-center text-muted-foreground text-sm">
                   <Calendar className="mr-2 h-4 w-4" />
                   <span>{news.date}</span>
                 </div>
               </div>
-              
             </div>
           </div>
           <div className="md:col-span-2 space-y-6 text-muted-foreground flex flex-col justify-center">
             <div className="bg-gray-50 p-6 rounded-lg shadow">
               <div
                 className="text-base sm:text-lg text-gray-800 text-justify space-y-4 [&>p]:mb-4 [&>ol]:mb-4 [&>ol>li]:mb-2"
-                dangerouslySetInnerHTML={{ __html: news.mot || "Aucun mot associé pour cette actualité pour le moment." }}
+                dangerouslySetInnerHTML={{
+                  __html:
+                    news.mot ||
+                    "Aucun mot associé pour cette actualité pour le moment.",
+                }}
               />
             </div>
-            <div className="mt-6">
+            <div className="mt-6 flex justify-between items-center">
               {isLast ? (
-                <a href="/activites/actualites" className="inline-flex items-center gap-1 text-ci-orange font-semibold hover:underline text-base">
+                <a
+                  href="/activites/actualites"
+                  className="inline-flex items-center gap-1 text-ci-orange font-semibold hover:underline text-base"
+                >
                   Retour
                   <ChevronRight className="h-5 w-5" />
                 </a>
               ) : (
-                <a href={`/activites/actualites/infos/${nextId}`} className="inline-flex items-center gap-1 text-ci-orange font-semibold hover:underline text-base">
+                <a
+                  href={`/activites/actualites/infos/${nextId}`}
+                  className="inline-flex items-center gap-1 text-ci-orange font-semibold hover:underline text-base"
+                >
                   Voir l’actualité suivante
                   <ChevronRight className="h-5 w-5" />
                 </a>
               )}
+              {id === '19' && <PdfViewerButton />}
             </div>
           </div>
         </div>
@@ -204,4 +226,4 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
       <Footer />
     </div>
   );
-} 
+}

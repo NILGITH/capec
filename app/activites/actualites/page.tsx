@@ -48,7 +48,6 @@ export default function NewsPage() {
 
         {/* News List */}
         <div className="mt-12">
-          <h2 className="text-2xl font-bold mb-6">Toutes les actualités</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {newsList.map((news) => (
               <NewsCard key={news.id} news={news} />
@@ -95,7 +94,7 @@ function NewsCard({ news } : { news: { id: string; title: string; excerpt: strin
 }
 
 // Sample data with updated image placeholders
-// const featuredNews = {
+// const newsList = {
 //   id: "1",
 //   title: "30e anniversaire de la CAPEC",
 //   excerpt:

@@ -244,7 +244,7 @@ const seniorResearchers = [
     id: "7",
     name: "Dr ASSOUM Féissal",
     title: "Chercheur et Economiste du développement à la (CAPEC)",
-    photo: "/images/chercheurs/Dr ASSOUM Féissal.jpg",
+    photo: "/images/chercheurs/converted_img3.png",
     expertise: ["Economie"],
     bio: "Titulaire d'un doctorat en économie de l’École Nationale de Statistique et d’Économie Appliquée (ENSEA) d'Abidjan, avec une solide formation en statistiques et mathématiques, je suis économiste du développement et chercheur à la Cellule d’Analyse des Politiques Économiques du CIRES (CAPEC), où je suis également responsable de la gestion des données. Cette double expertise en économie et en statistique me permet de combiner rigueur analytique et maîtrise technique pour mener des recherches économiques appliquées. Mes travaux portent principalement sur des questions de stabilité financière, de dette publique, de transformation structurelle et d’évaluation des politiques publiques, en utilisant des méthodes économétriques avancées pour fournir des analyses robustes et orientées vers la prise de décision.",
     socials: {
@@ -257,7 +257,7 @@ const seniorResearchers = [
     id: "8",
     name: "Dr KOUADIO Boniface",
     title: "Chercheur à la Cellule d’Analyse de politique economique du CIRES (CAPEC)",
-    photo: "/images/chercheurs/Dr KOUADIO BONI.jpg",
+    photo: "/images/chercheurs/converted_img4.png",
     expertise: ["Microéconomie", "Analyse des données", "méthodologie"],
     bio: `Dr KOUADIO est titulaire d’un doctorat en sciences économiques obtenu à l’Université Félix Houphouët-Boigny de Cocody. Enseignant-chercheur au sein de cette même université, il est également chercheur à la Cellule d’Analyse de Politiques Économiques du CIRES (CAPEC).Fort d’une dizaine d’années d’expérience dans la conduite de travaux de recherche et d’études, il a réalisé de nombreuses études tant pour des institutions internationales que pour des structures locales, en tant que consultant.Au sein de la CAPEC, il a activement contribué à la mise en œuvre de plusieurs projets de recherche, dans lesquels il a successivement occupé les fonctions d’assistant de recherche puis de chercheur associé.Dr KOUADIO est membre du réseau AfricaLics (African Network for Economics of Learning, Innovation, and Competence Building Systems).Ses intérêts de recherche portent principalement sur l’économie du développement, avec un accent particulier sur les domaines suivants :
 - Théorie économique (microéconomie et macroéconomie) ;

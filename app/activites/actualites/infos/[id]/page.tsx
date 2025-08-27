@@ -175,6 +175,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
                   <span>{news.date}</span>
                 </div>
               </div>
+              
             </div>
           </div>
           <div className="md:col-span-2 space-y-6 text-muted-foreground flex flex-col justify-center">

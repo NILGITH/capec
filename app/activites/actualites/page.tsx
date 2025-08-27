@@ -119,6 +119,7 @@ const newsList = [
     date: "le 3 décembre 2024 ",
     image:  "/images/photo/converted_img_j.png",
   },
+  
   {
     id: "16",
     title: "Le Forum EPA, organisé en partenariat avec l’ACED, s’est tenu à Abidjan les 6 et 7 novembre 2024. Cet événement majeur a réuni des acteurs clés du développement issus de divers horizons pour réfléchir ensemble aux voies d’un développement inclusif en Afrique francophone.",

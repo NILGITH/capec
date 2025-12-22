@@ -7,8 +7,12 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { MainNav } from "@/components/main-nav";
 import { title } from "process";
+import { sortNewsByDate } from "@/lib/utils";
 
 export default function NewsPage() {
+  // Triez la liste des actualités
+  const sortedNewsList = sortNewsByDate(newsList);
+
   return (
     <div className="flex flex-col min-h-screen">
       <MainNav />
@@ -53,7 +57,7 @@ export default function NewsPage() {
         {/* News List */}
         <div className="mt-12">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {newsList.map((news) => (
+            {sortedNewsList.map((news) => (
               <NewsCard key={news.id} news={news} />
             ))}
           </div>
@@ -127,6 +131,53 @@ function NewsCard({
 // }
 
 const newsList = [
+  {
+    id: "30",
+    title:
+      "Méthode et Techniques Marketing: Des cadres du BNETD à l'École de la CAPEC",
+    excerpt: "",
+    date: "21 septembre 2020",
+    image: "/images/Capec_logo_image.jpg",
+  },
+  {
+    id: "29",
+    title:
+      "Un atelier de méthodologie et d'écriture scientifique s'est tenu à Abidjan du 1er au 05 avril",
+    excerpt: "",
+    date: "1 au 5 avril 2019",
+    image: "/images/Capec_logo_image.jpg",
+  },
+  {
+    id: "28",
+    title:
+      "Développement industriel : Des cadres outillés à l'analyse des filières et aux techniques d'élaboration et de mise en œuvre",
+    excerpt: "",
+    date: "12 juillet 2017",
+    image: "/images/Capec_logo_image.jpg",
+  },
+  {
+    id: "27",
+    title: "Planification, Programmation, Budgétisation et Suivi-Evaluation",
+    excerpt: "",
+    date: "30 juin 2016",
+    image: "/images/Capec_logo_image.jpg",
+  },
+  {
+    id: "26",
+    title:
+      "ENVIRONNEMENT DE LA RECHERCHE EN SCIENCES SOCIALES EN COTE D'IVOIRE: La CAPEC propose des pistes pour la redynamisation",
+    excerpt: "",
+    date: "6 mai 2016",
+    image: "/images/Capec_logo_image.jpg",
+  },
+  {
+    id: "25",
+    title:
+      "Chaine PPBSE / Ministère d'Etat, Ministère du Plan et du Développement",
+    excerpt: "",
+    date: "26 juin 2015",
+    image: "/images/Capec_logo_image.jpg",
+  },
   {
     id: "24",
     title: "Projet KAIZEN en Côte d’Ivoire",

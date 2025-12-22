@@ -442,12 +442,12 @@ export function Footer() {
                 >
                   Rapports d'activités
                 </Link>
-                <Link
+                {/* <Link
                   href="/activites/compte-rendu"
                   className="hover:text-ci-orange transition-colors"
                 >
                   CR d'actualités
-                </Link>
+                </Link> */}
                 <Link
                   href="/activites/interview"
                   className="hover:text-ci-orange transition-colors"

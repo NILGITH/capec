@@ -73,10 +73,10 @@ export const navItems: NavItem[] = [
         title: "Rapports d'activités",
         href: "/activites/rapport",
       },
-      {
+      /* {
         title: "CR d'actualités",
         href: "/activites/compte-rendu",
-      },
+      }, */
       {
         title: "Interview - Question",
         href: "/activites/interview",

@@ -40,13 +40,11 @@ export function Header() {
       <div className="bg-white shadow-sm flex flex-col transition-all duration-500 ease-in-out">
         <div className="border-b border-b-ci-green transition-all duration-500">
           <div className="container flex flex-col items-center py-2">
+            
             <MainNav />
           </div>
-          
         </div>
       </div>
-      
     </header>
-  
   );
-} 
+}

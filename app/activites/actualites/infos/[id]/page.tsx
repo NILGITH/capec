@@ -339,7 +339,7 @@ const newsList = [
     title: "Projet KAIZEN en Côte d’Ivoire",
     excerpt: "",
     date: "",
-    image: "/images/Capec_logo_image.jpg",
+    image: "/images/photo/Projet_KAIZEN.jpg",
     mot: `<span style='color:#FF8000;font-weight:bold;'>Projet KAIZEN en Côte d’Ivoire</span>
     <br/>
     <ol style='margin-left:1em;'>
@@ -448,7 +448,7 @@ const newsList = [
       "Le Dr Prof. Alban AHOURÉ élu Membre Honoraire de l’Académie Royale Européenne des Docteurs (RAED)",
     excerpt: "",
     date: "Le 17 janvier 2024",
-    image: "/images/Capec_logo_image.jpg",
+    image: "/images/photo/RAED-Dr-Alban-Ahoure-20.jpg",
     mot: `<span style='color:#FF8000;font-weight:bold;'>Le Dr Prof. Alban AHOURÉ élu Membre Honoraire de l’Académie Royale Européenne des Docteurs (RAED)</span>
     <br/>
     <ol style='margin-left:1em;'>
@@ -475,7 +475,7 @@ const newsList = [
       "Visite du Professeur Esther Duflo, Prix Nobel d’Économie 2019, à la CAPEC",
     excerpt: "",
     date: "Le 16 janvier 2024",
-    image: "/images/Capec_logo_image.jpg",
+    image: "/images/photo/VISITE_D_esther_DUFLO.jpg",
     mot: `<span style='color:#FF8000;font-weight:bold;'>Visite du Professeur Esther Duflo, Prix Nobel d’Économie 2019, à la CAPEC</span>
     <br/>
     <ol style='margin-left:1em;'>
@@ -493,7 +493,7 @@ const newsList = [
     title: "Séminaire de rentrée 2024 : Cap sur de nouveaux objectifs !",
     excerpt: "",
     date: "Le 11 au 13 janvier 2024",
-    image: "/images/Capec_logo_image.jpg",
+    image: "/images/photo/SEMINAIRE_RENTRée_2024.jpg",
     mot: `<span style='color:#FF8000;font-weight:bold;'>Séminaire de rentrée 2024 : Cap sur de nouveaux objectifs !</span>
     <br/>
     <ol style='margin-left:1em;'>

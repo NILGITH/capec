@@ -214,7 +214,7 @@ const newsList = [
     title: "Séminaire de rentrée 2024 : Cap sur de nouveaux objectifs !",
     excerpt: "",
     date: "Le 11 au 13 janvier 2024",
-    image: "/images/photo/SEMINAIRE_RENTRée_2024.jpg",
+    image: "/images/photo/seminaire_rentree_2024.jpg",
   },
   {
     id: "19",

@@ -326,7 +326,7 @@ Auteur de plusieurs ouvrages et articles scientifiques dans des revues internati
     id: "11",
     name: "Dr TOURÉ Talnan Aboulaye",
     title:
-      "Chercheur junior macroéconomiste à la Cellule d’Analyse de Politiques Économiques du CIRES (CAPEC)",
+      "Chercheur macroéconomiste à la Cellule d’Analyse de Politiques Économiques du CIRES (CAPEC)",
     photo: "/images/chercheurs/PHOTO TOURE.jpg",
     expertise: [
       "l’économie monétaire, bancaire et financière",

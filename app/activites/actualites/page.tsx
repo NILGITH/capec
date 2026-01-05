@@ -183,7 +183,7 @@ const newsList = [
     title: "Projet KAIZEN en Côte d’Ivoire",
     excerpt: "",
     date: "",
-    image: "/images/Capec_logo_image.jpg",
+    image: "/images/photo/Projet_KAIZEN.jpg",
   },
   {
     id: "23",
@@ -199,7 +199,7 @@ const newsList = [
       "Le Dr Prof. Alban AHOURÉ élu Membre Honoraire de l’Académie Royale Européenne des Docteurs (RAED)",
     excerpt: "",
     date: "Le 17 janvier 2024 ",
-    image: "/images/Capec_logo_image.jpg",
+    image: "/images/photo/ingreso-RAED-Dr-Alban-Ahoure-21.jpg",
   },
   {
     id: "21",
@@ -207,14 +207,14 @@ const newsList = [
       "Visite du Professeur Esther Duflo, Prix Nobel d’Économie 2019, à la CAPEC",
     excerpt: "",
     date: "Le 16 janvier 2024 ",
-    image: "/images/Capec_logo_image.jpg",
+    image: "/images/photo/VISITE_D_esther_DUFLO.jpg",
   },
   {
     id: "20",
     title: "Séminaire de rentrée 2024 : Cap sur de nouveaux objectifs !",
     excerpt: "",
     date: "Le 11 au 13 janvier 2024",
-    image: "/images/Capec_logo_image.jpg",
+    image: "/images/photo/SEMINAIRE_RENTRée_2024.jpg",
   },
   {
     id: "19",

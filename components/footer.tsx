@@ -367,7 +367,7 @@ export function Footer() {
             <ul className="text-base text-gray-100 flex flex-col gap-2 w-full items-center md:items-start">
               <li className="flex items-center gap-2">
                 <Phone className="h-5 w-5" />
-                (225) 27 22 44 41 24/
+                (225) 27 22 44 41 24
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-5 w-5" />

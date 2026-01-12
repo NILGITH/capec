@@ -8,9 +8,10 @@ import { useTranslations } from "next-intl"
 
 type Institution = {
   id: string
-  name: string
-  type: string
   logo?: string
+  // Optional fallbacks (used only if a translation key is missing)
+  name?: string
+  type?: string
 }
 
 export default function ReferencesPage() {
@@ -88,22 +89,27 @@ function ReferencesGrid({ data }: { data: Institution[] }) {
 }
 
 function ReferenceCard({ reference }: { reference: Institution }) {
+  const t = useTranslations()
+
+  const has = (t as unknown as { has?: (k: string) => boolean }).has
+  const nameKey = `references.items.${reference.id}.name`
+  const typeKey = `references.items.${reference.id}.type`
+
+  const name = has && !has(nameKey) ? reference.name : t(nameKey)
+  const type = has && !has(typeKey) ? reference.type : t(typeKey)
+
   return (
     <div className="flex flex-col items-center text-center">
       <div className="relative w-32 h-32 mb-4">
         <Image
           src={reference.logo || "/placeholder.svg"}
-          alt={reference.name || "Institution"}
+          alt={name || "Institution"}
           fill
           className="object-contain"
         />
       </div>
-      {reference.name && (
-        <h3 className="font-medium text-sm">{reference.name}</h3>
-      )}
-      {reference.type && (
-        <p className="text-xs text-muted-foreground">{reference.type}</p>
-      )}
+      {name && <h3 className="font-medium text-sm">{name}</h3>}
+      {type && <p className="text-xs text-muted-foreground">{type}</p>}
     </div>
   )
 }
@@ -112,41 +118,41 @@ function ReferenceCard({ reference }: { reference: Institution }) {
 
 // Institutions Internationales
 const internationalInstitutions: Institution[] = [
-  { id: "ii1", name: "Banque Mondiale", type: "Institution financière", logo: "/images/partenaires/bankmondiale.jpg" },
-  { id: "ii2", name: "BAD", type: "Banque Africaine de Développement", logo: "/images/partenaires/BAD.jpg" },
-  { id: "ii3", name: "JICA", type: "Coopération japonaise", logo: "/images/partenaires/jica.webp" },
-  { id: "ii4", name: "Japan Foundation", type: "Fondation internationale", logo: "/images/partenaires/JAPANFUNDATION.webp" },
-  { id: "ii5", name: "AFD", type: "Agence Française de Développement", logo: "/images/partenaires/afdrouge.png" },
-  { id: "ii6", name: "IDRC", type: "Centre de recherche", logo: "/images/partenaires/IDRC.jpg" },
-  { id: "ii7", name: "PNUD", type: "Nations Unies", logo: "/images/partenaires/PNUD.jpg" },
-  { id: "ii8", name: "FAO", type: "Organisation alimentaire", logo: "/images/partenaires/FAO.webp" },
-  { id: "ii9", name: "PAM", type: "Programme Alimentaire Mondial", logo: "/images/partenaires/pam.png" },
-  { id: "ii10", name: "UNICEF", type: "Nations Unies", logo: "/images/partenaires/UNICEF.png" },
-  { id: "ii11", name: "ONU Femmes", type: "Nations Unies", logo: "/images/partenaires/UN-Women.png" },
+  { id: "ii1", logo: "/images/partenaires/bankmondiale.jpg" },
+  { id: "ii2", logo: "/images/partenaires/BAD.jpg" },
+  { id: "ii3", logo: "/images/partenaires/jica.webp" },
+  { id: "ii4", logo: "/images/partenaires/JAPANFUNDATION.webp" },
+  { id: "ii5", logo: "/images/partenaires/afdrouge.png" },
+  { id: "ii6", logo: "/images/partenaires/IDRC.jpg" },
+  { id: "ii7", logo: "/images/partenaires/PNUD.jpg" },
+  { id: "ii8", logo: "/images/partenaires/FAO.webp" },
+  { id: "ii9", logo: "/images/partenaires/pam.png" },
+  { id: "ii10", logo: "/images/partenaires/UNICEF.png" },
+  { id: "ii11", logo: "/images/partenaires/UN-Women.png" },
 ]
 
 // Institutions Régionales
 const regionalInstitutions: Institution[] = [
-  { id: "ir1", name: "CEDEAO", type: "Organisation régionale", logo: "/images/partenaires/CEDEAO.webp" },
-  { id: "ir2", name: "UEMOA", type: "Union économique", logo: "/images/partenaires/UEMOA.jpg" },
+  { id: "ir1", logo: "/images/partenaires/CEDEAO.webp" },
+  { id: "ir2", logo: "/images/partenaires/UEMOA.jpg" },
 ]
 
 // Institutions Nationales Publiques
 const nationalPublicInstitutions: Institution[] = [
-  { id: "np1", name: "Primature", type: "Institution publique", logo: "/images/partenaires/MEC.jpg" },
-  { id: "np2", name: "Ministère des Finances", type: "Institution publique", logo: "/images/partenaires/MFBCI.jpg" },
-  { id: "np3", name: "DGI", type: "Administration fiscale", logo: "/images/partenaires/DGI.jpg" },
-  { id: "np4", name: "BNETD", type: "Bureau d’études", logo: "/images/partenaire_de_la_CAPEC/LOGO BNETD.jpg" },
-  { id: "np5", name: "CIRES", type: "Centre de recherche", logo: "/images/partenaire_de_la_CAPEC/LOGO CIRES.jpg" },
+  { id: "np1", logo: "/images/partenaires/MEC.jpg" },
+  { id: "np2", logo: "/images/partenaires/MFBCI.jpg" },
+  { id: "np3", logo: "/images/partenaires/DGI.jpg" },
+  { id: "np4", logo: "/images/partenaire_de_la_CAPEC/LOGO BNETD.jpg" },
+  { id: "np5", logo: "/images/partenaire_de_la_CAPEC/LOGO CIRES.jpg" },
 ]
 
 // Secteur Privé
 const privateSectorInstitutions: Institution[] = [
-  { id: "ps1", name: "CGECI", type: "Patronat", logo: "/images/partenaires/CGECI.jpg" },
-  { id: "ps2", name: "UGECI", type: "Groupement économique", logo: "/images/partenaires/UGECI.png" },
+  { id: "ps1", logo: "/images/partenaires/CGECI.jpg" },
+  { id: "ps2", logo: "/images/partenaires/UGECI.png" },
 ]
 
 // Société Civile
 const civilSocietyInstitutions: Institution[] = [
-  { id: "cs1", name: "CSCI", type: "Organisation civile", logo: "/images/partenaires/CSCI.png" },
+  { id: "cs1", logo: "/images/partenaires/CSCI.png" },
 ]

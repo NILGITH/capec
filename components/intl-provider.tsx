@@ -13,7 +13,11 @@ export function IntlProvider({
   children: React.ReactNode
 }) {
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
+    <NextIntlClientProvider
+      locale={locale}
+      messages={messages}
+      timeZone="Africa/Abidjan"
+    >
       {children}
     </NextIntlClientProvider>
   )

@@ -1,10 +1,16 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Card, CardContent } from "@/components/ui/card"
-import { FileText, Users, Calendar, BookOpen, Globe, Award } from "lucide-react"
+"use client";
+
+import Image from "next/image";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Card, CardContent } from "@/components/ui/card";
+import { FileText, Users, Calendar, BookOpen, Globe, Award } from "lucide-react";
 import { MainNav } from "@/components/main-nav";
+import { useTranslations } from "next-intl";
 
 export default function CapecEnChiffresPage() {
+  const t = useTranslations();
+
   const tableData = [
     { year: "2002", travaux: 5, etudes: 3, formations: 2, personnes: 60, assistance: 1 },
     { year: "2003", travaux: 21, etudes: 2, formations: 1, personnes: 37, assistance: 2 },
@@ -26,10 +32,10 @@ export default function CapecEnChiffresPage() {
     { year: "2018", travaux: 4, etudes: 14, formations: 7, personnes: 141, assistance: 1 },
     { year: "2019", travaux: 8, etudes: 12, formations: 1, personnes: 7, assistance: 1 },
     { year: "2020", travaux: 7, etudes: 18, formations: 2, personnes: 14, assistance: 3 },
-    { year: "2021", travaux: 3, etudes: 20, formations: '-', personnes: '-', assistance: 3 },
-    { year: "2022", travaux: 4, etudes: 24, formations: '-', personnes: '-', assistance: 3 },
-    { year: "2023", travaux: 4, etudes: 19, formations: '-', personnes: '-', assistance: '-' },
-    { year: "2024", travaux: 4, etudes: 16, formations: '-', personnes: '-', assistance: '-' },
+    { year: "2021", travaux: 3, etudes: 20, formations: "-", personnes: "-", assistance: 3 },
+    { year: "2022", travaux: 4, etudes: 24, formations: "-", personnes: "-", assistance: 3 },
+    { year: "2023", travaux: 4, etudes: 19, formations: "-", personnes: "-", assistance: "-" },
+    { year: "2024", travaux: 4, etudes: 16, formations: "-", personnes: "-", assistance: "-" },
     { year: "2002-2024", travaux: 190, etudes: 229, formations: 71, personnes: 1570, assistance: 43 },
   ];
 
@@ -39,51 +45,67 @@ export default function CapecEnChiffresPage() {
       <div className="container px-4 py-8 sm:py-12 md:py-16 lg:py-24 flex-grow">
         <div className="space-y-4 mb-8 sm:mb-12">
           <h1 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-4xl">
-            La CAPEC en Chiffres
+            {t("capecChiffres.title")}
           </h1>
           <div className="w-16 sm:w-20 h-1 bg-ci-orange"></div>
           <p className="text-muted-foreground text-base sm:text-lg md:text-xl max-w-[800px]">
-            Découvrez les chiffres clés qui illustrent l'impact et les réalisations de la CAPEC.
+            {t("capecChiffres.subtitle")}
           </p>
         </div>
+
         <div className="text-center space-y-4 mb-8 sm:mb-12">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl md:text-4xl">
-            Tableau des Activités (2002-2024)
+            {t("capecChiffres.tableTitle")}
           </h2>
           <div className="w-20 sm:w-24 h-1 bg-ci-orange mx-auto"></div>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            Résumé des activités de la CAPEC, incluant les travaux de recherche, études, formations et assistance aux institutions.
+            {t("capecChiffres.tableDescription")}
           </p>
         </div>
 
         {/* Table */}
         <div className="overflow-x-auto rounded-xl shadow-lg">
-          <table className="w-full bg-white rounded-xl table-auto sm:table-fixed">
+          <table className="w-full bg-card rounded-xl table-auto sm:table-fixed">
             {/* Table Header */}
             <thead>
               <tr className="bg-ci-orange/10 text-gray-900">
-                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[80px]" rowSpan={2}>
-                  Année
+                <th
+                  className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[80px]"
+                  rowSpan={2}
+                >
+                  {t("capecChiffres.table.headers.year")}
                 </th>
-                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[120px]" rowSpan={2}>
-                  Travaux des chercheurs
+                <th
+                  className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[120px]"
+                  rowSpan={2}
+                >
+                  {t("capecChiffres.table.headers.travaux")}
                 </th>
-                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[80px]" rowSpan={2}>
-                  Études
+                <th
+                  className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[80px]"
+                  rowSpan={2}
+                >
+                  {t("capecChiffres.table.headers.etudes")}
                 </th>
-                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[260px]" colSpan={2}>
-                  Formations
+                <th
+                  className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[260px]"
+                  colSpan={2}
+                >
+                  {t("capecChiffres.table.headers.formationsGroup")}
                 </th>
-                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[180px]" rowSpan={2}>
-                  Assistance à l’Administration
+                <th
+                  className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[180px]"
+                  rowSpan={2}
+                >
+                  {t("capecChiffres.table.headers.assistance")}
                 </th>
               </tr>
               <tr className="bg-ci-orange/10 text-gray-900">
                 <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[80px]">
-                  Nombre de formations
+                  {t("capecChiffres.table.headers.formations")}
                 </th>
                 <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[140px]">
-                  Nombre de personnes formées
+                  {t("capecChiffres.table.headers.personnes")}
                 </th>
               </tr>
             </thead>
@@ -123,5 +145,5 @@ export default function CapecEnChiffresPage() {
       </div>
       <Footer />
     </div>
-  )
+  );
 }

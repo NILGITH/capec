@@ -2,6 +2,9 @@ import type React from "react"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
+import { cookies } from "next/headers"
+import { IntlProvider } from "@/components/intl-provider"
+import { getLocaleFromCookies, getMessages } from "@/lib/locale"
 // import { Inter, Poppins } from "next/font/google"
 
 // const inter = Inter({ subsets: ["latin"] })
@@ -18,21 +21,27 @@ export const metadata = {
     generator: 'v0.dev'
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const cookieStore = await cookies()
+  const locale = getLocaleFromCookies(cookieStore)
+  const messages = await getMessages(locale)
+
   return (
 
-    <html lang="fr" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
      <head>
      <link rel="icon" href="/logocapec.ico" />
      </head>
         <body /* className={`${inter.className} ${poppins.variable}`} */>
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-            {children}
-            <Toaster />
+            <IntlProvider locale={locale} messages={messages}>
+              {children}
+              <Toaster />
+            </IntlProvider>
           </ThemeProvider>
         </body>
     </html>

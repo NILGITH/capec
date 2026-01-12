@@ -27,7 +27,7 @@ export default function RapportActivitePage() {
             {annualReports.map((report) => (
               <div
                 key={report.id}
-                className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+                className="bg-card text-card-foreground rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300 border border-border"
               >
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">{report.title}</h3>
                 <p className="text-gray-500 mb-4">{report.year}</p>

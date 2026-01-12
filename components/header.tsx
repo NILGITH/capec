@@ -1,11 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
 import { MainNav } from "@/components/main-nav";
 
 export function Header() {
   const [showHeader, setShowHeader] = useState<boolean>(true);
-  const pathname = usePathname();
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -37,7 +35,7 @@ export function Header() {
         showHeader ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full"
       }`}
     >
-      <div className="bg-white shadow-sm flex flex-col transition-all duration-500 ease-in-out">
+      <div className="bg-background shadow-sm flex flex-col transition-all duration-500 ease-in-out">
         <div className="border-b border-b-ci-green transition-all duration-500">
           <div className="container flex flex-col items-center py-2">
             

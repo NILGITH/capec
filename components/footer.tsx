@@ -14,6 +14,7 @@ import {
   Instagram,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 // Types pour les partenaires
 interface Partner {
@@ -49,6 +50,9 @@ export function Footer() {
     "idle"
   );
   const pathname = usePathname();
+  const tFooter = useTranslations("footer");
+  const tF = useTranslations("footers");
+  const ts = useTranslations("sous-menu");
 
   // Gestion de la soumission du formulaire
   const handleSubmit = async (e: React.FormEvent) => {
@@ -68,10 +72,10 @@ export function Footer() {
     <footer className="bg-[#114232] text-white pt-0 pb-0">
       {/* PARTENAIRES : défilement horizontal en haut dans un fond blanc, uniquement sur la page d'accueil */}
       {pathname === "/" && (
-        <div className="bg-white w-full">
+        <div className="bg-background w-full">
           <section className="w-full py-6">
-            <h3 className="text-xl font-bold text-center text-[#114232] mb-6 font-policy-brief">
-              Nos principaux partenaires
+            <h3 className="text-xl font-bold text-center text-ci-green mb-6 font-policy-brief">
+              {tFooter("partners")}
             </h3>
             <div className="overflow-x-hidden">
               <div className="flex gap-12 min-w-[600px] justify-center items-center animate-scroll-partners">
@@ -341,16 +345,15 @@ export function Footer() {
             <div className="mb-4 mt-6">
               <Image
                 src="/images/logocapec.png"
-                alt="Logo de la CAPEC"
+                alt={tF("logoAlt")}
                 width={120}
                 height={100}
-                className="mx-auto md:mx-0 border bg-white rounded-xl mb-2"
+                className="mx-auto md:mx-0 border bg-background rounded-xl mb-2"
               />
             </div>
 
             <div className="text-base text-gray-100 mb-4 text-center md:text-left">
-              Bd Latrille, CIRES, Près du Lycée Classique d'Abidjan 08 BP 1295
-              Abidjan 08 Abidjan-Côte d'Ivoire
+              {tF("lieu")}
             </div>
             <a
               href="https://maps.app.goo.gl/2iQ82grwVVgQTdyW7"
@@ -359,7 +362,7 @@ export function Footer() {
               className="flex items-center gap-2 text-ci-orange font-semibold mb-2 hover:underline justify-center md:justify-start"
             >
               <MapPin className="h-5 w-5" />
-              Localisation Google map
+              {tF("localisation")}
             </a>
             <ul className="text-base text-gray-100 flex flex-col gap-2 w-full items-center md:items-start">
               <li className="flex items-center gap-2">
@@ -380,7 +383,7 @@ export function Footer() {
           {/* Colonne 2 : Découvrez (sous-menus) */}
           <div className="self-center mt-12 w-full">
             <h3 className="text-lg font-bold uppercase mb-2 font-policy-brief">
-              NOS SOUS MENUS
+              {ts("smenu")}
             </h3>
             <div className="w-10 h-1 bg-ci-orange mb-4" />
             <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-base">
@@ -390,43 +393,43 @@ export function Footer() {
                   href="/a-propos/historique-objectif"
                   className="hover:text-ci-orange transition-colors"
                 >
-                  Historique et Objectifs
+                  {ts("histoire")}
                 </Link>
                 <Link
                   href="/a-propos/organigramme"
                   className="hover:text-ci-orange transition-colors"
                 >
-                  Organigramme
+                 {ts("organigramme")}
                 </Link>
                 <Link
                   href="/a-propos/nos-activites"
                   className="hover:text-ci-orange transition-colors"
                 >
-                  Nos Activités
+                  {ts("activites")}
                 </Link>
                 <Link
                   href="/a-propos/capec-en-chiffres"
                   className="hover:text-ci-orange transition-colors"
                 >
-                  La CAPEC en Chiffres
+                  {ts("chiffres")}
                 </Link>
                 <Link
                   href="/a-propos/references"
                   className="hover:text-ci-orange transition-colors"
                 >
-                  Quelques Référence
+                  {ts("references")}
                 </Link>
                 <Link
                   href="/ressources/recherches"
                   className="hover:text-ci-orange transition-colors"
                 >
-                  Projets de recherches
+                  {ts("projets")}
                 </Link>
                 <Link
                   href="/ressources/etudes"
                   className="hover:text-ci-orange transition-colors"
                 >
-                  Etudes
+                  {ts("etudes")}
                 </Link>
               </div>
               <div className="flex flex-col gap-2">
@@ -434,13 +437,13 @@ export function Footer() {
                   href="/activites/programme"
                   className="hover:text-ci-orange transition-colors"
                 >
-                  Programmes d'activités
+                  {ts("programmes")}
                 </Link>
                 <Link
                   href="/activites/rapport"
                   className="hover:text-ci-orange transition-colors"
                 >
-                  Rapports d'activités
+                  {ts("rapports")}
                 </Link>
                 {/* <Link
                   href="/activites/compte-rendu"
@@ -452,25 +455,25 @@ export function Footer() {
                   href="/activites/interview"
                   className="hover:text-ci-orange transition-colors"
                 >
-                  Interview - Question
+                  {ts("interviews")}
                 </Link>
                 <Link
                   href="/activites/actualites"
                   className="hover:text-ci-orange transition-colors"
                 >
-                  Actualités
+                  {ts("actualites")}
                 </Link>
                 <Link
                   href="/medias/phototheque"
                   className="hover:text-ci-orange transition-colors"
                 >
-                  Photothèque
+                  {ts("phototheque")}
                 </Link>
                 <Link
                   href="/medias/videotheque"
                   className="hover:text-ci-orange transition-colors"
                 >
-                  Vidéothèque
+                  {ts("videotheque")}
                 </Link>
               </div>
             </div>
@@ -478,14 +481,10 @@ export function Footer() {
 
           {/* Colonne 3 : Newsletter */}
           <div className="self-center w-full">
-            <h3 className="text-lg font-bold uppercase mb-2 font-policy-brief">
-              NEWSLETTER
-            </h3>
+            <h3 className="text-lg font-bold uppercase mb-2 font-policy-brief">{tFooter("newsletter")}</h3>
             <div className="w-10 h-1 bg-ci-orange mb-4" />
             <p className="text-base text-gray-100 mb-4">
-              Abonnez-vous à notre newsletter pour obtenir des nouvelles
-              importantes dans le domaine de la recherche et des politiques
-              publiques :
+              {ts("newsletter")}
             </p>
             <form
               onSubmit={handleSubmit}
@@ -493,10 +492,10 @@ export function Footer() {
             >
               <input
                 type="email"
-                placeholder="Entrez votre Email"
+                placeholder={tFooter("emailPlaceholder")}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="px-4 py-2 text-black w-full focus:outline-none text-base"
+                className="px-4 py-2 bg-background text-foreground w-full focus:outline-none text-base"
                 required
                 aria-label="Adresse email pour l'infolettre"
               />
@@ -518,9 +517,9 @@ export function Footer() {
               }`}
             >
               {formStatus === "success"
-                ? "Inscription réussie !"
+                ? tFooter("subscribeSuccess")
                 : formStatus === "error"
-                ? "Erreur lors de l'inscription. Réessayez."
+                ? tFooter("subscribeError")
                 : ""}
             </p>
           </div>
@@ -537,22 +536,22 @@ export function Footer() {
               target="_blank"
               aria-label="Facebook"
             >
-              <Facebook className="h-8 w-8 rounded-xl bg-white p-[4px] text-ci-orange shadow hover:scale-110 hover:bg-ci-orange hover:text-white transition-all duration-300" />
+              <Facebook className="h-8 w-8 rounded-xl bg-background p-[4px] text-ci-orange shadow hover:scale-110 hover:bg-ci-orange hover:text-white transition-all duration-300" />
             </Link>
             <Link
               href="https://www.linkedin.com/in/cellule-d-analyse-de-politiques-economiques-du-cires-3993b0238/"
               aria-label="LinkedIn"
             >
-              <Linkedin className="h-8 w-8 rounded-xl bg-white p-[4px] text-ci-orange shadow hover:scale-110 hover:bg-ci-orange hover:text-white transition-all duration-300" />
+              <Linkedin className="h-8 w-8 rounded-xl bg-background p-[4px] text-ci-orange shadow hover:scale-110 hover:bg-ci-orange hover:text-white transition-all duration-300" />
             </Link>
             <Link
               href="https://www.youtube.com/@capeccotedivoire8917"
               aria-label="YouTube"
             >
-              <Youtube className="h-8 w-8 rounded-xl bg-white p-[4px] text-ci-orange shadow hover:scale-110 hover:bg-ci-orange hover:text-white transition-all duration-300" />
+              <Youtube className="h-8 w-8 rounded-xl bg-background p-[4px] text-ci-orange shadow hover:scale-110 hover:bg-ci-orange hover:text-white transition-all duration-300" />
             </Link>
             <Link href="https://x.com/info_capec?s=20" aria-label="twitter">
-              <Twitter className="h-8 w-8 rounded-xl bg-white p-[4px] text-ci-orange shadow hover:bg-ci-orange hover:text-white transition-all duration-300" />
+              <Twitter className="h-8 w-8 rounded-xl bg-background p-[4px] text-ci-orange shadow hover:bg-ci-orange hover:text-white transition-all duration-300" />
             </Link>
           </div>
           {/* Copyright */}

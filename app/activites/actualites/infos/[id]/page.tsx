@@ -708,7 +708,7 @@ export default async function Page({
                   className="object-cover"
                 />
               </div>
-              <div className="bg-white/90 px-2 py-3 rounded-b-lg shadow text-center">
+              <div className="bg-background/90 px-2 py-3 rounded-b-lg shadow text-center">
                 <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">
                   {news.title}
                 </h2>

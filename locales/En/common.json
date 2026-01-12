@@ -1,0 +1,912 @@
+{
+  "app": {
+    "name": "CAPEC"
+  },
+  "nav": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "resources": "RESOURCES",
+    "publications": "PUBLICATIONS",
+    "activities": "ACTIVITIES",
+    "media": "MEDIA",
+    "researchers": "RESEARCHERS",
+
+    "directorWord": "Director's Message",
+    "historyObjectives": "History & Objectives",
+    "ourActivities": "Our Activities",
+    "orgChart": "Organization Chart",
+    "capecFigures": "CAPEC in Numbers",
+    "references": "References",
+
+    "researchProjects": "Research Projects",
+    "studies": "Completed Studies",
+
+    "activityPrograms": "Activity Programs",
+    "activityReports": "Activity Reports",
+    "interviews": "Interview - Q&A",
+    "news": "News",
+
+    "photoLibrary": "Photo Library",
+    "videoLibrary": "Video Library",
+
+    "menu": "Menu",
+    "closeMenu": "Close menu"
+  },
+  "controls": {
+    "theme": {
+      "label": "Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "toggle": "Toggle theme"
+    },
+    "language": {
+      "label": "Language",
+      "french": "FR",
+      "english": "EN",
+      "toggle": "Change language"
+    }
+  },
+  "footer": {
+    "partners": "Our main partners",
+    "newsletter": "Newsletter",
+    "emailPlaceholder": "Your email",
+    "subscribe": "Subscribe",
+    "subscribeSuccess": "Thanks, you're subscribed.",
+    "subscribeError": "Something went wrong."
+  },
+  "carousel": {
+    "previous": "Previous slide",
+    "next": "Next slide",
+    "allNews": "See all our news",
+    "moreAbout": "Learn more about CAPEC",
+    "goToSlide": "Go to slide {number}",
+    "event1": "10th African Think Tanks Summit",
+    "event1Date": "October 8-11, 2024",
+    "event2": "JAPAN CORNER-CAPEC-TODA CORPORATION-JICA Conference",
+    "event2Date": "March 4, 2025",
+    "event3": "JICA-JAPAN CORNER-CAPEC Conference",
+    "event3Date": "February 22, 2024",
+    "mission": "Our Mission",
+     "missionText": "CAPEC's mission is to provide in-depth economic analyses to inform public policy decisions in Côte d'Ivoire. We work to strengthen the capacities of national stakeholders in economic management, strategic planning, and the implementation of reforms. At the same time, we promote applied research and innovation to foster inclusive and sustainable growth that addresses local economic challenges."
+    
+  },
+  "footers": {
+    "logoAlt": "CAPEC Logo",
+    "lieu": "Bd Latrille, CIRES, Near Lycée Classique d'Abidjan 08 BP 1295 Abidjan 08 Abidjan, Côte d'Ivoire",
+    "localisation": "Google Maps location"
+  },
+  "sous-menu": {
+    "smenu": "OUR SUB-MENUS",
+    "histoire": "History and Objectives",
+    "activites": "Our Activities",
+    "organigramme": "Organizational Chart",
+    "chiffres": "CAPEC in Figures",
+    "references": "Some References",
+    "projets": "Research Projects",
+    "etudes": "Studies",
+    "programmes": "Activity Programs",
+    "rapports": "Activity Reports",
+    "interviews": "Interviews - Questions",
+    "actualites": "News",
+    "phototheque": "Photo Gallery",
+    "videotheque": "Video Gallery",
+    "newsletter": "Subscribe to our newsletter to receive important updates in the field of research and public policy:"
+  },
+  "missionCarte": {
+    "recherche": {
+      "titre": "Research Projects",
+      "description": "Conduct high-quality research on African economic issues with strong developmental impact.",
+      "alt": "Economic Research"
+    },
+    "formation": {
+      "titre": "Training",
+      "description": "Training of DGI agents",
+      "alt": "Academic Training"
+    },
+    "etude": {
+      "titre": "Studies",
+      "description": "Provide strategic advice to policymakers and stakeholders.",
+      "alt": "Strategic Advisory"
+    }
+  },
+  "travaux": {
+    "travails": "Recent Research Works",
+    "decouvrez": "Discover our latest research projects.",
+    "voirTout": "View all research projects",
+    "image": "CAPEC in pictures",
+    "capecT": "Discover our activities, events, and team through this image gallery.",
+    "actu": "News",
+    "actuText": "Stay informed about the latest events and announcements from CAPEC.",
+    "vue": "View all news",
+    "vueTof": "View all photos"
+  },
+   "publications": {
+    "pub1": {
+      "title": "Presentation of results of the two studies funded by the PAGDS",
+      "excerpt": "This study analyzes the impact of various fiscal policies on long-term economic growth.",
+      "date": ""
+    },
+    "pub2": {
+      "title": "Construction of an index and endogenous sub-indices for monitoring governance in Côte d'Ivoire",
+      "excerpt": "An in-depth study of labour market dynamics and the factors contributing to wage inequalities.",
+      "date": ""
+    }
+  },
+ "news": {
+    "news1": {
+      "title": "Inaugural Lecture on the Occasion of CAPEC's 30th Anniversary",
+      "excerpt": "CAPEC celebrated its 30th anniversary on October 8 and 9, 2024, in Abidjan, in the presence of Mr. Emmanuel Ahoutou KOFFI, Minister and Director of Cabinet of the Vice-President, who delivered a remarkable inaugural lecture. He praised CAPEC's impact on public policy in Côte d'Ivoire and within the UEMOA-ECOWAS region, while encouraging the institution to innovate in response to climate, technological, and industrial challenges. This anniversary provided an opportunity to review three decades of expertise and outline prospects for inclusive and sustainable development.",
+      "date": "October 8, 2024"
+    },
+    "news2": {
+      "title": "30th Anniversary Dinner of CAPEC",
+      "excerpt": "Happy 30th anniversary to CAPEC, a leading institution serving the economic and social development of Côte d'Ivoire!",
+      "date": "October 9, 2024"
+    }
+  },
+  "motDuDirecteur": {
+  "title": "Director's Message",
+  "photoAlt": "Photo of the CAPEC Director",
+  "directorName": "Prof. AHOURE Alban A.E.",
+  "directorRole": "Director of CAPEC",
+  "greeting": "Dear visitors,",
+  "paragraph1": "It is with great pleasure that I welcome you to the official website of the Policy Analysis Unit for Economic Policies at CIRES (CAPEC). This digital space is intended to be a dynamic showcase of our institution — a place for sharing information and dialogue in support of applied economic research and public policy decision-making.",
+  "paragraph2": "Since its creation in 1993, CAPEC has positioned itself as a major player in policy analysis in Côte d'Ivoire and Africa. Our mission is to produce rigorous analyses based on reliable, evidence-based data to inform the strategic choices of public decision-makers, private-sector actors, civil society, development partners and all stakeholders involved in economic and social development. It serves as a bridge between academia and development actors.",
+  "paragraph3": "Our renewed website has been designed to meet your needs and is now the preferred channel to keep you updated daily on our achievements. Through this site, we invite you to explore our research work, publications, ongoing projects, analytical tools, as well as our training and knowledge dissemination activities. Please visit our website regularly to access up-to-date information about our activities.",
+  "paragraph4": "We firmly believe that shared knowledge is a powerful lever for transformation. For this reason, CAPEC is committed to remaining accessible, open and attentive to society’s needs.",
+  "closing": "Happy browsing to all, and thank you for your interest in our work."
+},
+"historiqueObjectif": {
+    "title": "History and Objectives",
+
+    "history": {
+      "sectionTitle": "Our History",
+      "intro": "Established in 1992, during an economic crisis, the Economic Policy Analysis Unit of CIRES (CAPEC) became operational in 1993...",
+      "timelineTitle": "Phase Timeline",
+
+      "phase1": {
+        "period": "1993 - 2003",
+        "title": "First phase",
+        "description": "The first phase began in June 1993..."
+      },
+      "phase2": {
+        "period": "2003 - 2007",
+        "title": "Second phase",
+        "description": "The objective of the second phase was to strengthen the achievements..."
+      },
+      "phase3": {
+        "period": "2007 - 2013",
+        "title": "Third phase",
+        "description": "The third phase began in June 2007..."
+      },
+      "phase4": {
+        "period": "2014 - Present",
+        "title": "Current phase",
+        "description": "Starting from January 2014, CAPEC's interventions..."
+      },
+
+      "imageAlt": "CAPEC History",
+      "imageCaption": "VISIT OF PROF ESTHER DUFLO, 2019 NOBEL PRIZE IN ECONOMICS"
+    },
+
+    "today": {
+      "title": "Today",
+      "description": "After more than 30 years of activities...",
+      "point1": "A valuable reference body in mastering Côte d'Ivoire's economic development.",
+      "point2": "A reference in the analysis and management of macroeconomic policies in Côte d'Ivoire.",
+      "conclusion": "This performance is attributed to the quality of its products."
+    },
+
+    "objectives": {
+      "title": "Our Objectives",
+      "generalTitle": "General Objective",
+      "generalText": "CAPEC's objective is to produce scientific work...",
+      "specificTitle": "Specific objectives",
+      "list": {
+        "1": "Conduct studies and research intended to inform decision-makers...",
+        "2": "Provide a national framework for reflection and scientific discussion...",
+        "3": "Ensure continuous training of Administration executives..."
+      }
+    }
+  },
+  "hero": {
+    "title": "Our Activities",
+    "subtitle": "Discover CAPEC's main activities, from research to training, including consulting and knowledge dissemination."
+  },
+  "activities": {
+    "research": {
+      "title": "Research Project",
+      "description": "Link between violent extremism and illicit activities in the Folon region",
+      "alt": "Economic research"
+    },
+    "training": {
+      "title": "Training",
+      "description": "Training seminar for DGI agents",
+      "alt": "Academic training"
+    },
+    "study": {
+      "title": "Study",
+      "description": "Development of the SRMT study",
+      "alt": "Strategic consulting"
+    },
+    "conference": {
+      "title": "Conferences",
+      "description": "JAPAN CORNER - JICA - CAPEC 2024 international conference",
+      "alt": "Economic conferences"
+    }
+  },
+  "calendar": {
+    "title": "Activities Calendar",
+    "event1": {
+      "title": "JAPAN CORNER - JICA - CAPEC 2024 Conference",
+      "date": "March 4, 2024",
+      "description": "Advancing industrialization and improving labor productivity."
+    },
+    "event2": {
+      "title": "Training for DGI agents",
+      "date": "March 2025",
+      "description": "Advanced training on econometric techniques."
+    }
+  },
+  "organigramme": {
+    "title": "Organization Chart",
+    "subtitle": "Discover the organizational structure of CAPEC and the various teams that make up our research center.",
+    "visualTitle": "CAPEC Organizational Structure",
+    "orgImageAlt": "CAPEC organization chart",
+    "committee": {
+      "title": "STEERING COMMITTEE",
+      "members": [
+        "Dr YEO Nahoua, Chief of Staff at the Ministry of Planning",
+        "Honorable DIABAGATÉ Mamah",
+        "Dr ABOUA Gustave",
+        "Mr. TRA BI Emmanuel",
+        "Prof. BALLO Zie",
+        "Prof. BAMBA N’Galadjo",
+        "Mr. ADOPO Fiacre",
+        "Mr. NIANGO Guy",
+        "Dr DIARRA Ibrahim"
+      ],
+      "0": "Dr YEO Nahoua, Chief of Staff at the Ministry of Planning",
+      "1": "Honorable DIABAGATÉ Mamah",
+      "2": "Dr ABOUA Gustave",
+      "3": "Mr. TRA BI Emmanuel",
+      "4": "Prof. BALLO Zie",
+      "5": "Prof. BAMBA N’Galadjo",
+      "6": "Mr. ADOPO Fiacre",
+      "7": "Mr. NIANGO Guy",
+      "8": "Dr DIARRA Ibrahim"
+    },
+    "leadership": {
+      "title": "MANAGEMENT TEAM",
+      "members": [
+        "Prof. AHOURE Alban A.E.",
+        "Prof. KIMOU Assi José Carlos",
+        "Dr KRAMO Kouakou Germain",
+        "Mr. NEZIT Denis"
+      ],
+      "0": "Prof. AHOURE Alban A.E.",
+      "1": "Prof. KIMOU Assi José Carlos",
+      "2": "Dr KRAMO Kouakou Germain",
+      "3": "Mr. NEZIT Denis"
+    },
+    "researchers": {
+      "title": "RESEARCH TEAM",
+      "members": [
+        "Prof. BEKE Ehuitche Tite",
+        "Dr TRAORE Nohoua",
+        "Dr BECHO Isabelle (née N’DRI)",
+        "Dr KACOU KACOU Yves Thierry",
+        "Dr KOUADIO Boniface",
+        "Dr TOURE Talnan",
+        "Dr ASSOUM Féissal"
+      ],
+      "0": "Prof. BEKE Ehuitche Tite",
+      "1": "Dr TRAORE Nohoua",
+      "2": "Dr BECHO Isabelle (née N’DRI)",
+      "3": "Dr KACOU KACOU Yves Thierry",
+      "4": "Dr KOUADIO Boniface",
+      "5": "Dr TOURE Talnan",
+      "6": "Dr ASSOUM Féissal"
+    },
+    "support": {
+      "title": "SUPPORT STAFF",
+      "members": [
+        "Mr. MEL Trihji Juste S",
+        "KEI Taud Miguel Emmanuella",
+        "KADJO Balémy Tatiana",
+        "Mrs. NEUBA Augusta (née GOUEDAN)",
+        "Mr. LAMOUA Kouakou Kouadio Aime",
+        "Mr. BAYALA Alexandre",
+        "YAOUA Antoinette"
+      ],
+      "0": "Mr. MEL Trihji Juste S",
+      "1": "KEI Taud Miguel Emmanuella",
+      "2": "KADJO Balémy Tatiana",
+      "3": "Mrs. NEUBA Augusta (née GOUEDAN)",
+      "4": "Mr. LAMOUA Kouakou Kouadio Aime",
+      "5": "Mr. BAYALA Alexandre",
+      "6": "YAOUA Antoinette"
+    }
+  },
+  "capecChiffres": {
+  "title": "CAPEC in Numbers",
+  "subtitle": "Discover the key figures illustrating CAPEC's impact and achievements.",
+  "tableTitle": "Activity Table (2002-2024)",
+  "tableDescription": "Summary of CAPEC activities, including research outputs, studies, trainings and administrative assistance.",
+  "table": {
+    "headers": {
+      "year": "Year",
+      "travaux": "Researchers' outputs",
+      "etudes": "Studies",
+      "formationsGroup": "Trainings",
+      "formations": "Number of trainings",
+      "personnes": "Number of participants trained",
+      "assistance": "Assistance to Administration"
+    }
+  }
+},
+"references": {
+  "title": "Selected References",
+  "subtitle": "Discover our partners and collaborators who trust us for our expertise in economic analysis and applied research.",
+  "tabs": {
+    "international": "International Institutions",
+    "regional": "Regional Institutions",
+    "public": "Public Institutions",
+    "private": "Private Sector",
+    "civil": "Civil Society"
+  }
+},
+  "publication": {
+    "title": "Publications",
+    "types": {
+      "PED": "Economic Policy and Development (PED)",
+      "BUPED": "Economic Policy and Development Bulletin (BUPED)",
+      "LPE": "Economic Policy Brief (LPE)"
+    },
+    "descriptions": {
+      "PED": "The PED reports the results of studies and research in their entirety...",
+      "BUPED": "The BUPED summarizes the conclusions and recommendations of studies in a few pages...",
+      "LPE": "The LPE reports the essential results and recommendations, intended for decision-makers..."
+    },
+    "labels": {
+      "type": "Publication type",
+      "year": "Year",
+      "selectYear": "Select year"
+    },
+    "search": "Search",
+    "noResults": "No publications found for this year.",
+    "authorPrefix": "Author:",
+    "downloadPdf": "Download PDF",
+    "pdfIconAlt": "PDF icon"
+  },
+  
+  "researchers": {
+    "title": "Our Researchers",
+    "description": "Discover CAPEC's research team through our photo gallery.",
+    "viewBio": "View biography",
+    "bioHeading": "Biography",
+    "data": {
+      "1": {
+        "title": "Director of CAPEC",
+        "bio": "Alban A. E. Ahouré is a Full Professor of Economics at Université Félix Houphouët-Boigny in Abidjan (since 2021) and Director of the Policy Analysis Unit for Economic Policies at CIRES (CAPEC) since 2011. He earned his PhD in Economics from Kobe University (Japan, 2006) and specializes in applied microeconomics, labor economics and human resources, institutional economics, game theory and policy evaluation.\n\nHe has coordinated numerous studies on competitiveness, taxation, the private sector, informality, agriculture, governance and development prospects for national, regional (WAEMU, ECOWAS) and international institutions (AfDB, World Bank, UNDP, WFP, FAO, UNICEF, etc.).\n\nAuthor of several books and peer-reviewed articles, his research focuses on employability, economic inclusion, inclusive business models and structural transformation in Africa.\n\nElected in 2024 as an Honorary Member of the Royal European Academy of Doctors (RAED) and featured repeatedly in the Who's Who in Côte d'Ivoire, he actively contributes to scientific debate and development policy in Africa."
+      },
+      "2": {
+        "title": "Deputy Director of CAPEC",
+        "bio": "Biography of Prof KIMOU Assi Jose Carlos."
+      },
+      "3": {
+        "title": "Researcher - Head of Administrative Management",
+        "bio": "KRAMO Kouakou Germain holds a PhD in Economics. He is a researcher at the Policy Analysis Unit for Economic Policies at CIRES (CAPEC) where he has coordinated or contributed to several projects and studies on the Ivorian economy and other African countries. With around ten years of research experience, Dr KRAMO is Head of Administrative Management at CAPEC and an Assistant Professor at the Faculty of Economics and Management at Université Félix Houphouët-Boigny. His research interests include public finance, international trade, economic integration, intellectual property rights and productivity."
+      },
+      "4": {
+        "title": "Researcher at the Economic Policy Analysis Unit (CAPEC)",
+        "bio": "BECHO Isabelle (née N'DRI) is an economist holding a PhD in Economics from Université Félix Houphouët-Boigny (Cocody) and a microprogram diploma in Applied Development Economics from Université Laval. She is a teacher-researcher at the Virtual University of Côte d'Ivoire (UVCI) and a researcher at CAPEC. Her expertise includes impact evaluation of public policies, poverty analysis, vulnerability assessment, political economy and governance, gender analysis, firm analysis, informal sector analysis, inclusive finance, microfinance, development economics, quantitative and qualitative methodologies and data analysis. She has worked on gender, vulnerability and violent extremism projects, collaborated with UN Women, and led research with USAID on COVID-19 policy impacts on women and youth in West Africa. She has also consulted for Equal Access on projects to reduce violent extremism through economic and social inclusion of youth. She teaches microeconomics, data analysis and research methods to students and public/private professionals and is member of scientific associations such as the International Association of Francophone Microfinance Researchers (AICFM) and the Association of Women Researchers of Côte d'Ivoire (AFEMCI)."
+      },
+      "5": {
+        "title": "Environmental Economist & Senior Researcher at CAPEC",
+        "bio": "Mr. BEKE Tite Ehuitché is an Associate Professor at the Faculty of Economics and Management, Université FHB (Abidjan). He holds a PhD in Environmental Economics and is a Senior Researcher at CAPEC. His publications and study reports focus on resilient agricultural value chains in the face of climate change, food security, the green economy, just ecological transition and green jobs. He is a member of the operational GJAM (Green Jobs Assessment Model) team and Team21 Côte d’Ivoire."
+      },
+      "6": {
+        "title": "Economist Researcher at CAPEC",
+        "bio": "Dr TRAORE Nohoua holds a PhD in Development Economics from Université Félix Houphouët-Boigny and a professional postgraduate diploma in Project Management. He is currently an Assistant Professor at Université Alassane Ouattara and an economist researcher at the CAPEC. Dr Traoré has contributed to several international research projects funded by IDRC focusing on firm performance in francophone Sub-Saharan Africa, economic inclusion of youth and women, inclusive entrepreneurship and COVID-19 impacts. His national contributions include work on informal sector supervision, tobacco product taxation, entrepreneur status, tax optimization and exemptions, privatization, and private sector competitiveness. He has also trained fiscal administration staff across francophone Africa on research methods applied to taxation for the African Tax Administration Forum (ATAF). He publishes in international journals and is a member of scientific committees including the African Tax Research Network and Sustainability, Research & Innovation Network."
+      },
+      "7": {
+        "title": "Researcher and Development Economist at CAPEC",
+        "bio": "Holder of a PhD in Economics from ENSEA (Abidjan), with strong training in statistics and mathematics, he is a development economist and researcher at CAPEC, responsible for data management. His combined expertise enables rigorous applied economic research. His work focuses on financial stability, public debt, structural transformation and policy evaluation using advanced econometric methods to provide robust, decision-oriented analyses."
+      },
+      "8": {
+        "title": "Researcher at the Economic Policy Analysis Unit (CAPEC)",
+        "bio": "Dr KOUADIO holds a PhD in Economics from Université Félix Houphouët-Boigny (Cocody). As a teacher-researcher and consultant, he has conducted numerous studies for international and local institutions. At CAPEC he contributed to many research projects, progressing from research assistant to associate researcher. He is a member of AfricaLics and his research interests include development economics, innovation management, firm economics, knowledge economy, digital economy, transport economics and quantitative techniques (statistics and econometrics)."
+      },
+      "9": {
+        "title": "Macroeconomist Researcher at CAPEC",
+        "bio": "Kacou Yves Thierry Kacou holds a PhD in Economics from the University of Ulsan (South Korea). He is a lecturer-researcher at INPHB (Yamoussoukro) and a macroeconomist researcher at CAPEC. He has contributed to studies on fiscal policy, economic modelling and forward-looking analysis, including development of a multi-sector DSGE model for the Ivorian economy and analysis of macroeconomic consequences of infrastructure delays and climate risk adaptation in WAEMU countries. His interests include public policy impact, applied econometrics and macroeconomic modelling."
+      },
+      "11": {
+        "title": "Macroeconomist Researcher at CAPEC",
+        "bio": "Touré Talnan Aboulaye has been a lecturer-researcher in economics at INP-HB (Yamoussoukro) since September 2023 and a junior macroeconomist researcher at CAPEC. He has contributed to studies on the competitiveness challenges of the Ivorian economy, the impact of electricity price increases (policy brief), the national strategy for resource mobilization (SNRMT), socio-economic impact assessment of tax exemptions, and the evaluation of fiscal measures such as changes in corporate tax regimes (BIC). He holds a PhD in Economics from Kobe University (Japan) and his research interests include monetary, banking and financial economics and fiscal policy."
+      }
+    }
+  },
+  "phototheque": {
+    "title": "Photo gallery",
+    "description": "Discover the highlights of CAPEC activities through our photo gallery.",
+    "close": "Close",
+    "previous": "Previous",
+    "next": "Next",
+    "data": {
+      "conf3": { "title": "3 IMPACT EVALUATION STUDIES OF FISCAL MEASURES", "date": "", "description": "" },
+      "conf4": { "title": "JAPAN CORNER - JICA - TODA CORPORATION - CAPEC CONFERENCE 2025", "date": "February 22, 2024", "description": "" },
+      "conf5": { "title": "Prof. Alban AHOURE nominated in Who's Who in Côte d'Ivoire 2024", "date": "", "description": "" },
+      "sem1": { "title": "EPA FORUM IN PARTNERSHIP WITH ACED", "date": "November 6-7, 2024", "description": "" },
+      "sem2": { "title": "Launch of the SPIA project in Côte d’Ivoire", "date": "May 15, 2025", "description": "" },
+      "sem3": { "title": "Launch of the SPIA project in Côte d’Ivoire", "date": "May 15, 2025", "description": "" },
+      "sem4": { "title": "Launch of the SPIA project in Côte d’Ivoire", "date": "May 15, 2025", "description": "" },
+      "sem5": { "title": "Launch of the SPIA project in Côte d’Ivoire", "date": "May 15, 2025", "description": "" },
+      "sem6": { "title": "Launch of the SPIA project in Côte d’Ivoire", "date": "May 15, 2025", "description": "" },
+      "sem7": { "title": "Launch of the SPIA project in Côte d’Ivoire", "date": "May 15, 2025", "description": "" },
+      "sem8": { "title": "Launch of the SPIA project in Côte d’Ivoire", "date": "May 15, 2025", "description": "" },
+      "sem9": { "title": "Launch of the SPIA project in Côte d’Ivoire", "date": "May 15, 2025", "description": "" },
+      "sem10": { "title": "Launch of the SPIA project in Côte d’Ivoire", "date": "May 15, 2025", "description": "" },
+      "sem11": { "title": "Launch of the SPIA project in Côte d’Ivoire", "date": "May 15, 2025", "description": "" },
+      "form1": { "title": "30th Anniversary Awards - CAPEC Economic Policy Awards", "date": "October 09, 2024", "description": "" },
+      "form2": { "title": "Visit of a delegation from Sophia University (Tokyo)", "date": "", "description": "" },
+      "form3": { "title": "CAPEC kick-off seminar (Mondoukou Bassam)", "date": "January 11 - 13, 2024", "description": "" },
+      "form4": { "title": "SPIA Côte d'Ivoire project launch workshop", "date": "", "description": "" },
+      "form5": { "title": "CAPEC exhibition booth - 30th anniversary & 10th summit", "date": "", "description": "" },
+      "eq2": { "title": "CAPEC Director Prof. AHOURE Alban during the JAPAN CORNER-JICA-TODA CORPORATION-CAPEC 2025 conference", "date": "", "description": "" },
+      "eq3": { "title": "Visit of Esther DUFLO, 2019 Nobel Prize in Economics", "date": "", "description": "" },
+      "pan2": { "title": "High-level panel", "date": "", "description": "" },
+      "pan3": { "title": "High-level panel", "date": "", "description": "" },
+      "pan4": { "title": "High-level panel", "date": "", "description": "" },
+      "pan5": { "title": "High-level panel", "date": "", "description": "" }
+    }
+  },
+  "videotheque": {
+    "title": "Video library",
+    "description": "Discover videos of CAPEC conferences, seminars and activities.",
+    "close": "Close",
+    "data": {
+      "vid1": {
+        "title": "Launch ceremony of the CRDI project on youth employability and urban violence",
+        "date": "December 16, 2020"
+      },
+      "vid2": {
+        "title": "Economy: an emerging Côte d'Ivoire by 2020 – CAPEC reflections",
+        "date": "June 03, 2020"
+      },
+      "vid3": {
+        "title": "CIRES reflection seminar – June 7, 2012 (Part 1)",
+        "date": "June 03, 2020"
+      }
+    }
+  },
+  "programmes": {
+    "title": "Activity Programs",
+    "description": "Explore CAPEC activity programs from 2008 to 2024.",
+    "download": "Download",
+    "data": {
+      "program2024": { "title": "Activity Programs 2024" },
+      "program2023": { "title": "Activity Programs 2023" },
+      "program2022": { "title": "Activity Programs 2022" },
+      "program2021": { "title": "Activity Programs 2021" },
+      "program2020": { "title": "Activity Programs 2020" },
+      "program2019": { "title": "Activity Programs 2019" },
+      "program2018": { "title": "Activity Programs 2018" },
+      "program2017": { "title": "Activity Programs 2017" },
+      "program2016": { "title": "Activity Programs 2016" },
+      "program2015": { "title": "Activity Programs 2015" },
+      "program2014": { "title": "Activity Programs 2014" },
+      "program2012": { "title": "Activity Programs 2012" },
+      "program2011": { "title": "Activity Programs 2011" },
+      "program2009": { "title": "Activity Programs 2009" },
+      "program2008": { "title": "Activity Programs 2008" }
+    }
+  },
+  "interviewsPage": {
+    "title": "Interviews & Questions",
+    "description": "Discover interviews and media interventions by CAPEC researchers on current economic issues.",
+    "tabs": {
+      "interviews": "Interviews",
+      "debats": "Question A"
+    },
+    "labels": {
+      "speaker": "Speaker",
+      "participants": "Participants"
+    },
+    "buttons": {
+      "view": "View more"
+    },
+    "cta": {
+      "title": "Interview Request",
+      "text": "Are you a journalist or representative of an organization and would like to interview a CAPEC researcher?",
+      "button": "Contact us",
+      "link": "/"
+    },
+    "interviews": [
+      { "id": "int1", "type": "video" },
+      { "id": "int2", "type": "audio" },
+      { "id": "int3", "type": "video" },
+      { "id": "int4", "type": "video" }
+    ],
+    "interviewsData": {
+      "int1": {
+        "title": "\"Our reflections will help establish a link between youth violence and economic opportunities\"",
+        "date": "August 18, 2020",
+        "speaker": "Prof Kimou Assi José Carlos, Deputy Director of CAPEC"
+      },
+      "int2": {
+        "title": "\"Côte d'Ivoire has not regressed, but its progress has been less significant\"",
+        "date": "June 15, 2020",
+        "speaker": "Dr Germain Kramo, Researcher at CAPEC"
+      },
+      "int3": {
+        "title": "\"One does not become a Full Professor through personal work alone\"",
+        "date": "June 5, 2020",
+        "speaker": "Prof Mama Ouattara, Director of CIRES"
+      },
+      "int4": {
+        "title": "\"Results-Based Management can help Southern countries\"",
+        "date": "November 5, 2019",
+        "speaker": "Jean Amantchi Gogoua, Senior Economist – World Bank"
+      }
+    },
+    "debats": [
+      { "id": "deb1" },
+      { "id": "deb2" }
+    ],
+    "debatsData": {
+      "deb1": {
+        "title": "Impacts of COVID-19 lockdown measures",
+        "date": "June 15, 2020",
+        "participants": "Prof Ahoure Alban, Director of CAPEC"
+      },
+      "deb2": {
+        "title": "Lessons for Africans in the franc zone",
+        "date": "February 15, 2019",
+        "participants": "Fatou Sow, Ouattara Ibrahim, Bamba Aminata"
+      }
+    }
+  },
+  "newsPage": {
+    "title": "News",
+    "description": "Stay informed about CAPEC's latest events, announcements and activities.",
+    "seeAll": "See all news"
+  },
+  "newsItems": {
+    "news1": {
+      "title": "CAPEC's 30th Anniversary",
+      "excerpt": "On October 8-9, 2024, CAPEC celebrated its 30th anniversary in Abidjan. The event, held under the High Patronage of the Vice-President of the Republic, Tiémoko Meyliet Koné, was an opportunity to review CAPEC's contributions to the structural transformation of Côte d'Ivoire and sub-regional integration between 1993 and 2023.",
+      "date": "October 8-9, 2024"
+    },
+    "news12": {
+      "title": "High-Level Panel at CAPEC's 30th Anniversary Celebration",
+      "excerpt": "Highlights from the high-level panel held during CAPEC's 30th anniversary celebration.",
+      "date": "October 8, 2024"
+    },
+    "news17": {
+      "title": "Japan Corner - JICA - CAPEC International Conference",
+      "excerpt": "Félix Houphouët-Boigny University of Cocody hosted the Japan Corner - JICA - CAPEC International Conference on the theme: 'Advancing industrialization and improving labor productivity: a path for the development of the Ivorian economy'.",
+      "date": "February 22, 2024"
+    },
+    "news19": {
+      "title": "Launch of the SPIA Project in Côte d'Ivoire",
+      "excerpt": "A new dynamic for Ivorian agriculture with the launch of the SPIA project in Côte d'Ivoire.",
+      "date": "May 15, 2025"
+    },
+    "news21": {
+      "title": "Visit of Professor Esther Duflo, 2019 Nobel Prize in Economics, to CAPEC",
+      "excerpt": "CAPEC had the honor of welcoming Professor Esther Duflo, winner of the 2019 Nobel Prize in Economics.",
+      "date": "January 16, 2024"
+    },
+    "news30": {
+      "title": "Marketing Methods and Techniques: BNETD Executives at CAPEC School",
+      "excerpt": "Specialized training in marketing methods and techniques for BNETD executives.",
+      "date": "September 21, 2020"
+    },
+    "news29": {
+      "title": "Scientific Methodology and Writing Workshop",
+      "excerpt": "A scientific methodology and writing workshop was held in Abidjan from April 1 to 5.",
+      "date": "April 1-5, 2019"
+    },
+    "news28": {
+      "title": "Industrial Development: Executives Trained in Sector Analysis",
+      "excerpt": "Training of executives in techniques for developing and implementing industrial sector analysis.",
+      "date": "July 12, 2017"
+    },
+    "news27": {
+      "title": "Planning, Programming, Budgeting and Monitoring-Evaluation",
+      "excerpt": "Training session on the PPBSE chain (Planning, Programming, Budgeting and Monitoring-Evaluation).",
+      "date": "June 30, 2016"
+    },
+    "news26": {
+      "title": "Social Sciences Research Environment in Côte d'Ivoire",
+      "excerpt": "CAPEC proposes ways to revitalize the social sciences research environment in Côte d'Ivoire.",
+      "date": "May 6, 2016"
+    },
+    "news25": {
+      "title": "PPBSE Chain / Ministry of State, Ministry of Planning and Development",
+      "excerpt": "Collaboration with the Ministry of State, Ministry of Planning and Development on the PPBSE chain.",
+      "date": "June 26, 2015"
+    },
+    "news24": {
+      "title": "KAIZEN Project in Côte d'Ivoire",
+      "excerpt": "Launch and implementation of the KAIZEN project for continuous productivity improvement in Côte d'Ivoire.",
+      "date": "September 15-16, 2025"
+    },
+    "news23": {
+      "title": "Three New Doctors in Economics Trained at CAPEC",
+      "excerpt": "Three new Doctors in Economics trained within the Economic Policy Analysis Unit of CIRES.",
+      "date": "July 2025"
+    },
+    "news22": {
+      "title": "Dr. Prof. Alban AHOURÉ Elected Honorary Member of the Royal European Academy of Doctors",
+      "excerpt": "International distinction for Dr. Prof. Alban AHOURÉ with his election as Honorary Member of the Royal European Academy of Doctors (RAED).",
+      "date": "April 11, 2024"
+    },
+    "news20": {
+      "title": "2024 Opening Seminar: Setting New Objectives!",
+      "excerpt": "CAPEC organized its 2024 opening seminar to define new strategic objectives.",
+      "date": "January 11-13, 2024"
+    },
+    "news18": {
+      "title": "Professor Alban AHOURÉ Nominated for Who's Who in Côte d'Ivoire",
+      "excerpt": "Professor Alban AHOURÉ, Director of CAPEC, was nominated for the 6th edition of Who's Who in Côte d'Ivoire, an annual event honoring Ivorian excellence in various sectors.",
+      "date": "December 3, 2024"
+    },
+    "news16": {
+      "title": "EPA Forum in Partnership with ACED",
+      "excerpt": "The EPA Forum, organized in partnership with ACED, was held in Abidjan on November 6-7, 2024. This major event brought together key development actors from various backgrounds to reflect together on pathways to inclusive development in Francophone Africa.",
+      "date": "November 6-7, 2024"
+    },
+    "news6": {
+      "title": "9th Edition of Africa Think Tanks - ACBF",
+      "excerpt": "Participation in the 9th edition of Africa Think Tanks organized by ACBF in Lusaka, Zambia.",
+      "date": "November 8-10, 2023"
+    },
+    "news15": {
+      "title": "Steering Committee Meeting for WAEMU Vision 2040",
+      "excerpt": "Meeting of the Independent Reading Committee and 4th meeting of the Steering Committee for the study on the development of WAEMU Vision 2040 in Ouagadougou, Burkina Faso.",
+      "date": "September 10-16, 2023"
+    },
+    "news7": {
+      "title": "Official Opening Ceremony of UFHB's JAPAN CORNER",
+      "excerpt": "Inauguration of the JAPAN CORNER at Félix Houphouët-Boigny University.",
+      "date": "June 1, 2023"
+    },
+    "news9": {
+      "title": "International Closing Conference of Covid-19 Impact Research Project",
+      "excerpt": "International closing conference in Abidjan of the research project on the impact of public policies related to the Covid-19 pandemic on businesses, women and youth: cases of Burkina Faso, Cameroon, Côte d'Ivoire and Senegal.",
+      "date": "March 23, 2023"
+    },
+    "news5": {
+      "title": "4th Edition of International Conferences on Japanese Studies",
+      "excerpt": "Organization of the 4th edition of International Conferences on Japanese Studies.",
+      "date": "February 9, 2023"
+    },
+    "news13": {
+      "title": "Presentation of Studies on Taxation and Investment",
+      "excerpt": "Presentation of 03 studies on 'The issue of changing the BIC tax rate' and 'Rationalization of the investment code' in Abidjan.",
+      "date": "February 2, 2023"
+    },
+    "news8": {
+      "title": "Closing Conference of PEP Research Project",
+      "excerpt": "Closing conference of the PEP Research Project on the socio-economic impact of vulnerable youth in Côte d'Ivoire, Abidjan.",
+      "date": "October 21, 2021"
+    },
+    "news14": {
+      "title": "Validation Meeting for ECOWAS Vision 2050 Project",
+      "excerpt": "Validation meeting for the Vision 2050 project by experts from ECOWAS member states in Accra, Ghana.",
+      "date": "September 10-12, 2021"
+    },
+    "news11": {
+      "title": "Launch of Research Project on Early Childhood Care",
+      "excerpt": "Launch ceremony of the Research Project on 'Impact of community socio-educational early childhood care programs on women's empowerment in disadvantaged areas in Burkina Faso and Côte d'Ivoire' in Abidjan.",
+      "date": "July 22, 2021"
+    }
+  },
+  "recherches": {
+    "ui": {
+      "pageTitle": "Research",
+      "pageSubtitle": "Browse our studies, reports and publications by topic and year.",
+      "selectYear": "Select year",
+      "show": "Show",
+      "downloadPdf": "Download PDF",
+      "noResults": "No studies found for this selection.",
+      "newsTitle": "News"
+    },
+    "categories": {
+      "analyseImpact": "Economic impact analysis",
+      "institution": "Institution & governance",
+      "transformation": "Structural transformation, growth & financing",
+      "finance": "Public finance & economic convergence",
+      "entrepreneuriat": "Entrepreneurship & inclusive business models",
+      "pauvrete": "Poverty, inequality & redistribution",
+      "agriculture": "Agriculture, Nutrition & Food Security",
+      "suivi": "Project monitoring & evaluation",
+      "modelisation": "Economic modelling",
+      "commerce": "International trade"
+    },
+    "etudes": {
+      "study1": {
+        "title": "Impact study of investments in hydrocarbons and energy sectors on the Ivorian economy",
+        "date": "2018"
+      },
+      "study2": {
+        "title": "Health and financial impact of financing the fight against AIDS in Côte d'Ivoire: financing scenario modelling",
+        "date": "2017"
+      },
+      "study3": {
+        "title": "Impact study of community radios in Côte d'Ivoire",
+        "date": "2016"
+      },
+      "study4": {
+        "title": "Socio-economic impact study of the return of the African Development Bank to Côte d'Ivoire",
+        "date": "2015"
+      },
+      "study5": {
+        "title": "National self-assessment report on corporate governance",
+        "date": "2017"
+      },
+      "study6": {
+        "title": "Emergence: Governance and Planning",
+        "date": "2016"
+      },
+      "study7": {
+        "title": "Capacity indicators in Africa 2015",
+        "date": "2015"
+      },
+      "study8": {
+        "title": "Governance and planning: their role in countries' emergence",
+        "date": "2014"
+      },
+      "study9": {
+        "title": "Strategies to improve governance indicators in Côte d'Ivoire",
+        "date": "2013"
+      },
+      "study10": {
+        "title": "National Public-Private Dialogue Strategy (SNDPP) 2016-2020 for Côte d'Ivoire",
+        "date": "2017"
+      },
+      "study11": {
+        "title": "Country profile: Côte d'Ivoire",
+        "date": "2015"
+      },
+      "study12": {
+        "title": "Emergence and sustainable human development",
+        "date": "2014"
+      },
+      "study13": {
+        "title": "Development of the National Strategy for Statistics (SNDS) 2017-2021 - Côte d'Ivoire",
+        "date": "2017"
+      },
+      "study14": {
+        "title": "Review of public agricultural expenditures (summary)",
+        "date": "2016"
+      },
+      "study15": {
+        "title": "Diagnostic analysis of state rents and proposal of a compatible public real estate policy",
+        "date": "2015"
+      },
+      "study16": {
+        "title": "Evaluation of financial administrations in Côte d'Ivoire",
+        "date": "2014"
+      },
+      "study17": {
+        "title": "Feasibility study for the establishment of the 'entreprenant' status in Côte d'Ivoire",
+        "date": "2016"
+      },
+      "study18": {
+        "title": "State-Private Sector Partnership",
+        "date": "2015"
+      },
+      "study19": {
+        "title": "State-Private Sector Partnership (Poverty & redistribution)",
+        "date": "2015"
+      },
+      "study20": {
+        "title": "FAIM ZERO Côte d'Ivoire - national strategic review",
+        "date": "2018"
+      },
+      "study21": {
+        "title": "Fisheries sector diagnostic: economic and environmental efficiency of fisheries management and rights",
+        "date": "2015"
+      },
+      "study22": {
+        "title": "Access to drinking water: assessment and perspectives",
+        "date": "2012"
+      },
+      "study23": {
+        "title": "Energy issues in CI: assessment and perspectives (1960-2060)",
+        "date": "2010"
+      },
+      "study24": {
+        "title": "GEMMES modelling project for Côte d'Ivoire",
+        "date": "2019"
+      },
+      "study25": {
+        "title": "Trade policy and eligibility issues for Côte d'Ivoire for the Millennium Challenge Corporation",
+        "date": "2013"
+      },
+      "study26": {
+        "title": "Regional action-research project on tobacco taxation in West Africa",
+        "date": "2013"
+      },
+      "study27": {
+        "title": "Study on innovative mechanisms for financing regional development (ECOWAS)",
+        "date": "2014"
+      },
+      "study28": {
+        "title": "Review of public agricultural expenditures (2014)",
+        "date": "2014"
+      },
+      "study29": {
+        "title": "Diagnostic analysis of state rents (trade)",
+        "date": "2015"
+      },
+      "study30": {
+        "title": "Evaluation of financial administrations in Côte d'Ivoire (trade)",
+        "date": "2016"
+      },
+      "study31": {
+        "title": "Drivers of growth and trade openness in Côte d'Ivoire",
+        "date": "2017"
+      }
+    },
+    "news": {
+      "news1": {
+        "title": "Inaugural lecture for CAPEC's 30th anniversary",
+        "date": "8 October 2024"
+      },
+      "news2": {
+        "title": "CAPEC 30th anniversary dinner",
+        "date": "9 October 2024"
+      },
+      "news3": {
+        "title": "International closing conference - Covid-19 impacts research project",
+        "date": "23 March 2023"
+      }
+    }
+  },
+   "etudesPage": {
+    "ui": {
+      "pageTitle": "Commissioned Studies",
+      "pageSubtitle": "Browse our studies and reports by topic and year.",
+      "selectYear": "Select year",
+      "show": "Show",
+      "downloadPdf": "Download PDF",
+      "noResults": "No studies found for this selection.",
+      "recentNews": "Recent news",
+      "categories": {
+        "analyseImpact": "Economic impact analysis",
+        "institution": "Institution & governance",
+        "transformation": "Structural transformation",
+        "finance": "Public finance",
+        "commerce": "International trade"
+      }
+    },
+    "etudes": {
+      "study_crime": { "title": "CRIME, SELF PROTECTION AND BUSINESS GROWTH IN COTE D'IVOIRE", "date": "2020" },
+      "study_investissements": { "title": "Impact of investments in hydrocarbons & energy sectors on the Ivorian economy", "date": "2018" },
+      "study_sida": { "title": "Health & financial impact of financing the fight against AIDS in Côte d'Ivoire", "date": "2017" },
+      "study_radios": { "title": "Impact study of community radios in Côte d'Ivoire", "date": "2016" },
+      "study_banqueafrique": { "title": "Socio-economic impact of the return of the African Development Bank to Côte d'Ivoire", "date": "2015" },
+
+      "study_gov_2017": { "title": "National self-assessment report on corporate governance", "date": "2017" },
+      "study_emergence": { "title": "Emergence: Governance and Planning", "date": "2016" },
+
+      "study_sndpp": { "title": "National Public-Private Dialogue Strategy (SNDPP) 2016-2020", "date": "2017" },
+
+      "study_snds": { "title": "Development of the National Strategy for Statistics (SNDS) 2017-2021", "date": "2017" },
+
+      "study_politique_commerciale": { "title": "Trade policy & MCC eligibility: Côte d'Ivoire", "date": "2013" },
+      "study_tobacco": { "title": "Regional research-action project on tobacco taxation in West Africa", "date": "2013" },
+      "study_financement_ceo": { "title": "Study on innovative mechanisms for financing ECOWAS regional development", "date": "2014" }
+    },
+    "news": {
+      "news1": { "title": "CAPEC 30th anniversary celebration", "date": "8 - 9 October 2024" },
+      "news2": { "title": "Validation meeting: Vision 2050 project (ECOWAS experts)", "date": "10 - 12 Sept. 2021" },
+      "news3": { "title": "International closing conference - Covid-19 impacts project", "date": "23 March 2023" }
+    }
+  }
+}

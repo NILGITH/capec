@@ -12,9 +12,12 @@ import {
 } from "lucide-react";
 import { navItems } from "./navItems";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { LanguageToggle } from "@/components/language-toggle";
+import { useTranslations } from "next-intl";
 
 export type NavItem = {
-  title: string;
+  titleKey: string;
   href: string;
   submenu?: NavItem[];
 };
@@ -23,6 +26,7 @@ export function MainNav() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const tNav = useTranslations("nav");
 
   return (
     <div className="shadow-sm w-full flex flex-col">
@@ -65,12 +69,18 @@ export function MainNav() {
             <Link href="https://x.com/info_capec?s=20" target="_blank">
               <Twitter className="h-4 w-4 sm:h-5 md:h-6 sm:w-5 md:w-6 text-white hover:text-ci-orange" />
             </Link>
+
+            {/* Controls (Theme + Language) */}
+            <div className="flex items-center gap-1 sm:gap-2 pl-2 sm:pl-3 border-l border-white/30">
+              <LanguageToggle />
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </div>
 
       {/* Navigation */}
-      <nav className="w-full text-black flex items-center min-h-[100px] sm:min-h-[120px] md:min-h-[150px] px-2 sm:px-4 md:px-8">
+      <nav className="w-full text-foreground bg-background flex items-center min-h-[100px] sm:min-h-[120px] md:min-h-[150px] px-2 sm:px-4 md:px-8">
         {/* Logo desktop */}
         <div className="hidden sm:flex absolute top-0 left-2 sm:left-4 h-[150px] sm:h-[180px] w-[180px] sm:w-[220px] items-center justify-center overflow-visible">
           <Link href="/">
@@ -94,30 +104,30 @@ export function MainNav() {
             if (item.submenu) {
               return (
                 <div
-                  key={item.title}
+                  key={item.titleKey}
                   className="group relative"
-                  onMouseEnter={() => setOpenDropdown(item.title)}
+                  onMouseEnter={() => setOpenDropdown(item.titleKey)}
                   onMouseLeave={() => setOpenDropdown(null)}
                 >
                   <Link
                     href={item.href || "#"}
                     className={cn(
                       "flex items-center px-2 md:px-3 py-1 md:py-2 text-base font-medium transition-colors hover:text-orange-300 rounded-md nav-text-reduced",
-                      isActive ? "text-black" : ""
+                      isActive ? "text-foreground" : ""
                     )}
                   >
-                    {item.title}
+                    {tNav(item.titleKey)}
                     <ChevronDown className="ml-0.5 md:ml-1 h-4 w-4 md:h-5 md:w-5" />
                   </Link>
                   <div
                     className={cn(
                       "absolute left-0 top-full z-50 pt-1 md:pt-2",
-                      openDropdown === item.title
+                      openDropdown === item.titleKey
                         ? "block"
                         : "hidden group-hover:block"
                     )}
                   >
-                    <div className="w-48 md:w-56 overflow-hidden rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+                    <div className="w-48 md:w-56 overflow-hidden rounded-md bg-popover text-popover-foreground shadow-lg ring-1 ring-border">
                       <div
                         className="py-1"
                         role="menu"
@@ -127,18 +137,18 @@ export function MainNav() {
                           const isSubActive = pathname === subItem.href;
                           return (
                             <Link
-                              key={subItem.title}
+                              key={subItem.titleKey}
                               href={subItem.href}
                               className={cn(
                                 "relative block px-3 md:px-4 py-1 md:py-1.5 text-sm md:text-base transition-all duration-200 group/item",
                                 isSubActive
-                                  ? "text-black"
-                                  : "text-gray-700 hover:text-green-700"
+                                  ? "text-foreground"
+                                  : "text-muted-foreground hover:text-ci-green"
                               )}
                               role="menuitem"
                             >
                               <span className="relative z-10">
-                                {subItem.title}
+                                {tNav(subItem.titleKey)}
                               </span>
                             </Link>
                           );
@@ -151,14 +161,14 @@ export function MainNav() {
             }
             return (
               <Link
-                key={item.title}
+                key={item.titleKey}
                 href={item.href}
                 className={cn(
                   "px-2 md:px-3 py-1 md:py-2 text-base font-medium transition-colors hover:text-orange-300 rounded-md nav-text-reduced",
-                  isActive ? "text-black" : ""
+                  isActive ? "text-foreground" : ""
                 )}
               >
-                {item.title}
+                {tNav(item.titleKey)}
               </Link>
             );
           })}
@@ -168,25 +178,25 @@ export function MainNav() {
         <div className="lg:hidden flex justify-end w-full pr-2">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="flex items-center space-x-1 text-sm font-medium text-black"
+            className="flex items-center space-x-1 text-sm font-medium text-foreground"
           >
-            <span>Menu</span>
+            <span>{tNav("menu")}</span>
             <div className="flex h-4 w-5 flex-col justify-between">
               <span
                 className={cn(
-                  "h-0.5 w-full transform bg-black transition duration-300",
+                  "h-0.5 w-full transform bg-foreground transition duration-300",
                   mobileMenuOpen ? "translate-y-1.5 rotate-45" : ""
                 )}
               />
               <span
                 className={cn(
-                  "h-0.5 w-full bg-black transition duration-300",
+                  "h-0.5 w-full bg-foreground transition duration-300",
                   mobileMenuOpen ? "opacity-0" : "opacity-100"
                 )}
               />
               <span
                 className={cn(
-                  "h-0.5 w-full transform bg-black transition duration-300",
+                  "h-0.5 w-full transform bg-foreground transition duration-300",
                   mobileMenuOpen ? "-translate-y-1.5 -rotate-45" : ""
                 )}
               />
@@ -202,7 +212,7 @@ export function MainNav() {
             className="fixed inset-0 z-40 bg-black bg-opacity-30 lg:hidden"
             onClick={() => setMobileMenuOpen(false)}
           />
-          <div className="fixed top-0 left-0 z-50 h-full w-4/5 max-w-xs bg-white shadow-2xl px-4 py-6 lg:hidden flex flex-col overflow-y-auto transition-transform duration-300">
+          <div className="fixed top-0 left-0 z-50 h-full w-4/5 max-w-xs bg-background text-foreground shadow-2xl px-4 py-6 lg:hidden flex flex-col overflow-y-auto transition-transform duration-300">
             <div className="flex items-center justify-between mb-4">
               <Link href="/" onClick={() => setMobileMenuOpen(false)}>
                 <Image
@@ -215,7 +225,7 @@ export function MainNav() {
               </Link>
               <button
                 onClick={() => setMobileMenuOpen(false)}
-                aria-label="Fermer le menu"
+                aria-label={tNav("closeMenu")}
               >
                 <svg
                   width="24"
@@ -240,51 +250,51 @@ export function MainNav() {
                     pathname.startsWith(`${item.href}/`));
                 if (item.submenu) {
                   return (
-                    <div key={item.title} className="space-y-1">
+                    <div key={item.titleKey} className="space-y-1">
                       <button
                         onClick={() =>
                           setOpenDropdown(
-                            openDropdown === item.title ? null : item.title
+                            openDropdown === item.titleKey ? null : item.titleKey
                           )
                         }
                         className={cn(
-                          "flex w-full items-center justify-between text-base font-medium transition-colors hover:text-ci-orange py-2 px-2 rounded-md bg-gray-50",
-                          isActive ? "text-black" : "text-foreground"
+                          "flex w-full items-center justify-between text-base font-medium transition-colors hover:text-ci-orange py-2 px-2 rounded-md bg-muted",
+                          isActive ? "text-foreground" : "text-foreground"
                         )}
-                        aria-expanded={openDropdown === item.title}
-                        aria-controls={`submenu-${item.title}`}
+                        aria-expanded={openDropdown === item.titleKey}
+                        aria-controls={`submenu-${item.titleKey}`}
                       >
-                        {item.title}
+                        {tNav(item.titleKey)}
                         <ChevronDown
                           className={cn(
                             "h-4 w-4 transition-transform",
-                            openDropdown === item.title ? "rotate-180" : ""
+                            openDropdown === item.titleKey ? "rotate-180" : ""
                           )}
                         />
                       </button>
-                      {openDropdown === item.title && (
+                      {openDropdown === item.titleKey && (
                         <div
-                          id={`submenu-${item.title}`}
-                          className="space-y-1 border-l-2 border-ci-green pl-4 ml-2 bg-gray-100 rounded-md"
+                          id={`submenu-${item.titleKey}`}
+                          className="space-y-1 border-l-2 border-ci-green pl-4 ml-2 bg-muted rounded-md"
                         >
                           {item.submenu.map((subItem) => {
                             const isSubActive = pathname === subItem.href;
                             return (
                               <Link
-                                key={subItem.title}
+                                key={subItem.titleKey}
                                 href={subItem.href}
                                 className={cn(
                                   "block rounded px-2 py-2 text-sm font-medium transition-colors",
                                   isSubActive
-                                    ? "text-ci-green bg-white"
-                                    : "text-foreground hover:text-ci-green hover:bg-white"
+                                    ? "text-ci-green bg-background"
+                                    : "text-foreground hover:text-ci-green hover:bg-background"
                                 )}
                                 onClick={() => {
                                   setMobileMenuOpen(false);
                                   setOpenDropdown(null);
                                 }}
                               >
-                                {subItem.title}
+                                {tNav(subItem.titleKey)}
                               </Link>
                             );
                           })}
@@ -295,15 +305,15 @@ export function MainNav() {
                 }
                 return (
                   <Link
-                    key={item.title}
+                    key={item.titleKey}
                     href={item.href}
                     className={cn(
-                      "py-2 px-2 rounded-md text-base font-medium transition-colors hover:text-ci-orange hover:bg-gray-50",
+                      "py-2 px-2 rounded-md text-base font-medium transition-colors hover:text-ci-orange hover:bg-muted",
                       isActive ? "text-ci-orange" : "text-foreground"
                     )}
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {item.title}
+                    {tNav(item.titleKey)}
                   </Link>
                 );
               })}

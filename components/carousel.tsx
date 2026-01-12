@@ -4,6 +4,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ChevronRight, ChevronLeft } from "lucide-react"
 import { useEffect, useState } from "react"
+import { useTranslations } from "next-intl"
 
 export function EventCarousel({ events }: { 
   events: {
@@ -16,6 +17,7 @@ export function EventCarousel({ events }: {
   }[]
 }) {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const t = useTranslations("carousel")
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % events.length)
@@ -36,7 +38,7 @@ export function EventCarousel({ events }: {
       <button 
         onClick={prevSlide} 
         className="absolute left-4 top-1/2 z-20 -translate-y-1/2 bg-black/40 hover:bg-black/70 p-3 rounded-full text-white"
-        aria-label="Previous slide"
+        aria-label={t("previous")}
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
@@ -44,7 +46,7 @@ export function EventCarousel({ events }: {
       <button 
         onClick={nextSlide} 
         className="absolute right-4 top-1/2 z-20 -translate-y-1/2 bg-black/40 hover:bg-black/70 p-3 rounded-full text-white"
-        aria-label="Next slide"
+        aria-label={t("next")}
       >
         <ChevronRight className="h-6 w-6" />
       </button>
@@ -76,7 +78,7 @@ export function EventCarousel({ events }: {
                   <div className="flex flex-wrap gap-3">
                       <Link href="/activites/actualites">
                         <Button className="flex flex-col gap-2 min-[400px]:flex-row">
-                          Découvrez toutes nos actualités
+                          {t("allNews")}
                           <ChevronRight className="ml-2 h-4 w-4" />
                         </Button>
                       </Link>
@@ -86,7 +88,7 @@ export function EventCarousel({ events }: {
                             variant="outline"
                             className="border-ci-green text-ci-green hover:bg-green-50"
                           >
-                            En savoir plus sur la CAPEC
+                            {t("moreAbout")}
                           </Button>
                         </Link>
                       )}
@@ -105,9 +107,9 @@ export function EventCarousel({ events }: {
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`h-2 w-2 rounded-full transition-colors ${
-              index === currentIndex ? "bg-white" : "bg-white/50"
+              index === currentIndex ? "bg-foreground" : "bg-foreground/50"
             }`}
-            aria-label={`Go to slide ${index + 1}`}
+            aria-label={t("goToSlide", { number: index + 1 })}
           />
         ))}
       </div>

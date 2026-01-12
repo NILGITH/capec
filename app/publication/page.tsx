@@ -1,5 +1,5 @@
-
 "use client";
+
 import Image from "next/image";
 import { useState } from "react";
 import { Header } from "@/components/header";
@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FileText, Search } from "lucide-react";
 import { MainNav } from "@/components/main-nav";
+import { useTranslations } from "next-intl";
 
 // Définir une interface pour le type des publications
 interface Publication {
@@ -17,59 +18,28 @@ interface Publication {
   pdfLink: string;
 }
 
-// Définir les types possibles pour selectedType
-type PublicationType =
-  | "Politique Économique et Développement (PED)"
-  | "Bulletin de Politique Économique et Développement (BUPED)"
-  | "Lettre de Politique Économique (LPE)"
-  | "Publications dans les revues spécialisées (PRS)";
+// Identifiants stables (NE PAS traduire ces valeurs)
+type PublicationType = "PED" | "BUPED" | "LPE";
 
-// Définir le type pour availableYearsByType et publicationsByType
+// Types pour l'organisation des données
 interface YearsByType {
   [key: string]: string[];
 }
-
 interface PublicationsByType {
   [key: string]: { [year: string]: Publication[] };
 }
 
 export default function PublicationsPage() {
-  const [selectedType, setSelectedType] = useState<PublicationType>("Politique Économique et Développement (PED)");
-  const [selectedYear, setSelectedYear] = useState<string>("Sélectionnez l’année");
+  const t = useTranslations("publication"); // utiliser ton common.json -> clé "publications"
+
+  // état : use stable ids (PED/BUPED/LPE) — l'affichage des labels se fait via t(...)
+  const [selectedType, setSelectedType] = useState<PublicationType>("PED");
+  const [selectedYear, setSelectedYear] = useState<string>(""); // empty = none selected
   const [showPublications, setShowPublications] = useState<boolean>(false);
   const [currentPublications, setCurrentPublications] = useState<Publication[]>([]);
 
-  // Liste des années disponibles pour chaque type de publication
-  const availableYearsByType: YearsByType = {
-    "Politique Économique et Développement (PED)": [
-    
-      "2012",
-      "2013",
-      "2014",
-      "2015",
-      "2017",
-    ],
-    "Bulletin de Politique Économique et Développement (BUPED)": [
-      
-      "2012",
-      "2013",
-      "2014",
-      "2015",
-      "2016",
-      "2018",
-    ],
-    "Lettre de Politique Économique (LPE)": [
-      "2012",
-      "2013",
-      "2014",
-      "2015",
-      "2018",
-      
-    ],
-    "Publications dans les revues spécialisées (PRS)": [],
-  };
-
-  // Données des publications
+  // --- Données (ta liste existante) ---
+  // (je n'ai pas touché aux contenus/URLs des PDF — juste la structure)
   const publications2015: Publication[] = [
     {
       title: "EFFETS REELS DE LA FUITE DES CAPITAUX EN COTE D’IVOIRE",
@@ -107,9 +77,7 @@ export default function PublicationsPage() {
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "/images/PUBLICATION/PED PDF/2015/decentralisation.pdf",
     },
-   
   ];
-
 
   const publications2012: Publication[] = [
     {
@@ -196,7 +164,6 @@ export default function PublicationsPage() {
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "/images/PUBLICATION/PED PDF/2014/entreprise familial.pdf",
     },
- 
   ];
 
   const publications2017: Publication[] = [
@@ -208,8 +175,7 @@ export default function PublicationsPage() {
     },
   ];
 
-  
-
+  // ---- BUPED ----
   const bupedPublications2012: Publication[] = [
     {
       title: "LA RELANCE POST CRISE EN COTE D'IVOIRE A-T-ELLE NECESSAIREMENT BESOIN D'UN SURCROIT D'ASSISTANCE EXTERIEURE ? : UNE ANALYSE PAR LES EFFETS DE SEUILS",
@@ -247,7 +213,6 @@ export default function PublicationsPage() {
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "/images/PUBLICATION/BUPED PDF/2012/APE.pdf",
     },
-   
   ];
 
   const bupedPublications2013: Publication[] = [
@@ -314,7 +279,6 @@ export default function PublicationsPage() {
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "/images/PUBLICATION/BUPED PDF/2014/EFFET DES INVESTISSEMENTS.pdf",
     },
-    
   ];
 
   const bupedPublications2015: Publication[] = [
@@ -336,20 +300,20 @@ export default function PublicationsPage() {
   ];
 
   const bupedPublications2018: Publication[] = [
-  
     {
       title: "ANALYSE DES EFFETS DE L’ENDETTEMENT ET DU DÉFICIT BUDGÉTAIRE SUR LA CROISSANCE DE LA CÔTE D’IVOIRE À LONG TERME",
       author: "Prof. Esso Loesse Jacques, Chercheurs CAPEC – Dr Fé Doukouré Charles",
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "/images/PUBLICATION/BUPED PDF/2018/ANALYSE DES EFFETS.pdf",
     },
-   
   ];
 
+  // ---- LPE ----
   const lpePublications2012: Publication[] = [
     {
       title: "CLIMAT DES AFFAIRES ET PERFORMANCE PRODUCTIVE DU SECTEUR PRIVÉ IVOIRIEN",
-      author: "N'GUESSAN Dieu-Donné Melagne, Chercheur Associé CAPEC",      authorLink: "https://capec-ci.org/publications/Search_pub",
+      author: "N'GUESSAN Dieu-Donné Melagne, Chercheur Associé CAPEC",
+      authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "/images/PUBLICATION/LPE PDF/2012/CLIMAT DES AFFAIRES.pdf",
     },
   ];
@@ -390,21 +354,23 @@ export default function PublicationsPage() {
     },
   ];
 
+  // --- Structure des années disponibles (par id stable) ---
+  const availableYearsByType: YearsByType = {
+    PED: ["2012", "2013", "2014", "2015", "2017"],
+    BUPED: ["2012", "2013", "2014", "2015", "2016", "2018"],
+    LPE: ["2012", "2013", "2014", "2015", "2018"],
+  };
 
-
-
-  // Structure des publications par type et année
+  // --- Structure des publications indexées par id stable ---
   const publicationsByType: PublicationsByType = {
-    "Politique Économique et Développement (PED)": {
-     
+    PED: {
       "2012": publications2012,
       "2013": publications2013,
       "2014": publications2014,
       "2015": publications2015,
       "2017": publications2017,
     },
-    "Bulletin de Politique Économique et Développement (BUPED)": {
-     
+    BUPED: {
       "2012": bupedPublications2012,
       "2013": bupedPublications2013,
       "2014": bupedPublications2014,
@@ -412,22 +378,18 @@ export default function PublicationsPage() {
       "2016": bupedPublications2016,
       "2018": bupedPublications2018,
     },
-    "Lettre de Politique Économique (LPE)": {
-    
+    LPE: {
       "2012": lpePublications2012,
       "2013": lpePublications2013,
       "2014": lpePublications2014,
       "2015": lpePublications2015,
       "2018": lpePublications2018,
-      
-     
     },
-   
   };
 
   // Gestion de l'affichage des publications
   const handleShowPublications = () => {
-    if (selectedYear === "Sélectionnez l’année") {
+    if (!selectedYear) {
       setShowPublications(false);
       setCurrentPublications([]);
       return;
@@ -438,136 +400,127 @@ export default function PublicationsPage() {
     setShowPublications(true);
   };
 
-  // Rendu des années disponibles pour le type sélectionné
+  // années disponibles pour le type choisi
   const availableYears = availableYearsByType[selectedType] || [];
 
   return (
     <div className="flex flex-col min-h-screen">
-    <MainNav/>
-    <main className="flex-grow">
-    <div className="max-w-5xl mx-auto mt-24 mb-52 p-6 bg-white rounded-lg">
-    <h2 className="text-4xl font-bold text-gray-800 mb-2">Publications</h2>
-        <div className="h-1 w-12 bg-orange-500 mb-6"></div>
+      <MainNav />
+      <main className="flex-grow">
+        <div className="max-w-5xl mx-auto mt-24 mb-52 p-6 bg-card text-card-foreground rounded-lg">
+          {/* Page title */}
+          <h2 className="text-4xl font-bold text-foreground mb-2">{t("title")}</h2>
+          <div className="h-1 w-12 bg-orange-500 mb-6"></div>
 
-        {/* Section PED */}
-        <section className="mb-6">
-          <h3 className="text-lg font-semibold text-orange-600 mb-2 flex items-center">
-            <FileText className="w-5 h-5 mr-2" />
-            Politique Économique et Développement (PED)
-          </h3>
-          <p className="text-gray-600">
-            Le PED rend compte des résultats des études et recherches dans leur intégralité sans aucune restriction, avec toute la technicité et la rigueur nécessaires. Sa distribution se fait sur demande expresse quand les lecteurs ne le consultent pas sur place.
-          </p>
-        </section>
+          {/* Section intro + descriptions for each type */}
+          <section className="mb-6">
+            <h3 className="text-lg font-semibold text-orange-600 mb-2 flex items-center">
+              <FileText className="w-5 h-5 mr-2" />
+              {t("types.PED")}
+            </h3>
+            <p className="text-muted-foreground">{t("descriptions.PED")}</p>
+          </section>
 
-        {/* Section BUPED */}
-        <section className="mb-6">
-          <h3 className="text-lg font-semibold text-orange-600 mb-2 flex items-center">
-            <FileText className="w-5 h-5 mr-2" />
-            Bulletin de Politique Économique et Développement (BUPED)
-          </h3>
-          <p className="text-gray-600">
-            Le BUPED, à la différence du PED, résume en une vingtaine de pages au plus et sans détail technique, les conclusions et recommandations des études.
-          </p>
-        </section>
+          <section className="mb-6">
+            <h3 className="text-lg font-semibold text-orange-600 mb-2 flex items-center">
+              <FileText className="w-5 h-5 mr-2" />
+              {t("types.BUPED")}
+            </h3>
+            <p className="text-muted-foreground">{t("descriptions.BUPED")}</p>
+          </section>
 
-        {/* Section LPE */}
-        <section className="mb-6">
-          <h3 className="text-lg font-semibold text-orange-600 mb-2 flex items-center">
-            <FileText className="w-5 h-5 mr-2" />
-            Lettre de Politique Économique (LPE)
-          </h3>
-          <p className="text-gray-600">
-            La LPE rend compte de l’essentiel des résultats des recherches et des recommandations de politiques économiques qui en découlent. Elle est aussi utilisée comme support pour les chroniques économiques. Elle ne comporte que quatre pages et reste spécialement destinée aux décideurs.
-          </p>
-        </section>
+          <section className="mb-6">
+            <h3 className="text-lg font-semibold text-orange-600 mb-2 flex items-center">
+              <FileText className="w-5 h-5 mr-2" />
+              {t("types.LPE")}
+            </h3>
+            <p className="text-muted-foreground">{t("descriptions.LPE")}</p>
+          </section>
 
+          {/* Search controls */}
+          <div className="bg-card text-card-foreground shadow-md rounded-lg p-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+              <div>
+                <label htmlFor="type" className="block text-sm font-medium text-foreground mb-2">
+                  {t("labels.type")}
+                </label>
+                <select
+                  id="type"
+                  value={selectedType}
+                  onChange={(e) => setSelectedType(e.target.value as PublicationType)}
+                  className="block w-full border-gray-300 p-2 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <option value="PED">{t("types.PED")}</option>
+                  <option value="BUPED">{t("types.BUPED")}</option>
+                  <option value="LPE">{t("types.LPE")}</option>
+                </select>
+              </div>
 
-      <div className="bg-white shadow-md rounded-lg p-6 mb-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-          <div>
-            <label htmlFor="type" className="block text-sm font-medium text-gray-700 mb-2">
-              Type de publication
-            </label>
-            <select
-              id="type"
-              value={selectedType}
-              onChange={(e) => setSelectedType(e.target.value as PublicationType)}
-              className="block w-full border-gray-300 p-2 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-            >
-              
-              <option>Politique Économique et Développement (PED)</option>
-              <option>Bulletin de Politique Économique et Développement (BUPED)</option>
-              <option>Lettre de Politique Économique (LPE)</option>
-            </select>
-          </div>
-          <div>
-            <label htmlFor="year" className="block text-sm font-medium text-gray-700 mb-2">
-              Année
-            </label>
-            <select
-              id="year"
-              value={selectedYear}
-              onChange={(e) => setSelectedYear(e.target.value)}
-              className="block w-full border-gray-300 p-2 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-            >
-              <option>Sélectionnez l’année</option>
-              {availableYears.map((year) => (
-                <option key={year} value={year}>
-                  {year}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="flex items-end">
-          <Button
+              <div>
+                <label htmlFor="year" className="block text-sm font-medium text-gray-700 mb-2">
+                  {t("labels.year")}
+                </label>
+                <select
+                  id="year"
+                  value={selectedYear}
+                  onChange={(e) => setSelectedYear(e.target.value)}
+                  className="block w-full border-gray-300 p-2 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <option value="">{t("labels.selectYear")}</option>
+                  {availableYears.map((year) => (
+                    <option key={year} value={year}>
+                      {year}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="flex items-end">
+                <Button
                   onClick={handleShowPublications}
                   className="bg-orange-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-orange-600 transition duration-300"
                 >
-                  Rechercher
+                  {t("search")}
                   <Search className="w-4 h-4 ml-2" />
                 </Button>
-          </div>
-        </div>
-      </div>
-
-      {showPublications && (
-          <section className="mt-6">
-            {currentPublications.map((pub, index) => (
-              <div key={index} className="rounded border py-3 px-4 mb-4">
-                <div className="flex items-center">
-                  <FileText className="w-5 h-5 mr-2 text-gray-800" />
-                  <h5 className="text-lg font-semibold text-gray-800">{pub.title}</h5>
-                </div>
-                <h6 className="text-gray-600 mt-1">
-                  Auteur : <a href={pub.authorLink} className="text-orange-500 hover:underline">{pub.author}</a>
-                </h6>
-                <div className="flex items-center mt-2">
-                  < Image
-                    src="/images/pdf.png"
-                    width="30"
-                    height="30"
-                    className="shadow"
-                    alt="PDF icon"
-                  />
-                  <a
-                    href={pub.pdfLink}
-                    target="_blank"
-                    className="text-orange-500 hover:underline ml-4"
-                  >
-                    Télécharger le pdf
-                  </a>
-                </div>
               </div>
-            ))}
-          </section>
-        )}
+            </div>
+          </div>
 
+          {/* Results */}
+          {showPublications && (
+            <section className="mt-6">
+              {currentPublications.length === 0 && (
+                <div className="rounded border py-3 px-4 mb-4 text-muted-foreground">
+                  {t("noResults")}
+                </div>
+              )}
 
-   </div>
-    </main>
-    <Footer />
-  </div>
-
+              {currentPublications.map((pub, index) => (
+                <div key={index} className="rounded border py-3 px-4 mb-4">
+                  <div className="flex items-center">
+                    <FileText className="w-5 h-5 mr-2 text-gray-800" />
+                    <h5 className="text-lg font-semibold text-gray-800">{pub.title}</h5>
+                  </div>
+                  <h6 className="text-gray-600 mt-1">
+                    {t("authorPrefix")}{" "}
+                    <a href={pub.authorLink} className="text-orange-500 hover:underline">
+                      {pub.author}
+                    </a>
+                  </h6>
+                  <div className="flex items-center mt-2">
+                    <Image src="/images/pdf.png" width={30} height={30} className="shadow" alt={t("pdfIconAlt")} />
+                    <a href={pub.pdfLink} target="_blank" rel="noreferrer" className="text-orange-500 hover:underline ml-4">
+                      {t("downloadPdf")}
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </section>
+          )}
+        </div>
+      </main>
+      <Footer />
+    </div>
   );
 }

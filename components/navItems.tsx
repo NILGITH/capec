@@ -2,7 +2,7 @@
 
 // Définissez et exportez le type NavItem dans ce fichier
 export type NavItem = {
-  title: string
+  titleKey: string
   href: string
   submenu?: NavItem[]  // sous-menu optionnel
 }
@@ -10,67 +10,67 @@ export type NavItem = {
 // Exportez ensuite vos données
 export const navItems: NavItem[] = [
   {
-    title: "ACCUEIL",
+    titleKey: "home",
     href: "/",
   },
   {
-    title: "A PROPOS",
+    titleKey: "about",
     href: "",
     submenu: [
       {
-        title: "Mot du Directeur",
+        titleKey: "directorWord",
         href: "/a-propos/mot-du-directeur",
       },
       {
-        title: "Historique et Objectifs",
+        titleKey: "historyObjectives",
         href: "/a-propos/historique-objectif",
       },
       {
-        title: "Nos Activités",
+        titleKey: "ourActivities",
         href: "/a-propos/nos-activites",
       },
       {
-        title: "Organigramme",
+        titleKey: "orgChart",
         href: "/a-propos/organigramme",
       },
       {
-        title: "La CAPEC en Chiffres",
+        titleKey: "capecFigures",
         href: "/a-propos/capec-en-chiffres",
       },
       {
-        title: "Quelques Références",
+        titleKey: "references",
         href: "/a-propos/references",
       },
     ],
   },
   {
-    title: "RESSOURCES",
+    titleKey: "resources",
     href: "",
     submenu: [
       {
-        title: "Projets de recherches",
+        titleKey: "researchProjects",
         href: "/ressources/recherches",
       },
       {
-        title: "Études réalisées",
+        titleKey: "studies",
         href: "/ressources/etudes",
       },
     ],
   },
   {
-    title: "PUBLICATIONS",
+    titleKey: "publications",
     href: "/publication",
   },
   {
-    title: "ACTIVITES",
+    titleKey: "activities",
     href: "",
     submenu: [
       {
-        title: "Programmes d'activités",
+        titleKey: "activityPrograms",
         href: "/activites/programme",
       },
       {
-        title: "Rapports d'activités",
+        titleKey: "activityReports",
         href: "/activites/rapport",
       },
       /* {
@@ -78,31 +78,31 @@ export const navItems: NavItem[] = [
         href: "/activites/compte-rendu",
       }, */
       {
-        title: "Interview - Question",
+        titleKey: "interviews",
         href: "/activites/interview",
       },
       {
-        title: "Actualités",
+        titleKey: "news",
         href: "/activites/actualites",
       },
     ],
   },
   {
-    title: "MEDIAS",
+    titleKey: "media",
     href: "",
     submenu: [
       {
-        title: "Photothèques",
+        titleKey: "photoLibrary",
         href: "/medias/phototheque",
       },
       {
-        title: "Vidéothèques",
+        titleKey: "videoLibrary",
         href: "/medias/videotheque",
       },
     ],
   },
   {
-    title: "CHERCHEURS",
+    titleKey: "researchers",
     href: "/chercheur",
   },
 ]

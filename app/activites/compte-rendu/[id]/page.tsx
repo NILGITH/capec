@@ -179,7 +179,7 @@ export default async function EventDetailsPage({ params, searchParams }: { param
       <div className="flex flex-col md:flex-row">
         {/* Contenu principal */}
         <main className="container mx-auto flex-grow px-4 py-12 md:max-w-4xl md:px-6 md:py-24">
-          <article className="rounded-lg bg-white p-8 shadow-md">
+          <article className="rounded-lg bg-card text-card-foreground p-8 shadow-md">
             <h1 className="mb-8 text-center text-2xl font-bold uppercase tracking-tighter sm:text-3xl md:text-4xl">
               {event.title}
             </h1>
@@ -212,7 +212,7 @@ export default async function EventDetailsPage({ params, searchParams }: { param
         </main>
 
         {/* Barre latérale */}
-        <aside className="mt-12 w-full mb-10 bg-white p-4 shadow-lg md:mt-18 md:w-80 md:overflow-y-auto md:sticky md:top-24 md:h-[calc(100vh-6rem)]">
+        <aside className="mt-12 w-full mb-10 bg-card text-card-foreground p-4 shadow-lg md:mt-18 md:w-80 md:overflow-y-auto md:sticky md:top-24 md:h-[calc(100vh-6rem)]">
           <h2 className="mb-4 text-xl font-semibold text-orange-500">
             Autres Comptes rendus
           </h2>

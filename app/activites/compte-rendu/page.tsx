@@ -64,7 +64,7 @@ function EventCard({ event }: { event: any }) {
           )}
           href={`/activites/compte-rendu/${event.id}`} // Utiliser une route dynamique
         >
-          <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40" />
+          <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-foreground opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40" />
           <span>Voir détails</span>
         </Link>
         </div>

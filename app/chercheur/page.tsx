@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
@@ -9,7 +11,6 @@ import { MainNav } from "@/components/main-nav";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -20,19 +21,21 @@ import {
   FaLinkedin as LinkedInIcon,
   FaGoogle as GoogleIcon,
 } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 export default function ChercheurPage() {
+  const t = useTranslations("researchers");
+
   return (
     <div className="flex flex-col min-h-screen">
       <MainNav />
       <div className="container px-4 py-12 md:px-6 md:py-24 flex-grow">
         <div className="space-y-4">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Nos Chercheurs
+            {t("title")}
           </h1>
           <p className="text-muted-foreground md:text-xl max-w-[800px]">
-            Découvrez l'équipe de chercheurs de la CAPEC à travers notre galerie
-            de photos.
+            {t("description")}
           </p>
         </div>
 
@@ -40,14 +43,14 @@ export default function ChercheurPage() {
           <TabsContent value="all" className="mt-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {allResearchers.map((researcher) => (
-                <ResearcherCard key={researcher.id} researcher={researcher} />
+                <ResearcherCard key={researcher.id} researcher={researcher} t={t} />
               ))}
             </div>
           </TabsContent>
           <TabsContent value="senior" className="mt-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {seniorResearchers.map((researcher) => (
-                <ResearcherCard key={researcher.id} researcher={researcher} />
+                <ResearcherCard key={researcher.id} researcher={researcher} t={t} />
               ))}
             </div>
           </TabsContent>
@@ -63,7 +66,7 @@ export default function ChercheurPage() {
   );
 }
 
-function ResearcherCard({ researcher }: { researcher: any }) {
+function ResearcherCard({ researcher, t }: { researcher: any; t: any }) {
   // Liste des identifiants des chercheurs pour lesquels appliquer le zoom et le centrage
   const idsToFocus = ["4", "5"]; // Dr BECHO et Prof BEKE
   const shouldFocus = idsToFocus.includes(researcher.id);
@@ -72,8 +75,25 @@ function ResearcherCard({ researcher }: { researcher: any }) {
     ? "object-cover object-position-top scale-125" // Zoom et positionne en haut
     : "object-contain"; // Utilise object-contain pour les autres images
 
+  // Récupération des traductions pour le titre et la bio.
+  // Les clés attendues : researchers.data.<id>.title et researchers.data.<id>.bio
+  // Si la traduction n'existe pas, on retombe sur la valeur locale (fallback).
+  const titleKey = `data.${researcher.id}.title`;
+  const bioKey = `data.${researcher.id}.bio`;
+
+  // t(...) retourne la chaîne. Si la clé manquait, next-intl renvoie généralement la clé.
+  let titleText = t(titleKey);
+  let bioText = t(bioKey);
+
+  // Heuristique de fallback : si t(...) renvoie la clé ou une chaîne vide, utiliser les valeurs locales.
+  const looksLikeKey = (s: string) =>
+    !s || s.length === 0 || s.includes("data.") || s.includes("researchers.");
+
+  if (looksLikeKey(titleText)) titleText = researcher.title || researcher.titleFallback || "";
+  if (looksLikeKey(bioText)) bioText = researcher.bio || researcher.bioFallback || "";
+
   return (
-    <Card className="overflow-hidden hover:shadow-md transition-shadow bg-white rounded-lg border border-gray-200 group">
+    <Card className="overflow-hidden hover:shadow-md transition-shadow bg-card rounded-lg border border-border group">
       <div className="relative w-full h-64 mb-6">
         <Image
           src={researcher.photo || "/placeholder.svg"}
@@ -84,15 +104,15 @@ function ResearcherCard({ researcher }: { researcher: any }) {
       </div>
 
       <div className="p-4  group-hover:bg-ci-orange/10 transition-colors duration-200">
-        <h3 className="font-bold text-lg text-gray-800 group-hover:text-ci-orange transition-colors">
+        <h3 className="font-bold text-lg text-foreground group-hover:text-ci-orange transition-colors">
           {researcher.name}
         </h3>
 
-        <p className="text-gray-600 text-sm mt-1 group-hover:text-ci-orange transition-colors">
-          {researcher.title}
+        <p className="text-muted-foreground text-sm mt-1 group-hover:text-ci-orange transition-colors">
+          {titleText}
         </p>
 
-        <div className="w-full h-px bg-gray-200 my-3"></div>
+        <div className="w-full h-px bg-border my-3"></div>
 
         {researcher.expertise && researcher.expertise.length > 0 && (
           <div className="mt-3 flex flex-wrap gap-2">
@@ -114,13 +134,12 @@ function ResearcherCard({ researcher }: { researcher: any }) {
                 variant="outline"
                 className="w-full text-ci-orange border-ci-orange hover:bg-ci-orange hover:text-white"
               >
-                Voir la biographie
+                {t("viewBio")}
               </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[900px]">
               <DialogHeader className="hidden">
                 <DialogTitle>{researcher.name}</DialogTitle>
-                <DialogDescription>{researcher.title}</DialogDescription>
               </DialogHeader>
               <div className="grid md:grid-cols-3 gap-6 p-4">
                 <div className="md:col-span-1 flex flex-col items-center text-center">
@@ -138,7 +157,7 @@ function ResearcherCard({ researcher }: { researcher: any }) {
                   </div>
                   <h2 className="text-xl font-bold">{researcher.name}</h2>
                   <p className="text-md text-gray-600 mb-4">
-                    {researcher.title}
+                    {titleText}
                   </p>
 
                   <div className="flex gap-4 mb-4">
@@ -170,11 +189,11 @@ function ResearcherCard({ researcher }: { researcher: any }) {
 
                 <div className="md:col-span-2">
                   <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                    Biographie
+                    {t("bioHeading")}
                   </h3>
                   <div className="prose prose-sm max-w-none text-gray-700 max-h-[50vh] overflow-y-auto scrollbar-thin">
                     <p className="whitespace-pre-line leading-relaxed">
-                      {researcher.bio}
+                      {bioText}
                     </p>
                   </div>
                 </div>
@@ -187,7 +206,7 @@ function ResearcherCard({ researcher }: { researcher: any }) {
   );
 }
 
-// Sample data
+// Sample data (ids stables, contenu en FR comme fallback)
 const seniorResearchers = [
   {
     id: "1",
@@ -196,13 +215,7 @@ const seniorResearchers = [
     photo:
       "/images/chercheurs/profahourealbanalphonseemmanueldirecteurdelacapec.jpg?t&height=200&width=1200&object-cover",
     expertise: ["Économie ", "Gestion", "Politiques publiques"],
-    bio: `Alban A. E. Ahouré est Professeur Titulaire des Sciences Économiques à l'Université Félix Houphouët-Boigny d'Abidjan (depuis 2021) et Directeur de la Cellule d'Analyse de Politiques Économiques du CIRES (CAPEC) depuis 2011. Docteur en économie de l'Université de Kobé (Japon, 2006), il est spécialiste de la microéconomie appliquée, de l'économie du travail et des ressources humaines, de l'économie des institutions, de la théorie des jeux et de l'évaluation des politiques publiques.
-
-Il a coordonné de nombreuses études sur la compétitivité, la fiscalité, le secteur privé, l'informalité, l'agriculture, la gouvernance et les perspectives de développement pour des institutions nationales, régionales (UEMOA, CEDEAO) et internationales (AfDB, Banque Mondiale, PNUD, PAM, FAO, UNICEF, etc).
-
-Auteur de plusieurs ouvrages et articles scientifiques dans des revues internationales de référence, ses recherches portent notamment sur l'employabilité, l'inclusion économique, les modèles d'affaires inclusifs et la transformation structurelle en Afrique.
-
-Élu en 2024 Membre Honoraire de l'Académie Royale Européenne de Docteurs (RAED) et figurant sans discontinuer dans le Who's Who en Côte d'Ivoire depuis sa première édition, il contribue activement au débat scientifique et aux politiques de développement en Afrique.`,
+    bio: `Alban A. E. Ahouré est Professeur Titulaire des Sciences Économiques à l'Université Félix Houphouët-Boigny d'Abidjan (depuis 2021) et Directeur de la Cellule d'Analyse de Politiques Économiques du CIRES (CAPEC) depuis 2011. Docteur en économie de l'Université de Kobé (Japon, 2006), il est spécialiste de la microéconomie appliquée, de l'économie du travail et des ressources humaines, de l'économie des institutions, de la théorie des jeux et de l'évaluation des politiques publiques.\n\nIl a coordonné de nombreuses études sur la compétitivité, la fiscalité, le secteur privé, l'informalité, l'agriculture, la gouvernance et les perspectives de développement pour des institutions nationales, régionales (UEMOA, CEDEAO) et internationales (AfDB, Banque Mondiale, PNUD, PAM, FAO, UNICEF, etc).\n\nAuteur de plusieurs ouvrages et articles scientifiques dans des revues internationales de référence, ses recherches portent notamment sur l'employabilité, l'inclusion économique, les modèles d'affaires inclusifs et la transformation structurelle en Afrique.\n\nÉlu en 2024 Membre Honoraire de l'Académie Royale Européenne de Docteurs (RAED) et figurant sans discontinuer dans le Who's Who en Côte d'Ivoire depuis sa première édition, il contribue activement au débat scientifique et aux politiques de développement en Afrique.`,
     socials: {
       linkedin: "https://www.linkedin.com/in/yves-thierry-kacou-phd-462a69145",
       twitter: "#",
@@ -229,12 +242,7 @@ Auteur de plusieurs ouvrages et articles scientifiques dans des revues internati
     photo:
       "/images/chercheurs/chercheurresponsabledelagestionadministrative.jpg?text=Dr.+Jean+Touré&height=100&width=300",
     expertise: ["Administration", "Gestion", "Organisation"],
-    bio: `KRAMO Kouakou Germain est titulaire d’un Doctorat en économie. Il est Chercheur à la Cellule d’Analyse de Politiques Economiques du CIRES (CAPEC) où il a coordonné ou contribué à la mise en œuvre de plusieurs projets et études portant sur l’économie ivoirienne et d’autres pays africains. Il totalise une dizaine d’années dans le domaine de la recherche sur les questions économiques. Dr KRAMO est le Responsable de la Gestion Administrative de la CAPEC. Maître Assistant, il est également un Enseignant-Chercheur à la Faculté des Sciences Economiques et de Gestion de l’Université Félix Houphouët-Boigny. Macroéconomiste, ses domaines d’intérêt et de recherche sont :
-- Finances publiques ;
-- Commerce internationale ; 
-- Intégration économique ;
-- Droits de propriété intellectuelle ;
-- Productivité`,
+    bio: `KRAMO Kouakou Germain est titulaire d’un Doctorat en économie. Il est Chercheur à la Cellule d’Analyse de Politiques Economiques du CIRES (CAPEC) où il a coordonné ou contribué à la mise en œuvre de plusieurs projets et études portant sur l’économie ivoirienne et d’autres pays africains. Il totalise une dizaine d’années dans le domaine de la recherche sur les questions économiques. Dr KRAMO est le Responsable de la Gestion Administrative de la CAPEC. Maître Assistant, il est également un Enseignant-Chercheur à la Faculté des Sciences Economiques et de Gestion de l’Université Félix Houphouët-Boigny. Macroéconomiste, ses domaines d’intérêt et de recherche sont :\n- Finances publiques ;\n- Commerce internationale ; \n- Intégration économique ;\n- Droits de propriété intellectuelle ;\n- Productivité`,
   },
   {
     id: "4",
@@ -270,7 +278,7 @@ Auteur de plusieurs ouvrages et articles scientifiques dans des revues internati
       "Economiste Chercheur à la Cellule d'Analyse de Politiques Économiques du Cires (CAPEC). ",
     photo: "/images/chercheurs/converted_img5.png",
     expertise: ["Economie"],
-    bio: "Dr TRAORE Nohoua est titulaire d'un Doctorat en Économie du Développement à Université Félix Houphouët Boigny et d’un Diplôme d’Etudes Supérieures Professionnelles en Gestion des Projets. Il est actuellement Maître Assistant à l'Université Alassane Ouattara et Economiste Chercheur à la Cellule d'Analyse de Politiques Économiques  du  Cires (CAPEC).Dr Traoré a contribué à la réalisation de plusieurs projets de recherche internationaux financés par le CRDI, traitant de la performance des entreprises en Afrique Subsaharienne Francophone, l’inclusion économique des jeunes et des femmes, l’entrepreneuriat inclusif et les impacts de la Covid-19. Aussi, sa contribution aux études nationales ont trait, à l’encadrement du secteur informel, la taxation des produits du tabac, le statut de l’entreprenant, l’optimisation et exonération fiscale, la privatisation des entreprises, la compétitivité du secteur privé etc. Par ailleurs, en tant que formateur l’économiste a contribué à la formation  des cadres de l’administration fiscale d’Afrique francophone, sur les méthodes de recherche appliquées à la fiscalité, pour le compte de African Tax Administration Forum (ATAF) en 2019 à Nairobi et en 2023 à Pretoria. En plus, le chercheur capitalise plusieurs publications dans des revues internationales dont Région et Développement, Journal of Academy of Business and Economics et Journal of Applied Business and Economics. Aussi, il est Membre du comité scientifique de African Tax Research Network et  de  Sustainability, Research & Innovation Network.",
+    bio: "Dr TRAORE Nohoua est titulaire d'un Doctorat en Économie du Développement à Université Félix Houphouët Boigny et d’un Diplôme d’Etudes Supérieures Professionnelles en Gestion des Projets. Il est actuellement Maître Assistant à l'Université Alassane Ouattara et Economiste Chercheur à la Cellule d'Analyse de Politiques Économiques  du  Cires (CAPEC).Dr Traoré a contribué à la réalisation de plusieurs projets de recherche internationaux financés par le CRDI, traitant de la performance des entreprises en Afrique Subsaharienne Francophone, l’inclusion économique des jeunes et des femmes, l’entrepreneuriat inclusif et les impacts de la Covid-19. Aussi, sa contribution aux études nationales ont trait, à l’encadrement du secteur informel, la taxation des produits du tabac, le statut de l’entreprenant, l’optimisation et exonération fiscale, la privatisation des entreprises, la compétitivité du secteur privé etc. Par ailleurs, en tant que formateur l’économiste a contribué à la formation  des cadres de l’administration fiscale d’Afrique francophone, sur les méthodes de recherche appliquées à la fiscalité, pour le compte de African Tax Administration Forum (ATAF) en 2019 à Nairobi et en 2023 à Pretoria. En plus, le chercheur capitalise plusieurs publications dans des revues internationales dont Région et Développement, Journal of Academy of Business and Economics et Journal of Applied Business and Economics. Aussi, il est Membre du comité scientifique de African Tax Research Network et  de  Sustainability, Research & Innovation Network.",
     socials: {
       linkedin: "https://www.linkedin.com/in/yves-thierry-kacou-phd-462a69145",
       twitter: "#",
@@ -297,11 +305,7 @@ Auteur de plusieurs ouvrages et articles scientifiques dans des revues internati
       "Chercheur à la Cellule d’Analyse de politique economique du CIRES (CAPEC)",
     photo: "/images/chercheurs/kouadio.png",
     expertise: ["Microéconomie", "Analyse des données", "méthodologie"],
-    bio: `Dr KOUADIO est titulaire d’un doctorat en sciences économiques obtenu à l’Université Félix Houphouët-Boigny de Cocody. Enseignant-chercheur au sein de cette même université, il est également chercheur à la Cellule d’Analyse de Politiques Économiques du CIRES (CAPEC).Fort d’une dizaine d’années d’expérience dans la conduite de travaux de recherche et d’études, il a réalisé de nombreuses études tant pour des institutions internationales que pour des structures locales, en tant que consultant.Au sein de la CAPEC, il a activement contribué à la mise en œuvre de plusieurs projets de recherche, dans lesquels il a successivement occupé les fonctions d’assistant de recherche puis de chercheur associé.Dr KOUADIO est membre du réseau AfricaLics (African Network for Economics of Learning, Innovation, and Competence Building Systems).Ses intérêts de recherche portent principalement sur l’économie du développement, avec un accent particulier sur les domaines suivants :
-- Théorie économique (microéconomie et macroéconomie) ;
-- Management de l’innovation, économie des firmes, économie de la connaissance, économie numérique ;
-- Économie des transports (réformes, formulation de politiques et planification du secteur), économie circulaire ;
-- Techniques quantitatives : statistiques et mathématiques appliquées, économétrie.`,
+    bio: `Dr KOUADIO est titulaire d’un doctorat en sciences économiques obtenu à l’Université Félix Houphouët-Boigny de Cocody. Enseignant-chercheur au sein de cette même université, il est également chercheur à la Cellule d’Analyse de Politiques Économiques du CIRES (CAPEC).Fort d’une dizaine d’années d’expérience dans la conduite de travaux de recherche et d’études, il a réalisé de nombreuses études tant pour des institutions internationales que pour des structures locales, en tant que consultant.Au sein de la CAPEC, il a activement contribué à la mise en œuvre de plusieurs projets de recherche, dans lesquels il a successivement occupé les fonctions d’assistant de recherche puis de chercheur associé.Dr KOUADIO est membre du réseau AfricaLics (African Network for Economics of Learning, Innovation, and Competence Building Systems).Ses intérêts de recherche portent principalement sur l’économie du développement, avec un accent particulier sur les domaines suivants :\n- Théorie économique (microéconomie et macroéconomie) ;\n- Management de l’innovation, économie des firmes, économie de la connaissance, économie numérique ;\n- Économie des transports (réformes, formulation de politiques et planification du secteur), économie circulaire ;\n- Techniques quantitatives : statistiques et mathématiques appliquées, économétrie.`,
     socials: {
       linkedin: "https://www.linkedin.com/in/yves-thierry-kacou-phd-462a69145",
       twitter: "#",

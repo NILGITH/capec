@@ -133,7 +133,7 @@ function NewsCard({
 const newsList = [
   {
     id: "31",
-    title:"5e CONFERENCE INTERNATIONALE SUR LES ETUDES JAPONAISES",
+    title:"CONFÉRENCE INTERNATIONALE – ÉTUDES JAPONAISES | 5ᵉ ÉDITION ",
     excerpt: "",
     date: "15 Janvier 2025",
     image: "/images/Actualites/5emeCONF.jpeg",

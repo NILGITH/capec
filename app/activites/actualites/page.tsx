@@ -132,6 +132,13 @@ function NewsCard({
 
 const newsList = [
   {
+    id: "31",
+    title:"5e CONFERENCE INTERNATIONALE SUR LES ETUDES JAPONAISES",
+    excerpt: "",
+    date: "15 Janvier 2025",
+    image: "/images/Actualites/5emeCONF.jpeg",
+  }
+  ,{
     id: "30",
     title:
       "Méthode et Techniques Marketing: Des cadres du BNETD à l'École de la CAPEC",

@@ -12,6 +12,61 @@ import { sortNewsByDate } from "@/lib/utils";
 // Simule la même liste que dans page.tsx (à factoriser plus tard)
 const newsList = [
   {
+  id: "31",
+  title:
+    "CONFÉRENCE INTERNATIONALE – ÉTUDES JAPONAISES | 5ᵉ ÉDITION",
+  excerpt: "",
+  date: "15 janvier 2026",
+  image: "/images/Actualites/5emeCONF.jpeg",
+  mot: `<span style='color:#FF8000;font-weight:bold;'>
+    CONFÉRENCE INTERNATIONALE – ÉTUDES JAPONAISES | 5ᵉ ÉDITION
+  </span>
+  <br/><br/>
+
+  La Conférence sur les études japonaises revient pour sa 5ᵉ édition autour d’un thème fort et actuel.
+  <br/><br/>
+
+  <b>
+    « Co-créer des solutions durables : les leçons japonaises pour l'innovation socio-économique et environnementale en Afrique »
+  </b>
+  <br/><br/>
+
+  <b>Pourquoi participer ?</b>
+  <br/>
+  Ce rendez-vous stratégique vous offre l’opportunité de :
+  <br/><br/>
+
+  <ol style='margin-left:1em;'>
+    <li>
+      Rencontrer des experts de hauts niveaux, chercheurs africains et japonais, ainsi que des représentants des administrations publiques, du secteur privé, des organisations internationales et de la société civile.
+    </li>
+    <li>
+      Contribuer à une réflexion de haut niveau sur l’innovation durable inspirée de l’expérience japonaise.
+    </li>
+    <li>
+      <b>Date :</b> Jeudi 15 janvier 2026
+    </li>
+    <li>
+      <b>Heure :</b> 08h00 – 17h00
+    </li>
+    <li>
+      <b>Lieu :</b> ENSEA, Amphi François YATTIEN-AMIGUET
+    </li>
+    <li>
+      <b>Inscription :</b><br/>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfznSy5Fic8gCiq7p6wL6b6DCZa88BuoidqBjZzmzwL-sYBzA/viewform?usp=publish-editor" target="_blank">
+        https://docs.google.com/forms/d/e/1FAIpQLSfznSy5Fic8gCiq7p6wL6b6DCZa88BuoidqBjZzmzwL-sYBzA/viewform?usp=publish-editor
+      </a>
+    </li>
+  </ol>
+
+  <br/>
+  <b>Ne manquez pas cette conférence incontournable à forte portée scientifique et institutionnelle.</b>
+  `,
+}
+,
+
+  {
     id: "30",
     title:
       "Méthode et Techniques Marketing: Des cadres du BNETD à l'École de la CAPEC",

@@ -11,13 +11,13 @@ import { sortNewsByDate } from "@/lib/utils";
 
 // Simule la même liste que dans page.tsx (à factoriser plus tard)
 const newsList = [
-  {
+ {
   id: "31",
   title:
     "CONFÉRENCE INTERNATIONALE – ÉTUDES JAPONAISES | 5ᵉ ÉDITION",
   excerpt: "",
   date: "15 janvier 2026",
-  image: "/images/Actualites/5emeCONF.jpeg",
+  image: "/images/conference-japonaises.jpg",
   mot: `<span style='color:#FF8000;font-weight:bold;'>
     CONFÉRENCE INTERNATIONALE – ÉTUDES JAPONAISES | 5ᵉ ÉDITION
   </span>
@@ -54,8 +54,20 @@ const newsList = [
     </li>
     <li>
       <b>Inscription :</b><br/>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfznSy5Fic8gCiq7p6wL6b6DCZa88BuoidqBjZzmzwL-sYBzA/viewform?usp=publish-editor" target="_blank">
-        https://docs.google.com/forms/d/e/1FAIpQLSfznSy5Fic8gCiq7p6wL6b6DCZa88BuoidqBjZzmzwL-sYBzA/viewform?usp=publish-editor
+      <a 
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfznSy5Fic8gCiq7p6wL6b6DCZa88BuoidqBjZzmzwL-sYBzA/viewform?usp=publish-editor"
+        target="_blank"
+        style="
+          color:#FF8000;
+          font-weight:bold;
+          text-decoration:underline;
+          word-break:break-word;
+          overflow-wrap:anywhere;
+          display:inline-block;
+          max-width:100%;
+        "
+      >
+        S’inscrire via le formulaire Google
       </a>
     </li>
   </ol>
@@ -64,6 +76,7 @@ const newsList = [
   <b>Ne manquez pas cette conférence incontournable à forte portée scientifique et institutionnelle.</b>
   `,
 }
+
 ,
 
   {

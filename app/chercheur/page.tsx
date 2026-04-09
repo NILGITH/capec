@@ -31,8 +31,8 @@ export default function ChercheurPage() {
             Nos Chercheurs
           </h1>
           <p className="text-muted-foreground md:text-xl max-w-[800px]">
-            Découvrez l'équipe de chercheurs de la CAPEC à travers notre galerie
-            de photos.
+            Une équipe de recherche engagée au service de la production de
+            connaissances rigoureuses et de solutions innovantes.
           </p>
         </div>
 
@@ -191,7 +191,7 @@ function ResearcherCard({ researcher }: { researcher: any }) {
 const seniorResearchers = [
   {
     id: "1",
-    name: "Prof AHOURE ALBAN ALPHONSE EMMANUEL",
+    name: "Prof AHOURE Alban Alphonse Emmanuel",
     title: "Directeur de la CAPEC",
     photo:
       "/images/chercheurs/profahourealbanalphonseemmanueldirecteurdelacapec.jpg?t&height=200&width=1200&object-cover",

@@ -70,6 +70,8 @@ export default function RapportActivitePage() {
 }
 
 const annualReports = [
+  // { id: "report2026", title: "Rapports d'Activités 2026", year: "2026", pdfUrl: "/images/rapport activite/rapport 2026.pdf" },
+  { id: "report2025", title: "Rapports d'Activités 2025", year: "2025", pdfUrl: "/images/rapport activite/rapport 2025.pdf" },
   { id: "report2024", title: "Rapports d'Activités 2024", year: "2024", pdfUrl: "/images/rapport activite/rapport 2024.pdf" },
   { id: "report2023", title: "Rapports d'Activités 2023", year: "2023", pdfUrl: "/images/rapport activite/rapport 2023.pdf" },
   { id: "report2022", title: "Rapports d'Activités 2022", year: "2022", pdfUrl: "/images/rapport activite/rapport 2022.pdf" },

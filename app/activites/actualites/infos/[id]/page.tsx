@@ -11,14 +11,91 @@ import { sortNewsByDate } from "@/lib/utils";
 
 // Simule la même liste que dans page.tsx (à factoriser plus tard)
 const newsList = [
- {
-  id: "31",
-  title:
-    "CONFÉRENCE INTERNATIONALE – ÉTUDES JAPONAISES | 5ᵉ ÉDITION",
-  excerpt: "",
-  date: "15 janvier 2026",
-  image: "/images/conference-japonaises.jpg",
-  mot: `<span style='color:#FF8000;font-weight:bold;'>
+  {
+    id: "32",
+    title:
+      "5ᵉ Edition des Conférences internationales sur les Études japonaises",
+    excerpt: "",
+    date: "15 janvier 2026",
+    image:
+      "/images/Actualites/5e_edition_des_conferences_internationales_sur_les_etudes_japonaises.jpg",
+    mot: `<span style='color:#FF8000;font-weight:bold;'>
+    5ᵉ Edition des Conférences internationales sur les Études japonaises
+  </span>
+  <br/><br/>
+  
+  <b>
+    « Co-créer des solutions durables : les leçons japonaises pour l'innovation socio-économique et environnementale en Afrique »
+  </b>
+  <br/>
+
+  <br/>
+  Le 15 janvier 2026, l’amphithéâtre François Yattien Amiguet de l’École Nationale Supérieure de Statistique et d’Économie Appliquée (ENSEA) a accueilli la 5ᵉ Conférence internationale sur les Études japonaises, 
+  organisée conjointement par le Japan Corner de l’Université Félix Houphouët-Boigny et la CAPEC, avec le soutien financier de la Japan Foundation.
+  <br/><br/>
+
+    Cette rencontre scientifique de haut niveau s’est tenue autour du thème :
+  <br/>
+
+  <br/>
+  <b>
+    « Co-créer des solutions durables : les leçons japonaises pour l'innovation socio-économique et environnementale en Afrique »
+  </b>
+  <br/><br/>
+
+  La conférence a réuni environ 180 participants comprenant des experts internationaux, des chercheurs africains et japonais, 
+  des représentants de l’administration publique, 
+  ainsi que des acteurs du secteur privé et de la société civile, 
+  dans un cadre d’échanges consacré aux stratégies d’innovation durable inspirées de l’expérience japonaise et adaptées aux réalités africaines.
+  <br/><br/>
+
+  Dans son mot de bienvenue, le Professeur DION Yodé Simplice, Vice-président en charge de la planification, 
+  de la coopération et des relations extérieures de l’Université Félix Houphouët-Boigny, 
+  a salué la pertinence du thème et réaffirmé l’engagement de l’université en faveur du dialogue scientifique international et de la coopération ivoiro-japonaise. 
+  Il a également souligné l’appui constant des partenaires institutionnels, notamment la Japan Foundation et l’Ambassade du Japon en Côte d’Ivoire.
+  <br/><br/>
+
+  Prenant la parole, Son Excellence Monsieur Gomakubo Junji, Ambassadeur du Japon en Côte d’Ivoire, 
+  a rappelé que cette conférence vise à renforcer l’intérêt pour les études japonaises, 
+  à encourager le dialogue intellectuel entre l’Afrique et le Japon, et à favoriser l’émergence d’un réseau régional d’acteurs engagés dans ce champ de recherche. 
+  Il a souligné le rôle stratégique du Japan Corner, inauguré en juin 2023 à l’UFHB, devenu un pôle de référence pour la promotion de la langue, 
+  de la culture et des études japonaises en Afrique de l’Ouest.
+  <br/><br/>
+
+  Représentant le Ministère de l’Environnement, du Développement Durable et de la Transition écologique, 
+  le Directeur de Cabinet Adjoint, Docteur Napari Elisée YEO a présenté cette conférence comme un espace de réflexion stratégique sur les défis du développement durable. 
+  Il a insisté sur la nécessité de promouvoir des modèles de croissance inclusifs, résilients et respectueux de l’environnement, fondés sur la co-création de solutions et l’adaptation des bonnes pratiques japonaises aux contextes africains.
+  <br /> <br />
+
+  À l’issue des allocutions officielles, plusieurs communications riches et inspirantes se sont succédé, animées par d’éminents chercheurs. 
+  La matinée a été consacrée aux présentations des experts japonais, à savoir S.E.M. Yukuo MURATA (ambassadeur du Japon au Mali et chercheur à Kobé University, 
+  Professeure Tomoko HASHINO de Kobé University, Professeur Masamichi OGAWARA de Keio University, Professeur Yoshiaki TERUMICHI et Mme Miri ASANO de Sophia University, 
+  le Docteur Takashi IROHARA de Sophia University et Monsieur Yasunori ITO de Okayama Shoka University. Dans l’après-midi, ce fut le temps de présentations de chercheurs africains que sont les Docteurs Abdoul SOGODOGO (Kurukanfuga de Bamako, Mali), 
+  Mansoum N’DIAYE (CESAG, Sénégal), Mansé BAMBA (Université de Bondoukou, CI), Karna SORO (Université de San-Pedro, CI), Guy KAUL (MC, Université Alassane Ouattara, CI), Finagnon Jules ZANNOU (Université d’Abomey-Calavi, Bénin), 
+  et des Professeurs Akoété Ega AGBODJI (Université de Lomé, Togo) et Maman Maman Nafiou MALAM (Université Abdou Moumouni, Niger).
+  <br /><br />
+
+  Les travaux de cette 5ᵉ édition de la Conférence internationale sur les Études japonaises ont mis en évidence un fil conducteur fort : 
+  <b> 𝐥𝐞 𝐝𝐞́𝐯𝐞𝐥𝐨𝐩𝐩𝐞𝐦𝐞𝐧𝐭 𝐝𝐮𝐫𝐚𝐛𝐥𝐞 𝐧𝐞 𝐩𝐞𝐮𝐭 𝐞̂𝐭𝐫𝐞 𝐧𝐢 𝐢𝐦𝐩𝐨𝐫𝐭𝐞́ 𝐦𝐞́𝐜𝐚𝐧𝐢𝐪𝐮𝐞𝐦𝐞𝐧𝐭, 𝐧𝐢 𝐝𝐞́𝐜𝐫𝐞́𝐭𝐞́. 𝐈𝐥 𝐬𝐞 𝐜𝐨𝐧𝐬𝐭𝐫𝐮𝐢𝐭 𝐩𝐚𝐫 𝐥’𝐚𝐩𝐩𝐫𝐨𝐩𝐫𝐢𝐚𝐭𝐢𝐨𝐧, 𝐥’𝐚𝐝𝐚𝐩𝐭𝐚𝐭𝐢𝐨𝐧 𝐞𝐭 𝐥𝐚 𝐜𝐨𝐜𝐫𝐞́𝐚𝐭𝐢𝐨𝐧.</b> 
+  L’expérience japonaise, à travers l’histoire, la gouvernance, l’innovation productive, l’éducation, la santé, la culture et le sport, 
+  nous enseigne que <b>𝐥𝐚 𝐭𝐫𝐚𝐧𝐬𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞𝐥𝐥𝐞 𝐫𝐞𝐩𝐨𝐬𝐞 𝐚𝐯𝐚𝐧𝐭 𝐭𝐨𝐮𝐭 𝐬𝐮𝐫 𝐥𝐞 𝐜𝐚𝐩𝐢𝐭𝐚𝐥 𝐡𝐮𝐦𝐚𝐢𝐧, 𝐥𝐚 𝐝𝐢𝐬𝐜𝐢𝐩𝐥𝐢𝐧𝐞 𝐜𝐨𝐥𝐥𝐞𝐜𝐭𝐢𝐯𝐞, 𝐥𝐚 𝐪𝐮𝐚𝐥𝐢𝐭𝐞́ 𝐝𝐞𝐬 𝐢𝐧𝐬𝐭𝐢𝐭𝐮𝐭𝐢𝐨𝐧𝐬 𝐞𝐭 𝐥𝐚 𝐜𝐨𝐧𝐬𝐭𝐚𝐧𝐜𝐞 𝐝𝐚𝐧𝐬 𝐥’𝐞𝐟𝐟𝐨𝐫𝐭.</b>
+  <br /><br />
+
+  Pour l’Afrique, le message est clair. Il ne s’agit pas de copier le Japon, 
+  mais de s’inspirer de sa capacité à apprendre des autres tout en restant fidèle à ses valeurs, 
+  à investir durablement dans l’éducation et la formation, à promouvoir l’amélioration continue, 
+  et à inscrire l’innovation dans une vision de long terme.
+  <br /><br />
+
+  `,
+  },
+  {
+    id: "31",
+    title: "CONFÉRENCE INTERNATIONALE – ÉTUDES JAPONAISES | 5ᵉ ÉDITION",
+    excerpt: "",
+    date: "15 janvier 2026",
+    image: "/images/Actualites/5emeCONF.jpeg",
+    mot: `<span style='color:#FF8000;font-weight:bold;'>
     CONFÉRENCE INTERNATIONALE – ÉTUDES JAPONAISES | 5ᵉ ÉDITION
   </span>
   <br/><br/>
@@ -75,9 +152,7 @@ const newsList = [
   <br/>
   <b>Ne manquez pas cette conférence incontournable à forte portée scientifique et institutionnelle.</b>
   `,
-}
-
-,
+  },
 
   {
     id: "30",

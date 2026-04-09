@@ -132,13 +132,22 @@ function NewsCard({
 
 const newsList = [
   {
+    id: "32",
+    title:
+      "5ᵉ Edition des Conférences internationales sur les Études japonaises",
+    excerpt: "",
+    date: "15 Janvier 2026",
+    image:
+      "/images/Actualites/5e_edition_des_conferences_internationales_sur_les_etudes_japonaises.jpg",
+  },
+  {
     id: "31",
-    title:"CONFÉRENCE INTERNATIONALE – ÉTUDES JAPONAISES | 5ᵉ ÉDITION ",
+    title: "CONFÉRENCE INTERNATIONALE – ÉTUDES JAPONAISES | 5ᵉ ÉDITION ",
     excerpt: "",
     date: "15 Janvier 2026",
     image: "/images/Actualites/5emeCONF.jpeg",
-  }
-  ,{
+  },
+  {
     id: "30",
     title:
       "Méthode et Techniques Marketing: Des cadres du BNETD à l'École de la CAPEC",

@@ -46,7 +46,7 @@ export function Footer() {
   const year = new Date().getFullYear();
   const [email, setEmail] = useState("");
   const [formStatus, setFormStatus] = useState<"idle" | "success" | "error">(
-    "idle"
+    "idle",
   );
   const pathname = usePathname();
 
@@ -364,16 +364,24 @@ export function Footer() {
             <ul className="text-base text-gray-100 flex flex-col gap-2 w-full items-center md:items-start">
               <li className="flex items-center gap-2">
                 <Phone className="h-5 w-5" />
-                (225) 27 22 44 41 24/
+                (225) 27 22 44 41 / 01 01 97 84 13
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-5 w-5" />
-                <a
-                  href="mailto:info@capec.ci"
-                  className="hover:text-ci-orange transition-colors"
-                >
-                  info@capec-ci.org
-                </a>
+                <div className="flex flex-col gap-1">
+                  <a
+                    href="mailto:assitanat.recerche@capec-ci.org"
+                    className="hover:text-ci-orange transition-colors"
+                  >
+                    assitanat.recerche@capec-ci.org
+                  </a>
+                  <a
+                    href="mailto:assistanat@capec-ci.org"
+                    className="hover:text-ci-orange transition-colors"
+                  >
+                    assistanat@capec-ci.org
+                  </a>
+                </div>
               </li>
             </ul>
           </div>
@@ -513,15 +521,15 @@ export function Footer() {
                 formStatus === "success"
                   ? "text-green-400"
                   : formStatus === "error"
-                  ? "text-red-400"
-                  : "text-gray-300"
+                    ? "text-red-400"
+                    : "text-gray-300"
               }`}
             >
               {formStatus === "success"
                 ? "Inscription réussie !"
                 : formStatus === "error"
-                ? "Erreur lors de l'inscription. Réessayez."
-                : ""}
+                  ? "Erreur lors de l'inscription. Réessayez."
+                  : ""}
             </p>
           </div>
         </div>

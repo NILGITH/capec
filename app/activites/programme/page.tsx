@@ -14,7 +14,7 @@ export default function ProgrammeActivitesPage() {
           <h1 className="text-4xl font-bold text-gray-900 tracking-wide">Programmes d'Activités</h1>
           <div className="w-24 h-1 bg-orange-500 mx-auto mt-2 rounded-full"></div>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto italic">
-            Voyagez à travers les années et découvrez les programmes d'activités de la CAPEC de 2008 à 2024.
+            Voyagez à travers les années et découvrez les programmes d'activités de la CAPEC de 2008 à 2026.
           </p>
         </div>
 
@@ -55,6 +55,8 @@ export default function ProgrammeActivitesPage() {
 }
 
 const annualPrograms = [
+  { id: "program2026", title: "Programmes d'Activités 2026", year: "2026", pdfUrl: "/images/programme activités/activite 2026.pdf" },
+  { id: "program2025", title: "Programmes d'Activités 2025", year: "2025", pdfUrl: "/images/programme activités/activite 2025.pdf" },
   { id: "program2024", title: "Programmes d'Activités 2024", year: "2024", pdfUrl: "/images/programme activités/activite 2024.pdf" },
   { id: "program2023", title: "Programmes d'Activités 2023", year: "2023", pdfUrl: "/images/programme activités/activite 2023.pdf" },
   { id: "program2022", title: "Programmes d'Activités 2022", year: "2022", pdfUrl: "/images/programme activités/activite 2022.pdf" },

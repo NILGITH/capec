@@ -12,6 +12,48 @@ import { sortNewsByDate } from "@/lib/utils";
 // Simule la même liste que dans page.tsx (à factoriser plus tard)
 const newsList = [
   {
+    id: "34",
+    title: "3e CONFERENCE INTERNATIONALE Japan Corner – CAPEC – JICA",
+    excerpt: "",
+    date: "05 mars 2026",
+    image: "/images/Actualites/Symposium_Post-TICAD_9_05_Mars_2026.jpeg",
+    mot: `<span style='color:#FF8000;font-weight:bold;'>
+   3e CONFERENCE INTERNATIONALE Japan Corner – CAPEC – JICA – Fondation TODAbidjan / JICA Chair 2026
+  </span>
+  <br/><br/>
+Le jeudi 05 mars 2026, six mois après la 9e Conférence internationale de Tokyo sur le Développement de l’Afrique (TICAD 9) tenue du 20 au 22 août 2025 à Yokohama, le Japan Corner de l’Université Félix Houphouët-Boigny et la Cellule d’Analyse de Politiques Economiques du CIRES (CAPEC), 
+avec l’appui de l’Ambassade du Japon en Côte d’Ivoire, ont organisé un symposium Post-TICAD9, à l’ENSEA de Cocody. Cette rencontre scientifique avait pour thème :  « 𝐂𝐨-𝐜𝐫𝐞́𝐞𝐫 𝐥𝐚 𝐭𝐫𝐚𝐧𝐬𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐝𝐞 𝐥𝐚 𝐂𝐨̂𝐭𝐞 𝐝’𝐈𝐯𝐨𝐢𝐫𝐞 𝐚̀ 𝐥’𝐡𝐨𝐫𝐢𝐳𝐨𝐧 𝟐𝟎𝟑𝟎 : 𝐩𝐚𝐫𝐭𝐞𝐧𝐚𝐫𝐢𝐚𝐭𝐬 𝐉𝐚𝐩𝐨𝐧–𝐂𝐨̂𝐭𝐞 𝐝’𝐈𝐯𝐨𝐢𝐫𝐞 𝐩𝐨𝐬𝐭-𝐓𝐈𝐂𝐀𝐃 𝟗 𝐩𝐨𝐮𝐫 𝐮𝐧 𝐝𝐞́𝐯𝐞𝐥𝐨𝐩𝐩𝐞𝐦𝐞𝐧𝐭 𝐯𝐞𝐫𝐭, 𝐧𝐮𝐦𝐞́𝐫𝐢𝐪𝐮𝐞 𝐞𝐭 𝐢𝐧𝐜𝐥𝐮𝐬𝐢𝐟 ».
+
+<br /><br />
+Ce symposium qui a mobilisé 12 panélistes du Japon, de la France et de la Côte d’Ivoire, et d’institutions comme la BAD et le PNUD et près de 200 participants, était placé sous 𝐥𝐚 𝐏𝐑𝐄𝐒𝐈𝐃𝐄𝐍𝐂𝐄 𝐞𝐭 𝐥𝐚 𝐩𝐫𝐞́𝐬𝐞𝐧𝐜𝐞 𝐞𝐟𝐟𝐞𝐜𝐭𝐢𝐯𝐞 𝐝𝐮 𝐃𝐨𝐜𝐭𝐞𝐮𝐫 𝐄𝐮𝐠𝐞̀𝐧𝐞 𝐀𝐊𝐀 𝐀𝐎𝐔𝐄𝐋𝐄, 𝐏𝐫𝐞́𝐬𝐢𝐝𝐞𝐧𝐭 𝐝𝐮 𝐂𝐨𝐧𝐬𝐞𝐢𝐥 𝐄𝐜𝐨𝐧𝐨𝐦𝐢𝐪𝐮𝐞, 𝐒𝐨𝐜𝐢𝐚𝐥, 𝐄𝐧𝐯𝐢𝐫𝐨𝐧𝐧𝐞𝐦𝐞𝐧𝐭𝐚𝐥 𝐞𝐭 𝐂𝐮𝐥𝐭𝐮𝐫𝐞𝐥 (𝐂𝐄𝐒𝐄𝐂)  et sous 𝐥𝐞 𝐏𝐀𝐑𝐑𝐀𝐈𝐍𝐀𝐆𝐄 𝐝𝐮 𝐃𝐨𝐜𝐭𝐞𝐮𝐫 𝐒𝐨𝐮𝐥𝐞𝐲𝐦𝐚𝐧
+  <br/>
+
+  `,
+  },
+  {
+    id: "33",
+    title: "3e CONFERENCE INTERNATIONALE Japan Corner – CAPEC – JICA",
+    excerpt: "",
+    date: "13 fevrier 2026",
+    image:
+      "/images/Actualites/3e_Edition_des_conference_JICA_CHAIR_2026_13_Fevrier_2026.jpg",
+    mot: `<span style='color:#FF8000;font-weight:bold;'>
+   3e CONFERENCE INTERNATIONALE Japan Corner – CAPEC – JICA – Fondation TODAbidjan / JICA Chair 2026
+  </span>
+  <br/><br/>
+
+𝐋𝐞 𝐉𝐚𝐩𝐚𝐧 𝐂𝐨𝐫𝐧𝐞𝐫 𝐝𝐞 𝐥’𝐔𝐧𝐢𝐯𝐞𝐫𝐬𝐢𝐭𝐞́ 𝐅𝐞́𝐥𝐢𝐱 𝐇𝐨𝐮𝐩𝐡𝐨𝐮𝐞̈𝐭-𝐁𝐨𝐢𝐠𝐧𝐲, 𝐥𝐚 𝐂𝐀𝐏𝐄𝐂, 𝐥𝐚 𝐅𝐨𝐧𝐝𝐚𝐭𝐢𝐨𝐧 𝐓𝐎𝐃𝐀𝐛𝐢𝐝𝐣𝐚𝐧 𝐞𝐭 𝐥𝐚 𝐉𝐈𝐂𝐀 ont organisé la 3ᵉ Conférence JICA CHAIR autour du thème :« 𝐕𝐢𝐞𝐢𝐥𝐥𝐢𝐬𝐬𝐞𝐦𝐞𝐧𝐭, 𝐦𝐚𝐥𝐚𝐝𝐢𝐞𝐬 𝐧𝐨𝐧 𝐭𝐫𝐚𝐧𝐬𝐦𝐢𝐬𝐬𝐢𝐛𝐥𝐞𝐬 𝐞𝐭 𝐩𝐫𝐨𝐭𝐞𝐜𝐭𝐢𝐨𝐧 𝐬𝐨𝐜𝐢𝐚𝐥𝐞 : 𝐥𝐞𝐜̧𝐨𝐧𝐬 𝐝𝐮 𝐦𝐨𝐝𝐞̀𝐥𝐞 𝐣𝐚𝐩𝐨𝐧𝐚𝐢𝐬 𝐩𝐨𝐮𝐫 𝐫𝐞𝐧𝐟𝐨𝐫𝐜𝐞𝐫 𝐥𝐚 𝐂𝐌𝐔 𝐞𝐭 𝐥𝐞 𝐝𝐢𝐯𝐢𝐝𝐞𝐧𝐝𝐞 𝐝𝐞́𝐦𝐨𝐠𝐫𝐚𝐩𝐡𝐢𝐪𝐮𝐞 𝐞𝐧 𝐂𝐨̂𝐭𝐞 𝐝’𝐈𝐯𝐨𝐢𝐫𝐞 ». Elle visait à tirer des leçons du modèle japonais pour renforcer la CMU et la protection sociale en Côte d’Ivoire, en cohérence avec le PND 2026-2030.
+<br /><br />
+📅 Vendredi 13 février 2026 | 📍 Amphithéâtre François Yattien-Amiguet, ENSEA | 08h30–13h30.
+
+  <br/><br/>
+
+    Dans son mot de bienvenue, 𝐥𝐞 𝐏𝐫𝐞́𝐬𝐢𝐝𝐞𝐧𝐭 𝐝𝐞 𝐥’𝐔𝐧𝐢𝐯𝐞𝐫𝐬𝐢𝐭𝐞́ 𝐅é𝐥𝐢𝐱 𝐇𝐨𝐮𝐩𝐡𝐨𝐮𝐞̈𝐭-𝐁𝐨𝐢𝐠𝐧𝐲, 𝐥𝐞 𝐏𝐫𝐨𝐟𝐞𝐬𝐬𝐞𝐮𝐫 𝐁𝐀𝐋𝐋𝐎 𝐙𝐢𝐞́ a souligné le rôle central de l’Université comme pôle de production de savoir, laboratoire d’idées et espace d’innovation, mettant en avant le Japan Corner et la CAPEC comme plateformes de référence pour la recherche et la coopération internationale.
+  <br/>
+
+  `,
+  },
+  {
     id: "32",
     title:
       "5ᵉ Edition des Conférences internationales sur les Études japonaises",

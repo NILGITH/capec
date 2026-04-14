@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
 // Définissez et exportez le type NavItem dans ce fichier
 export type NavItem = {
-  title: string
-  href: string
-  submenu?: NavItem[]  // sous-menu optionnel
-}
+  title: string;
+  href: string;
+  submenu?: NavItem[]; // sous-menu optionnel
+};
 
 // Exportez ensuite vos données
 export const navItems: NavItem[] = [
@@ -43,7 +43,7 @@ export const navItems: NavItem[] = [
       },
     ],
   },
-  {
+  /*  {
     title: "RESSOURCES",
     href: "",
     submenu: [
@@ -56,7 +56,7 @@ export const navItems: NavItem[] = [
         href: "/ressources/etudes",
       },
     ],
-  },
+  }, */
   {
     title: "PUBLICATIONS",
     href: "/publication",
@@ -105,4 +105,4 @@ export const navItems: NavItem[] = [
     title: "CHERCHEURS",
     href: "/chercheur",
   },
-]
+];

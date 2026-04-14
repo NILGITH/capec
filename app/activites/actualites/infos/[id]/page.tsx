@@ -12,7 +12,7 @@ import { sortNewsByDate } from "@/lib/utils";
 // Simule la même liste que dans page.tsx (à factoriser plus tard)
 const newsList = [
   {
-    id: "34",
+    id: "36",
     title: "3e CONFERENCE INTERNATIONALE Japan Corner – CAPEC – JICA",
     excerpt: "",
     date: "05 mars 2026",
@@ -31,7 +31,59 @@ Ce symposium qui a mobilisé 12 panélistes du Japon, de la France et de la Côt
   `,
   },
   {
-    id: "33",
+    id: "35",
+    title: "📢 𝐒𝐘𝐌𝐏𝐎𝐒𝐈𝐔𝐌 𝐏𝐎𝐒𝐓-𝐓𝐈𝐂𝐀𝐃 𝟗",
+    excerpt: "",
+    date: "13 fevrier 2026",
+    image:
+      "/images/Actualites/3e_Edition_des_conference_JICA_CHAIR_2026_13_Fevrier_2026.jpg",
+    mot: `<span style='color:#FF8000;font-weight:bold;'>
+   📢 𝐒𝐘𝐌𝐏𝐎𝐒𝐈𝐔𝐌 𝐏𝐎𝐒𝐓-𝐓𝐈𝐂𝐀𝐃 𝟗
+  </span>
+  <br/><br/>
+Le Japan Corner de l’Université Félix Houphouët-Boigny, 
+la Cellule d’Analyse de Politiques Économiques du CIRES (CAPEC) en collaboration avec  
+l’Ambassade du Japon en Côte d’Ivoire  organisent un symposium sur le thème :
+<br />
+« 𝐂𝐨-𝐜𝐫𝐞́𝐞𝐫 𝐥𝐚 𝐭𝐫𝐚𝐧𝐬𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐝𝐞 𝐥𝐚 𝐂𝐨̂𝐭𝐞 𝐝’𝐈𝐯𝐨𝐢𝐫𝐞 𝐚̀ 𝐥’𝐡𝐨𝐫𝐢𝐳𝐨𝐧 𝟐𝟎𝟑𝟎 : 𝐩𝐚𝐫𝐭𝐞𝐧𝐚𝐫𝐢𝐚𝐭𝐬 𝐉𝐚𝐩𝐨𝐧–𝐂𝐨̂𝐭𝐞 𝐝’𝐈𝐯𝐨𝐢𝐫𝐞 𝐩𝐨𝐬𝐭-𝐓𝐈𝐂𝐀𝐃 𝟗 𝐩𝐨𝐮𝐫 𝐮𝐧 𝐝𝐞́𝐯𝐞𝐥𝐨𝐩𝐩𝐞𝐦𝐞𝐧𝐭 𝐯𝐞𝐫𝐭, 𝐧𝐮𝐦𝐞́𝐫𝐢𝐪𝐮𝐞 𝐞𝐭 𝐢𝐧𝐜𝐥𝐮𝐬𝐢𝐟 »
+
+
+<br /><br />
+📅 <b>Date</b> : Jeudi 05 Mars 2026
+<br />
+⏰ <b>Heure</b>: 08h00 – 14h00
+<br />
+📍 <b>Lieu</b> : Amphi François Yattien-Amiguet, ENSEA – Cocody
+  <br/><br/>
+
+  Un cadre d’échanges stratégiques pour renforcer la coopération Japon–Côte d’Ivoire et promouvoir une transformation durable et inclusive.
+  <br/><br/>
+
+
+👉 Inscription via le lien ci-dessous pour la participation en ligne (présentiel sur invitation uniquement).
+
+  <br/><br/>
+  <a    href="https://docs.google.com/forms/d/e/1FAIpQLSfQkQvuFtrLzZNmbeQ17AxJFMCVuVWTlr3sFHlg-HWV0J17sA/viewform?usp=dialog"
+        target="_blank"
+        style="
+          color:#FF8000;
+          font-weight:bold;
+          text-decoration:underline;
+          word-break:break-word;
+          overflow-wrap:anywhere;
+          display:inline-block;
+          max-width:100%;
+        "
+      >
+        S'inscrire
+      </a>
+
+  <br/>
+
+  `,
+  },
+  {
+    id: "34",
     title: "3e CONFERENCE INTERNATIONALE Japan Corner – CAPEC – JICA",
     excerpt: "",
     date: "13 fevrier 2026",
@@ -49,6 +101,56 @@ Ce symposium qui a mobilisé 12 panélistes du Japon, de la France et de la Côt
   <br/><br/>
 
     Dans son mot de bienvenue, 𝐥𝐞 𝐏𝐫𝐞́𝐬𝐢𝐝𝐞𝐧𝐭 𝐝𝐞 𝐥’𝐔𝐧𝐢𝐯𝐞𝐫𝐬𝐢𝐭𝐞́ 𝐅é𝐥𝐢𝐱 𝐇𝐨𝐮𝐩𝐡𝐨𝐮𝐞̈𝐭-𝐁𝐨𝐢𝐠𝐧𝐲, 𝐥𝐞 𝐏𝐫𝐨𝐟𝐞𝐬𝐬𝐞𝐮𝐫 𝐁𝐀𝐋𝐋𝐎 𝐙𝐢𝐞́ a souligné le rôle central de l’Université comme pôle de production de savoir, laboratoire d’idées et espace d’innovation, mettant en avant le Japan Corner et la CAPEC comme plateformes de référence pour la recherche et la coopération internationale.
+  <br/>
+
+
+  `,
+  },
+  {
+    id: "33",
+    title:
+      "𝟑𝐞 𝐂𝐨𝐧𝐟𝐞́𝐫𝐞𝐧𝐜𝐞 𝐢𝐧𝐭𝐞𝐫𝐧𝐚𝐭𝐢𝐨𝐧𝐚𝐥𝐞 𝐉𝐀𝐏𝐀𝐍 𝐂𝐎𝐑𝐍𝐄𝐑 – 𝐂𝐀𝐏𝐄𝐂 – 𝐉𝐈𝐂𝐀 – 𝐓𝐎𝐃𝐀 𝐂𝐨𝐫𝐩𝐨𝐫𝐚𝐭𝐢𝐨𝐧 (𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐞 𝐉𝐈𝐂𝐀 𝐂𝐇𝐀𝐈𝐑)",
+    excerpt: "",
+    date: "13 fevrier 2026",
+    image:
+      "/images/Actualites/3e_Edition_des_conference_JICA_CHAIR_2026_13_Fevrier_2026.jpg",
+    mot: `<span style='color:#FF8000;font-weight:bold;'>
+   𝟑𝐞 𝐂𝐨𝐧𝐟𝐞́𝐫𝐞𝐧𝐜𝐞 𝐢𝐧𝐭𝐞𝐫𝐧𝐚𝐭𝐢𝐨𝐧𝐚𝐥𝐞 𝐉𝐀𝐏𝐀𝐍 𝐂𝐎𝐑𝐍𝐄𝐑 – 𝐂𝐀𝐏𝐄𝐂 – 𝐉𝐈𝐂𝐀 – 𝐓𝐎𝐃𝐀 𝐂𝐨𝐫𝐩𝐨𝐫𝐚𝐭𝐢𝐨𝐧 (𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐞 𝐉𝐈𝐂𝐀 𝐂𝐇𝐀𝐈𝐑)
+  </span>
+  <br/><br/>
+
+📌Thème :« 𝐕𝐢𝐞𝐢𝐥𝐥𝐢𝐬𝐬𝐞𝐦𝐞𝐧𝐭, 𝐦𝐚𝐥𝐚𝐝𝐢𝐞𝐬 𝐧𝐨𝐧 𝐭𝐫𝐚𝐧𝐬𝐦𝐢𝐬𝐬𝐢𝐛𝐥𝐞𝐬 𝐞𝐭 𝐩𝐫𝐨𝐭𝐞𝐜𝐭𝐢𝐨𝐧 𝐬𝐨𝐜𝐢𝐚𝐥𝐞 : 𝐞𝐧𝐬𝐞𝐢𝐠𝐧𝐞𝐦𝐞𝐧𝐭𝐬 𝐝𝐮 𝐦𝐨𝐝𝐞̀𝐥𝐞 𝐣𝐚𝐩𝐨𝐧𝐚𝐢𝐬 𝐩𝐨𝐮𝐫 𝐥𝐞 𝐫𝐞𝐧𝐟𝐨𝐫𝐜𝐞𝐦𝐞𝐧𝐭 𝐝𝐞 𝐥𝐚 𝐂𝐌𝐔 𝐞𝐭 𝐝𝐮 𝐝𝐢𝐯𝐢𝐝𝐞𝐧𝐝𝐞 𝐝𝐞́𝐦𝐨𝐠𝐫𝐚𝐩𝐡𝐢𝐪𝐮𝐞 𝐞𝐧 𝐂𝐨̂𝐭𝐞 𝐝’𝐈𝐯𝐨𝐢𝐫𝐞 »
+
+<br /><br />
+📅 <b>Date</b> : Vendredi 13 février 2026
+<br />
+⏰ <b>Heure</b>: 08h30 – 13h00
+<br />
+📍 <b>Lieu</b> : ENSEA – Amphithéâtre François Yattien-Amiguet
+  <br/><br/>
+
+  🎎Side Event « La calligraphie au stylo-pinceau au service du corps et de l’esprit » Organisé par la Fondation TODAbidjan
+  <br/><br/>
+
+
+👉 Inscription via le lien ci-dessous pour la participation en ligne (présentiel sur invitation uniquement).
+
+  <br/><br/>
+  <a    href=" https://docs.google.com/forms/d/e/1FAIpQLScrFVfIAJ5V3JpOF3JOuKRfxq1jhIqRP9T36A9tEueDvYYcIg/viewform?usp=header"
+        target="_blank"
+        style="
+          color:#FF8000;
+          font-weight:bold;
+          text-decoration:underline;
+          word-break:break-word;
+          overflow-wrap:anywhere;
+          display:inline-block;
+          max-width:100%;
+        "
+      >
+        S'inscrire
+      </a>
+
   <br/>
 
   `,

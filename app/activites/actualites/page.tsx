@@ -132,14 +132,22 @@ function NewsCard({
 
 const newsList = [
   {
-    id: "34",
+    id: "36",
     title: "𝐂𝐎𝐌𝐏𝐓𝐄 𝐑𝐄𝐍𝐃𝐔 𝐃𝐔 𝐒𝐘𝐌𝐏𝐎𝐒𝐈𝐔𝐌 𝐏𝐎𝐒𝐓-𝐓𝐈𝐂𝐀𝐃 𝟗",
     excerpt: "",
     date: "05 mars 2026",
     image: "/images/Actualites/Symposium_Post-TICAD_9_05_Mars_2026.jpeg",
   },
   {
-    id: "33",
+    id: "35",
+    title: "𝐒𝐘𝐌𝐏𝐎𝐒𝐈𝐔𝐌 𝐏𝐎𝐒𝐓-𝐓𝐈𝐂𝐀𝐃 𝟗",
+    excerpt: "",
+    date: "05 mars 2026",
+    image: "/images/Actualites/symposium-post-ticad-annonce.jpeg",
+  },
+
+  {
+    id: "34",
     title:
       "3e CONFERENCE INTERNATIONALE Japan Corner – CAPEC – JICA – Fondation TODAbidjan / JICA Chair 2026",
     excerpt: "",
@@ -147,6 +155,16 @@ const newsList = [
     image:
       "/images/Actualites/3e_Edition_des_conference_JICA_CHAIR_2026_13_Fevrier_2026.jpg",
   },
+  {
+    id: "33",
+    title:
+      "𝟑𝐞 𝐂𝐨𝐧𝐟𝐞́𝐫𝐞𝐧𝐜𝐞 𝐢𝐧𝐭𝐞𝐫𝐧𝐚𝐭𝐢𝐨𝐧𝐚𝐥𝐞 𝐉𝐀𝐏𝐀𝐍 𝐂𝐎𝐑𝐍𝐄𝐑 – 𝐂𝐀𝐏𝐄𝐂 – 𝐉𝐈𝐂𝐀 – 𝐓𝐎𝐃𝐀 𝐂𝐨𝐫𝐩𝐨𝐫𝐚𝐭𝐢𝐨𝐧 (𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐞 𝐉𝐈𝐂𝐀 𝐂𝐇𝐀𝐈𝐑)",
+    excerpt: "",
+    date: "13 février 2026",
+    image:
+      "/images/Actualites/3e_Edition_des_conference_JICA_CHAIR_2026_13_Fevrier_2026-annonce.jpg",
+  },
+
   {
     id: "32",
     title:
